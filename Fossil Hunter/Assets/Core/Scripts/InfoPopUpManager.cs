@@ -16,7 +16,9 @@ public class InfoPopUpManager : MonoBehaviour
         closeButton = gameObject.GetComponent<UIDocument>().rootVisualElement.Q<Button>(name: "Btn_Close");
         closeButton.clicked += CloseUI;
         //closeButton.clicked += ()=>{ OpenUI(FossileInfo); };
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false);
+
+        OpenUI(FossileInfo);
     }
 
     // Update is called once per frame

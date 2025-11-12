@@ -4,12 +4,11 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "FossileInfo_SO", menuName = "Scriptable Objects/FossileInfo_SO")]
 public class FossileInfo_SO : ScriptableObject
 {
-    private string infoText;
+    [SerializeField][Tooltip("The fact text about the fossil.\nLeave empty for the fossil's deafutl tekst.")] private string infoText;
 
-    [SerializeField] public int Age;
-    [SerializeField] public FossilType FossilType;
-    [SerializeField] public Kvalitet Kvalitet;
-    [SerializeField]
+    [SerializeField][Tooltip("The age of the fossil in mio. years.")] public int Age;
+    [SerializeField][Tooltip("The type of fossil.")] public FossilType FossilType;
+    [SerializeField][Tooltip("The quality of the fossil.")] public Kvalitet Kvalitet;    
     public string InfoText
     {
         get

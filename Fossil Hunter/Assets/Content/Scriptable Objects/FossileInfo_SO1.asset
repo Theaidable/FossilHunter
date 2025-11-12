@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8585d3a4c28b76640a9fedd802c8a8b4, type: 3}
   m_Name: FossileInfo_SO1
   m_EditorClassIdentifier: 
+  infoText: custom text look at me
   Age: 203
   FossilType: 2
   Kvalitet: 1
-  InfoText: is verry big and cool i ike much...
