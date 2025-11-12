@@ -45,7 +45,7 @@ public class DigThroughLayers : MonoBehaviour
                     //if it's the last layer without a hole
                     Debug.Log("hit a dead end");
                     //if there are more layers underneath, make a hole (create a new spritemask) (not very efficient)
-                    if (hitCollider.collider.gameObject.tag != "Bottom Layer" && hitCollider.collider.gameObject.tag != "Fossil")
+                    if (hitCollider.collider.gameObject.tag != "Bottom Layer" && hitCollider.collider.gameObject.GetComponent<PickupableFossil>()==null)
                     {
                         var v3 = Input.mousePosition;
                         v3 = mainCamera.ScreenToWorldPoint(v3);
@@ -60,7 +60,13 @@ public class DigThroughLayers : MonoBehaviour
                         hole.transform.localScale = new Vector2(holeSize, holeSize);
                         hole.AddComponent<CircleCollider2D>();
                     }
-                    break;
+                    //if we're clicking on a fossil, don't make a hole, instead pick up the fossil
+                    else if(hitCollider.collider.gameObject.GetComponent<PickupableFossil>() != null)
+                    {
+                        Debug.Log($"Picked up a {hitCollider.collider.gameObject.GetComponent<PickupableFossil>().Data.FossilName}");
+                        hitCollider.collider.gameObject.GetComponent<PickupableFossil>().PickUp();
+                    }
+                        break;
                 }
             }
             if (hits.Length < 1)
