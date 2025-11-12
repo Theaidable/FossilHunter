@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "Prototype",
+    "Projects": [
+      {
+        "Path": "TCPServer\\TCPServer.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "TCPClient\\TCPClient.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

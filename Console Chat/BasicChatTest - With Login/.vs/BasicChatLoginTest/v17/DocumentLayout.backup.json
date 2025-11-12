@@ -1,0 +1,69 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\david\\OneDrive\\Desktop\\Skole\\1. Eksamen\\3. Semester\\SCRUM-Eksamen\\BasicChatTest - With Login\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DA4AE976-126E-4A2C-A9FB-DCDB9219C3D5}|TCPClient\\TCPClient.csproj|c:\\users\\david\\onedrive\\desktop\\skole\\1. eksamen\\3. semester\\scrum-eksamen\\basicchattest - with login\\tcpclient\\tcpclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA4AE976-126E-4A2C-A9FB-DCDB9219C3D5}|TCPClient\\TCPClient.csproj|solutionrelative:tcpclient\\tcpclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A2DEC0B-166F-407F-9081-030A77CC94FB}|TCPServer\\TCPServer.csproj|c:\\users\\david\\onedrive\\desktop\\skole\\1. eksamen\\3. semester\\scrum-eksamen\\basicchattest - with login\\tcpserver\\tcpserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A2DEC0B-166F-407F-9081-030A77CC94FB}|TCPServer\\TCPServer.csproj|solutionrelative:tcpserver\\tcpserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A2DEC0B-166F-407F-9081-030A77CC94FB}|TCPServer\\TCPServer.csproj|c:\\users\\david\\onedrive\\desktop\\skole\\1. eksamen\\3. semester\\scrum-eksamen\\basicchattest - with login\\tcpserver\\messagemodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A2DEC0B-166F-407F-9081-030A77CC94FB}|TCPServer\\TCPServer.csproj|solutionrelative:tcpserver\\messagemodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MessageModels.cs",
+              "DocumentMoniker": "C:\\Users\\david\\OneDrive\\Desktop\\Skole\\1. Eksamen\\3. Semester\\SCRUM-Eksamen\\BasicChatTest - With Login\\TCPServer\\MessageModels.cs",
+              "RelativeDocumentMoniker": "TCPServer\\MessageModels.cs",
+              "ToolTip": "C:\\Users\\david\\OneDrive\\Desktop\\Skole\\1. Eksamen\\3. Semester\\SCRUM-Eksamen\\BasicChatTest - With Login\\TCPServer\\MessageModels.cs",
+              "RelativeToolTip": "TCPServer\\MessageModels.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T11:51:20.575Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TCPServer.cs",
+              "DocumentMoniker": "C:\\Users\\david\\OneDrive\\Desktop\\Skole\\1. Eksamen\\3. Semester\\SCRUM-Eksamen\\BasicChatTest - With Login\\TCPServer\\TCPServer.cs",
+              "RelativeDocumentMoniker": "TCPServer\\TCPServer.cs",
+              "ToolTip": "C:\\Users\\david\\OneDrive\\Desktop\\Skole\\1. Eksamen\\3. Semester\\SCRUM-Eksamen\\BasicChatTest - With Login\\TCPServer\\TCPServer.cs",
+              "RelativeToolTip": "TCPServer\\TCPServer.cs",
+              "ViewState": "AgIAALUAAAAAAAAAAAAkwL8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T10:29:41.29Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TCPClient.cs",
+              "DocumentMoniker": "C:\\Users\\david\\OneDrive\\Desktop\\Skole\\1. Eksamen\\3. Semester\\SCRUM-Eksamen\\BasicChatTest - With Login\\TCPClient\\TCPClient.cs",
+              "RelativeDocumentMoniker": "TCPClient\\TCPClient.cs",
+              "ToolTip": "C:\\Users\\david\\OneDrive\\Desktop\\Skole\\1. Eksamen\\3. Semester\\SCRUM-Eksamen\\BasicChatTest - With Login\\TCPClient\\TCPClient.cs",
+              "RelativeToolTip": "TCPClient\\TCPClient.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T10:30:34.237Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
