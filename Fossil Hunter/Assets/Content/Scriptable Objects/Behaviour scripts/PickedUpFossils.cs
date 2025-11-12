@@ -7,7 +7,7 @@ public class PickedUpFossils : ScriptableObject
 {
     [SerializeField]
     [Tooltip("Fossils that have been picked up are stored here")]
-    private List<FossilData> fossilsPickedUp = new List<FossilData>();
+    private List<FossileInfo_SO> fossilsPickedUp = new List<FossileInfo_SO>();
     private static PickedUpFossils instance;
 
     //make this a singleton
@@ -34,7 +34,7 @@ public class PickedUpFossils : ScriptableObject
     /// Add a single fossilData to the list of fossils in inventory (can have duplicates)
     /// </summary>
     /// <param name="fossil">The fossilData to add</param>
-    public void AddFossil(FossilData fossil)
+    public void AddFossil(FossileInfo_SO fossil)
     {
         fossilsPickedUp.Add(fossil);
     }
@@ -42,7 +42,7 @@ public class PickedUpFossils : ScriptableObject
     /// Get a list of all fossils in inventory
     /// </summary>
     /// <returns>Generic List of all given fossilData</returns>
-    public List<FossilData> GetFossils()
+    public List<FossileInfo_SO> GetFossils()
     {
         return fossilsPickedUp;
     }
@@ -50,7 +50,7 @@ public class PickedUpFossils : ScriptableObject
     /// Removes singular fossilData from the inventory
     /// </summary>
     /// <param name="fossil">The fossilData to remove</param>
-    public void RemoveFossil(FossilData fossil)
+    public void RemoveFossil(FossileInfo_SO fossil)
     {
         if(fossilsPickedUp.Contains(fossil)) fossilsPickedUp.Remove(fossil);
     }

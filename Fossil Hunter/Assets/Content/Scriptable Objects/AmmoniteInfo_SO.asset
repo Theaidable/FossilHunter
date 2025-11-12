@@ -9,9 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7612eed394d84e34db15bbb2cb2b5b4e, type: 3}
-  m_Name: AmmoniteData
+  m_Script: {fileID: 11500000, guid: 8585d3a4c28b76640a9fedd802c8a8b4, type: 3}
+  m_Name: AmmoniteInfo_SO
   m_EditorClassIdentifier: 
-  sprite: {fileID: -6249800146077113139, guid: fc9a7b5c413264d4e90ee96ee2c1c698, type: 3}
-  fossilName: Ammonit
-  foundOnLayer: 1
+  infoText: 
+  Age: 0
+  FossilType: 0
+  Kvalitet: 0

@@ -3,9 +3,9 @@ using UnityEngine;
 public class PickupableFossil : MonoBehaviour
 {
     [SerializeField]
-    private FossilData data;
+    private FossileInfo_SO data;
 
-    public FossilData Data {  get { return data; } }
+    public FossileInfo_SO Data {  get { return data; } }
 
     /// <summary>
     /// When the fossil is clicked on, send the data to the PickedUpFossils Scriptable Object & delete this gameobject
@@ -14,9 +14,9 @@ public class PickupableFossil : MonoBehaviour
     {
         PickedUpFossils.Instance.AddFossil(data);
         string fossils = "";
-        foreach (FossilData fossil in PickedUpFossils.Instance.GetFossils())
+        foreach (FossileInfo_SO fossil in PickedUpFossils.Instance.GetFossils())
         {
-            fossils += fossil.FossilName+", ";
+            fossils += fossil.FossilType+", ";
         }
         Debug.Log($"All fossils: {fossils}");
         Destroy(gameObject);

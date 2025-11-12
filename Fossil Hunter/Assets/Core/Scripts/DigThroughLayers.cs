@@ -63,7 +63,7 @@ public class DigThroughLayers : MonoBehaviour
                     //if we're clicking on a fossil, don't make a hole, instead pick up the fossil
                     else if(hitCollider.collider.gameObject.GetComponent<PickupableFossil>() != null)
                     {
-                        Debug.Log($"Picked up a {hitCollider.collider.gameObject.GetComponent<PickupableFossil>().Data.FossilName}");
+                        Debug.Log($"Picked up a {hitCollider.collider.gameObject.GetComponent<PickupableFossil>().Data.FossilType}");
                         hitCollider.collider.gameObject.GetComponent<PickupableFossil>().PickUp();
                     }
                         break;

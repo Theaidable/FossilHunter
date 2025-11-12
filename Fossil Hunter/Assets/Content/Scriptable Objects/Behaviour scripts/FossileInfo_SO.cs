@@ -4,7 +4,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "FossileInfo_SO", menuName = "Scriptable Objects/FossileInfo_SO")]
 public class FossileInfo_SO : ScriptableObject
 {
-    [SerializeField][Tooltip("The fact text about the fossil.\nLeave empty for the fossil's deafutl tekst.")] private string infoText;
+    [SerializeField][Tooltip("The fact text about the fossil.\nLeave empty for the fossil's deafult tekst.")] private string infoText;
 
     [SerializeField][Tooltip("The age of the fossil in mio. years.")] public int Age;
     [SerializeField][Tooltip("The type of fossil.")] public FossilType FossilType;
@@ -19,7 +19,7 @@ public class FossileInfo_SO : ScriptableObject
                 // returns a string based on the type of fossil
                 switch (FossilType)
                 {
-                    case FossilType.Amonite:
+                    case FossilType.Ammonit:
                         return "amoniter er seje";
                     case FossilType.Søpindsvin:
                         return "der her er et søpindsvin";
