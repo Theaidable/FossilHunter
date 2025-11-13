@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3440499216037246071}
   - component: {fileID: 2780748492966977695}
   m_Layer: 7
-  m_Name: Fossil
+  m_Name: PickUppableFossil_Prefab
   m_TagString: Fossil
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

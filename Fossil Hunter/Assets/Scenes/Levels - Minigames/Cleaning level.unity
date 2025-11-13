@@ -299,6 +299,10 @@ PrefabInstance:
       propertyPath: eraserSize
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 4717935157375701707, guid: b066d5cb2b9828245a5d87d74ea6478d, type: 3}
+      propertyPath: cleanPercentage
+      value: 90
+      objectReference: {fileID: 0}
     - target: {fileID: 5549914305276230249, guid: b066d5cb2b9828245a5d87d74ea6478d, type: 3}
       propertyPath: m_Size.x
       value: 9.023345
