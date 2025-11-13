@@ -33,7 +33,7 @@ public class EraseDirt : MonoBehaviour
         //render sprite to test that it matches current settings
         spriteRend.sprite = Sprite.Create(m_Texture, originalSpriteRect, new Vector2(0.5f, 0.5f));
 
-        //determine how much colour is on the object from the start
+        //determine the total opacity of the dirt
         foreach (Color c in m_Colors)
         {
             totalColourSaturation += c.a;
@@ -104,6 +104,7 @@ public class EraseDirt : MonoBehaviour
     }
     void CheckIfClean()
     {
+        //compare current opacity to starting opacity & check if it meets the clean percentage
         float currentColourSaturation = 0;
         foreach (var color in m_Colors)
         {
