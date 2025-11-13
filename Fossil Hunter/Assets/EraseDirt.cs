@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EraseDirt : MonoBehaviour
@@ -12,6 +13,10 @@ public class EraseDirt : MonoBehaviour
     private Vector2Int lastPos;
     private bool Drawing = false;
     private Rect originalSpriteRect;
+    private float totalColourSaturation;
+    [SerializeField]
+    [Range(0f, 100f)]
+    private float cleanPercentage = 90;
     void Start()
     {
         spriteRend = gameObject.GetComponent<SpriteRenderer>();
@@ -27,6 +32,12 @@ public class EraseDirt : MonoBehaviour
         m_Texture.Apply();
         //render sprite to test that it matches current settings
         spriteRend.sprite = Sprite.Create(m_Texture, originalSpriteRect, new Vector2(0.5f, 0.5f));
+
+        //determine how much colour is on the object from the start
+        foreach (Color c in m_Colors)
+        {
+            totalColourSaturation += c.a;
+        }
     }
 
     void Update()
@@ -89,5 +100,18 @@ public class EraseDirt : MonoBehaviour
         m_Texture.SetPixels(m_Colors);
         m_Texture.Apply();
         spriteRend.sprite = Sprite.Create(m_Texture, originalSpriteRect, new Vector2(0.5f, 0.5f));
+        CheckIfClean();
+    }
+    void CheckIfClean()
+    {
+        float currentColourSaturation = 0;
+        foreach (var color in m_Colors)
+        {
+            currentColourSaturation += color.a;
+        }
+        if (currentColourSaturation <= totalColourSaturation - (totalColourSaturation / 100 * cleanPercentage))
+        {
+            Debug.Log("clean!");
+        }
     }
 }
