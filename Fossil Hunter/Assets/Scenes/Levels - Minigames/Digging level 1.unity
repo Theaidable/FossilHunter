@@ -195,11 +195,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64947f5543b74db44a0796b717160998, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  layerMask:
-    m_Bits: 0
   layerMasks:
   - Default
-  mainCamera: {fileID: 0}
   holeSize: 2
   holeSprite: {fileID: 8177471321811730583, guid: 87aaca0a643d54397ba969dab4fc8875, type: 3}
 --- !u!4 &313772129
@@ -277,7 +274,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 596635699
-  m_SortingLayer: 0
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -5704692716807404661, guid: 514b0c0076211bd46951fdd34d26c069, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -287,7 +284,7 @@ SpriteRenderer:
   m_Size: {x: 54.743214, y: 22.480001}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 2
   m_SpriteSortPoint: 0
 --- !u!4 &793027951
@@ -411,7 +408,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1493932027
-  m_SortingLayer: 0
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 2589881839042300461, guid: 0ada0e401a68d9747995fedaf987f1e1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -421,7 +418,7 @@ SpriteRenderer:
   m_Size: {x: 19.2, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 2
   m_SpriteSortPoint: 0
 --- !u!4 &1255238805
@@ -550,9 +547,9 @@ SpriteMask:
   m_Sprite: {fileID: 8177471321811730583, guid: 87aaca0a643d54397ba969dab4fc8875, type: 3}
   m_MaskAlphaCutoff: 0.2
   m_FrontSortingLayerID: 596635699
-  m_BackSortingLayerID: 0
-  m_FrontSortingLayer: 0
-  m_BackSortingLayer: 0
+  m_BackSortingLayerID: -1493932027
+  m_FrontSortingLayer: 2
+  m_BackSortingLayer: 1
   m_FrontSortingOrder: 0
   m_BackSortingOrder: 0
   m_IsCustomRangeActive: 1
@@ -675,7 +672,7 @@ SpriteMask:
   m_MaskAlphaCutoff: 0.2
   m_FrontSortingLayerID: -1493932027
   m_BackSortingLayerID: 0
-  m_FrontSortingLayer: 0
+  m_FrontSortingLayer: 1
   m_BackSortingLayer: 0
   m_FrontSortingOrder: 0
   m_BackSortingOrder: 0
