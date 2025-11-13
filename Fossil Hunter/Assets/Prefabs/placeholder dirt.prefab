@@ -101,8 +101,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a548b1cf954895428f19750eb24269b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Texture: {fileID: 0}
-  eraserSize: 5
+  eraserSize: 10
+  cleanPercentage: 95
 --- !u!61 &5549914305276230249
 BoxCollider2D:
   m_ObjectHideFlags: 0
