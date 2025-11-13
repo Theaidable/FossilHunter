@@ -112,7 +112,11 @@ public class EraseDirt : MonoBehaviour
         }
         if (currentColourSaturation <= totalColourSaturation - (totalColourSaturation / 100 * cleanPercentage))
         {
+            //play feedback & remove dirt object
             Debug.Log("clean!");
+            if(!transform.parent.gameObject.GetComponent<AudioSource>().isPlaying)
+            transform.parent.gameObject.GetComponent<AudioSource>().Play();
+            GameObject.Destroy(gameObject);
         }
     }
 }
