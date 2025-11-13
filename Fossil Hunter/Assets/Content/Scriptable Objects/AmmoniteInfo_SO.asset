@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8585d3a4c28b76640a9fedd802c8a8b4, type: 3}
   m_Name: AmmoniteInfo_SO
   m_EditorClassIdentifier: 
-  infoText: 
-  Age: 0
-  FossilType: 0
-  Kvalitet: 0
+  infoText: tekst her
+  Age: 20
+  FossilType: 1
+  Kvalitet: 2

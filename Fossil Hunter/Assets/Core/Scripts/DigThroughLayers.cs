@@ -66,7 +66,8 @@ public class DigThroughLayers : MonoBehaviour
                         Debug.Log($"Picked up a {hitCollider.collider.gameObject.GetComponent<PickupableFossil>().Data.FossilType}");
                         hitCollider.collider.gameObject.GetComponent<PickupableFossil>().PickUp();
                     }
-                        break;
+                    passThrough = false;
+                    break;
                 }
             }
             if (hits.Length < 1)
