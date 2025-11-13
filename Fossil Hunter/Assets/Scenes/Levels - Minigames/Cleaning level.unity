@@ -132,6 +132,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4717935157375701707, guid: b066d5cb2b9828245a5d87d74ea6478d, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4717935157375701707, guid: b066d5cb2b9828245a5d87d74ea6478d, type: 3}
       propertyPath: eraserSize
       value: 5
       objectReference: {fileID: 0}

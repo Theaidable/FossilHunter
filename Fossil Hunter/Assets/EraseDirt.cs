@@ -32,7 +32,7 @@ public class EraseDirt : MonoBehaviour
         if (Input.GetMouseButton(0))
         {
             hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
-            if (hit.collider != null)
+            if (hit.collider == GetComponent<Collider2D>())
             {
                 UpdateTexture();
                 Drawing = true;
@@ -47,8 +47,8 @@ public class EraseDirt : MonoBehaviour
         int w = m_Texture.width;
         int h = m_Texture.height;
         var mousePos = hit.point - (Vector2)hit.collider.bounds.min;
-        mousePos.x *= w / hit.collider.bounds.size.x;
-        mousePos.y *= h / hit.collider.bounds.size.y;
+        mousePos.x *= w / (hit.collider.bounds.size.x * 2.56f);
+        mousePos.y *= h / (hit.collider.bounds.size.y * 2.56f);
         Vector2Int p = new Vector2Int((int)mousePos.x, (int)mousePos.y);
         Vector2Int start = new Vector2Int();
         Vector2Int end = new Vector2Int();
