@@ -16,7 +16,7 @@ public class EraseDirt : MonoBehaviour
     {
         spriteRend = gameObject.GetComponent<SpriteRenderer>();
         //set the rect of the sprite a bit differently, so it stays proportional
-        originalSpriteRect = new Rect(spriteRend.sprite.rect.x, spriteRend.sprite.rect.y, spriteRend.sprite.rect.width / 2.56f, spriteRend.sprite.rect.height / 2.56f);
+        originalSpriteRect = new Rect(spriteRend.sprite.rect.x, spriteRend.sprite.rect.y, spriteRend.sprite.rect.width, spriteRend.sprite.rect.height);
         var tex = spriteRend.sprite.texture;
         //ready the texture that will be turning into a new sprite
         m_Texture = new Texture2D(tex.width, tex.height, TextureFormat.ARGB32, false);
@@ -51,8 +51,8 @@ public class EraseDirt : MonoBehaviour
         int w = m_Texture.width;
         int h = m_Texture.height;
         var mousePos = hit.point - (Vector2)hit.collider.bounds.min;
-        mousePos.x *= w / (hit.collider.bounds.size.x * 2.56f);
-        mousePos.y *= h / (hit.collider.bounds.size.y * 2.56f);
+        mousePos.x *= w / (hit.collider.bounds.size.x);
+        mousePos.y *= h / (hit.collider.bounds.size.y);
 
         //log current mouse movement
         Vector2Int p = new Vector2Int((int)mousePos.x, (int)mousePos.y);
