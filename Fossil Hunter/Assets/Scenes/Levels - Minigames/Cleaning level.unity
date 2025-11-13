@@ -129,8 +129,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6268731632725469156, guid: b066d5cb2b9828245a5d87d74ea6478d, type: 3}
   m_PrefabInstance: {fileID: 1395436292}
   m_PrefabAsset: {fileID: 0}
---- !u!61 &477601142
-BoxCollider2D:
+--- !u!70 &477601142
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -163,18 +163,9 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 8.87, y: 7.68}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 8.87, y: 7.68}
-  m_EdgeRadius: 0
+  m_Offset: {x: 0.15289451, y: 0.015571339}
+  m_Size: {x: 9.389006, y: 7.9127526}
+  m_Direction: 1
 --- !u!1 &1344209004
 GameObject:
   m_ObjectHideFlags: 0
