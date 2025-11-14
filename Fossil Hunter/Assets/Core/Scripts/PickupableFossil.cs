@@ -5,7 +5,7 @@ public class PickupableFossil : MonoBehaviour
     [SerializeField]
     private FossileInfo_SO data;
 
-    public FossileInfo_SO Data {  get { return data; } }
+    public FossileInfo_SO Data { get => data; }
 
     /// <summary>
     /// When the fossil is clicked on, send the data to the PickedUpFossils Scriptable Object & delete this gameobject

@@ -8,7 +8,8 @@ public class FossileInfo_SO : ScriptableObject
 
     [SerializeField][Tooltip("The age of the fossil in mio. years.")] public int Age;
     [SerializeField][Tooltip("The type of fossil.")] public FossilType FossilType;
-    [SerializeField][Tooltip("The quality of the fossil.")] public Kvalitet Kvalitet;    
+    [SerializeField][Tooltip("The quality of the fossil.")] public Kvalitet Kvalitet;
+    
     public string InfoText
     {
         get
@@ -28,19 +29,35 @@ public class FossileInfo_SO : ScriptableObject
                     case FossilType.HajTand:
                         return "tooth of shork";
                     default:
-                        return "couldn't find a type, if you see this; somebody fucked up.";
+                        return "?";
                 }
-                
+
             }
             else
             {
                 return infoText;
             }
         }
+        //set
+        //{
+        //    infoText = value;
+        //}
+    }
 
-        set
-        {
-            infoText = value;
-        }
+    public string GetInfoText()
+    {
+        // makes the values "?" if not unlock/ shouldn't be accessed.
+        string fossilType = (int)FossilType == 0 ? "???\t" : $"{FossilType}";
+        string kvalitet = (int)Kvalitet == 0 ? "???\t\t" : $"{Kvalitet}";
+        string age = (Age == 0 ? "???\t" : $"{Age} mio. år");
+
+        // formats the text
+        string finalText = "";
+        finalText += $"{fossilType}\t\t";
+        finalText += $"Kvalitet: {kvalitet}\n\n";
+        finalText += $"Alder: {age}\n";
+        finalText += $"{InfoText}";
+
+        return finalText;
     }
 }
