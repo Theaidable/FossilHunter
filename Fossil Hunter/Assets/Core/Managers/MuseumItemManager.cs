@@ -17,6 +17,7 @@ public static class MuseumItemManager
         if (!museumLoaded)
         {
             museumFossilSpots.AddRange(GameObject.FindGameObjectsWithTag("MuseumItem"));
+            entries = 0;
             museumLoaded = true;
         }
 
@@ -33,6 +34,7 @@ public static class MuseumItemManager
         {
             UnlockFossil(entry);
         }
+        PickedUpFossils.Instance.ClearFossils();
     }
 
     /// <summary>
