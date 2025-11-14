@@ -52,11 +52,11 @@ public class MuseumUnlockable : MonoBehaviour
     /// </summary>
     /// <param name="sprite">The Fossils <see cref="Sprite"/>.</param>
     /// <param name="fossileInfo">The Fossils <see cref="FossileInfo_SO"/>.</param>
-    public void Unlock(Sprite sprite, FossileInfo_SO fossileInfo)
+    public void Unlock(FossileInfo_SO fossileInfo)
     {
         // gives object fossil data and its toggles unlocked state
         this.fossileInfo = fossileInfo;
-        gameObject.GetComponent<SpriteRenderer>().sprite = sprite;
+        //gameObject.GetComponent<SpriteRenderer>().sprite = sprite;
         IsUnlocked = !IsUnlocked;
     }
 }
