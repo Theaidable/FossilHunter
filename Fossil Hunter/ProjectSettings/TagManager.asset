@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Bottom Layer
   - Fossil
+  - MuseumItem
   layers:
   - Default
   - TransparentFX
