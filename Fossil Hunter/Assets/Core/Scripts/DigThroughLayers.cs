@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DigThroughLayers : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class DigThroughLayers : MonoBehaviour
         layerMask = ~LayerMask.GetMask(layerMasks);
         mainCamera = Camera.main;
     }
+
 
     void Update()
     {
