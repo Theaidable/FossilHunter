@@ -3,16 +3,13 @@ using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.LowLevel;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// TempSceneManager er et testing script, den er der primært så at man kan skifte scener selv hvis knapperne ikke fungere. Fjernes nok eventually
+/// </summary>
 public class TempSceneManager : MonoBehaviour
 {
 
     // Update is called once per frame
-
-    void Start()
-    {
-       
-    }
-
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.K) == true)

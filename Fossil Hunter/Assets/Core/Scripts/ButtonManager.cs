@@ -3,6 +3,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
+/// <summary>
+/// Tænkt til at styre alle knapperne, dette bliver en form for UI styrning
+/// </summary>
 public class ButtonManager : MonoBehaviour
 {
     private Button leftBtn;
@@ -26,11 +29,12 @@ public class ButtonManager : MonoBehaviour
         rightBtn.clicked -= OnRightPressed;
     }
 
+    //Skifter scene til digging level, skal nok optimeres senere
     private void OnLeftPressed()
     {
         SceneManager.LoadSceneAsync("Scenes/Levels - Minigames/Digging level 1");
     }
-
+    //Skal senere kunne skifte til en anden scene, fikser senere
     private void OnRightPressed()
     {
         Debug.Log("Right Pressed");
