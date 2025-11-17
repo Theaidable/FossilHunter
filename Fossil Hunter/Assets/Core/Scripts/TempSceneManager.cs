@@ -8,22 +8,50 @@ using UnityEngine.SceneManagement;
 /// </summary>
 public class TempSceneManager : MonoBehaviour
 {
+    int currentScene = 1;
+
+    private void Start()
+    {
+        SceneManager.LoadSceneAsync(1, LoadSceneMode.Additive);
+    }
 
     // Update is called once per frame
     void Update()
     {
+
         if (Input.GetKeyDown(KeyCode.K) == true)
         {
-            SceneManager.LoadSceneAsync("Scenes/SampleScene");
-            Debug.Log("Beep");
+            if (currentScene != 1)
+            {
+                SceneManager.UnloadSceneAsync(currentScene);
+                currentScene--;
+                SceneManager.LoadSceneAsync(currentScene, LoadSceneMode.Additive);
+                Debug.Log(currentScene);
+            }
+            else
+            {
+                SceneManager.UnloadSceneAsync(currentScene);
+                currentScene = 3;
+                SceneManager.LoadSceneAsync(currentScene, LoadSceneMode.Additive);
+                Debug.Log(currentScene);
+            }
         }
         if (Input.GetKeyDown(KeyCode.J) == true)
         {
-            SceneManager.LoadSceneAsync("Scenes/Levels - Minigames/Digging level 1");
-        }
-        if (Input.GetKeyDown(KeyCode.S) == true)
-        {
-            Debug.Log(SceneManager.sceneCount);
+            if (currentScene != 3)
+            {
+                SceneManager.UnloadSceneAsync(currentScene);
+                currentScene++;
+                SceneManager.LoadSceneAsync(currentScene, LoadSceneMode.Additive);
+                Debug.Log(currentScene);
+            }
+            else
+            {
+                SceneManager.UnloadSceneAsync(currentScene);
+                currentScene = 1;
+                SceneManager.LoadSceneAsync(currentScene, LoadSceneMode.Additive);
+                Debug.Log(currentScene);
+            }
         }
     }
 }
