@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class TempSceneManager : MonoBehaviour
 {
-
-    // Update is called once per frame
+    int currentScene = 3;
+    
 
     void Start()
     {
@@ -17,12 +17,22 @@ public class TempSceneManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.K) == true)
         {
-            SceneManager.LoadSceneAsync("Scenes/SampleScene");
-            Debug.Log("Beep");
+            if (currentScene != 0)
+            {
+                currentScene--;
+                SceneManager.LoadSceneAsync(currentScene);
+                Debug.Log(currentScene);
+            }
+            else
+            {
+                currentScene = 3;
+                SceneManager.LoadSceneAsync(currentScene);
+                Debug.Log(currentScene);
+            }
         }
         if (Input.GetKeyDown(KeyCode.J) == true)
         {
-            SceneManager.LoadSceneAsync("Scenes/Levels - Minigames/Digging level 1");
+            SceneManager.LoadSceneAsync(1);
         }
         if (Input.GetKeyDown(KeyCode.S) == true)
         {
