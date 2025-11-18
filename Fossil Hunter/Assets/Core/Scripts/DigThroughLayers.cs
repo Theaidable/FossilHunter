@@ -52,6 +52,7 @@ public class DigThroughLayers : MonoBehaviour
                         var v3 = Input.mousePosition;
                         v3 = mainCamera.ScreenToWorldPoint(v3);
                         GameObject hole = new GameObject();
+                        //base the position of the spritemask on the position of the mouse and the depth of the layer hit
                         hole.transform.position = new Vector3(v3.x, v3.y, hitCollider.collider.gameObject.transform.position.z - 0.1f);
                         hole.layer = hitCollider.collider.gameObject.layer;
                         SpriteMask sm = hole.AddComponent<SpriteMask>();
