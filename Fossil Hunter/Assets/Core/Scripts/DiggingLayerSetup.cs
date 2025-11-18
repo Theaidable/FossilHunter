@@ -5,6 +5,7 @@ using static UnityEngine.GraphicsBuffer;
 
 public class LayerSetup : MonoBehaviour
 {
+    //these will hopefully be shortened
     [SerializeField]
     [Range(1, 10)]
     private int totalLayers;
@@ -53,8 +54,10 @@ public class LayerSetup : MonoBehaviour
 
     void Awake()
     {
+        //put fields in some arrays so we can create a for loop
         Sprite[] layerSprites = { layer1Sprite, layer2Sprite, layer3Sprite, layer4Sprite, layer5Sprite, layer6Sprite, layer7Sprite, layer8Sprite, layer9Sprite, layer10Sprite };
         List<FossileInfo_SO>[] fossilsOnLayers = { fossilsOnLayer1, fossilsOnLayer2, fossilsOnLayer3, fossilsOnLayer4, fossilsOnLayer5, fossilsOnLayer6, fossilsOnLayer7, fossilsOnLayer8, fossilsOnLayer9, fossilsOnLayer10 };
+        //create as many new earth layers as specified from total layers & fields (no fossil spawning yet)
         for (int i = 0; i < totalLayers; i++)
         {
             GameObject newLayer = new GameObject();
