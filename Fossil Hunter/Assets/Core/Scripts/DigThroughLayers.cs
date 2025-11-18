@@ -38,7 +38,7 @@ public class DigThroughLayers : MonoBehaviour
                     passThrough = true;
                 }
                 //turn off the boolean so we check the next layer instead of passing through
-                else if (passThrough && hitCollider.collider.gameObject.tag != "Bottom Layer"&& hitCollider.collider.gameObject.tag !="Fossil")
+                else if (passThrough && hitCollider.collider.gameObject.tag != "Bottom Layer" && hitCollider.collider.gameObject.tag != "Fossil")
                 {
                     passThrough = false;
                 }
@@ -47,12 +47,12 @@ public class DigThroughLayers : MonoBehaviour
                     //if it's the last layer without a hole
                     Debug.Log("hit a dead end");
                     //if there are more layers underneath, make a hole (create a new spritemask) (not very efficient)
-                    if (hitCollider.collider.gameObject.tag != "Bottom Layer" && hitCollider.collider.gameObject.GetComponent<PickupableFossil>()==null)
+                    if (hitCollider.collider.gameObject.tag != "Bottom Layer" && hitCollider.collider.gameObject.GetComponent<PickupableFossil>() == null)
                     {
                         var v3 = Input.mousePosition;
                         v3 = mainCamera.ScreenToWorldPoint(v3);
                         GameObject hole = new GameObject();
-                        hole.transform.position = new Vector3(v3.x,v3.y,0);
+                        hole.transform.position = new Vector3(v3.x, v3.y, hitCollider.collider.gameObject.transform.position.z - 0.1f);
                         hole.layer = hitCollider.collider.gameObject.layer;
                         SpriteMask sm = hole.AddComponent<SpriteMask>();
                         sm.sprite = holeSprite;
@@ -63,7 +63,7 @@ public class DigThroughLayers : MonoBehaviour
                         hole.AddComponent<CircleCollider2D>();
                     }
                     //if we're clicking on a fossil, don't make a hole, instead pick up the fossil
-                    else if(hitCollider.collider.gameObject.GetComponent<PickupableFossil>() != null)
+                    else if (hitCollider.collider.gameObject.GetComponent<PickupableFossil>() != null)
                     {
                         Debug.Log($"Picked up a {hitCollider.collider.gameObject.GetComponent<PickupableFossil>().Data.FossilType}");
                         hitCollider.collider.gameObject.GetComponent<PickupableFossil>().PickUp();

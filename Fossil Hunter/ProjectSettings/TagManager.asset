@@ -16,7 +16,7 @@ TagManager:
   - UI
   - top layer
   - 2nd layer
-  - 
+  - 3rd layer
   - 
   - 
   - 
@@ -43,6 +43,9 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: 3rd layer
+    uniqueID: 1364986305
     locked: 0
   - name: 2nd layer
     uniqueID: 2801035269
