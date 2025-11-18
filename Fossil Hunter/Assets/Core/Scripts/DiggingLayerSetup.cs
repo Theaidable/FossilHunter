@@ -60,9 +60,9 @@ public class LayerSetup : MonoBehaviour
             GameObject newLayer = new GameObject();
             newLayer.name = $"Ground layer {(i + 1).ToString()}";
             SpriteRenderer sr = newLayer.AddComponent<SpriteRenderer>();
-            sr.sprite = layerSprites[i];;
-            sr.sortingLayerID = SortingLayer.NameToID(SortingLayer.layers[10-i].name);
+            sr.sortingLayerID = SortingLayer.layers[10-i].id;
             sr.maskInteraction = SpriteMaskInteraction.VisibleOutsideMask;
+            sr.sprite = layerSprites[i];
             newLayer.AddComponent<BoxCollider2D>();
             newLayer.transform.position = new Vector3(0, 0, i);
             if (i == (totalLayers - 1)) newLayer.tag = "Bottom Layer";
