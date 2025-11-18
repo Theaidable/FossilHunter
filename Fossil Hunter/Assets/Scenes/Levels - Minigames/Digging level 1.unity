@@ -129,6 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 313772129}
   - component: {fileID: 313772128}
+  - component: {fileID: 313772130}
   m_Layer: 0
   m_Name: Digger
   m_TagString: Untagged
@@ -166,6 +167,39 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &313772130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 313772127}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e365841db78fd847a66402a7f527853, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalLayers: 2
+  layer1Sprite: {fileID: -5704692716807404661, guid: 514b0c0076211bd46951fdd34d26c069, type: 3}
+  fossilsOnLayer1: []
+  layer2Sprite: {fileID: 2589881839042300461, guid: 0ada0e401a68d9747995fedaf987f1e1, type: 3}
+  fossilsOnLayer2: []
+  layer3Sprite: {fileID: 4244110540411089770, guid: ababbc00125174d498675cbb00628c23, type: 3}
+  fossilsOnLayer3: []
+  layer4Sprite: {fileID: 0}
+  fossilsOnLayer4: []
+  layer5Sprite: {fileID: 0}
+  fossilsOnLayer5: []
+  layer6Sprite: {fileID: 0}
+  fossilsOnLayer6: []
+  layer7Sprite: {fileID: 0}
+  fossilsOnLayer7: []
+  layer8Sprite: {fileID: 0}
+  fossilsOnLayer8: []
+  layer9Sprite: {fileID: 0}
+  fossilsOnLayer9: []
+  layer10Sprite: {fileID: 0}
+  fossilsOnLayer10: []
 --- !u!1 &615200346
 GameObject:
   m_ObjectHideFlags: 0
@@ -272,7 +306,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1364986305
-  m_SortingLayer: 1
+  m_SortingLayer: 8
   m_SortingOrder: 0
   m_Sprite: {fileID: 4244110540411089770, guid: ababbc00125174d498675cbb00628c23, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -311,7 +345,7 @@ GameObject:
   - component: {fileID: 793027951}
   - component: {fileID: 793027950}
   - component: {fileID: 793027952}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: temp top layer img_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -360,7 +394,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 596635699
-  m_SortingLayer: 3
+  m_SortingLayer: 10
   m_SortingOrder: 0
   m_Sprite: {fileID: -5704692716807404661, guid: 514b0c0076211bd46951fdd34d26c069, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -445,7 +479,7 @@ GameObject:
   - component: {fileID: 1255238805}
   - component: {fileID: 1255238804}
   - component: {fileID: 1255238806}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: temp 2nd layer img_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -494,7 +528,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1493932027
-  m_SortingLayer: 2
+  m_SortingLayer: 9
   m_SortingOrder: 0
   m_Sprite: {fileID: 2589881839042300461, guid: 0ada0e401a68d9747995fedaf987f1e1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -633,9 +667,9 @@ SpriteMask:
   m_Sprite: {fileID: 8177471321811730583, guid: 87aaca0a643d54397ba969dab4fc8875, type: 3}
   m_MaskAlphaCutoff: 0.2
   m_FrontSortingLayerID: 596635699
-  m_BackSortingLayerID: 596635699
-  m_FrontSortingLayer: 3
-  m_BackSortingLayer: 3
+  m_BackSortingLayerID: -1493932027
+  m_FrontSortingLayer: 10
+  m_BackSortingLayer: 9
   m_FrontSortingOrder: 0
   m_BackSortingOrder: 0
   m_IsCustomRangeActive: 1
@@ -758,7 +792,7 @@ SpriteMask:
   m_MaskAlphaCutoff: 0.2
   m_FrontSortingLayerID: -1493932027
   m_BackSortingLayerID: 0
-  m_FrontSortingLayer: 2
+  m_FrontSortingLayer: 9
   m_BackSortingLayer: 0
   m_FrontSortingOrder: 0
   m_BackSortingOrder: 0
@@ -867,6 +901,10 @@ PrefabInstance:
     - target: {fileID: 7226735751304753899, guid: 19cfb0b405d65c64ab1c8e38fd1f31fa, type: 3}
       propertyPath: m_Name
       value: Ammonite
+      objectReference: {fileID: 0}
+    - target: {fileID: 7226735751304753899, guid: 19cfb0b405d65c64ab1c8e38fd1f31fa, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

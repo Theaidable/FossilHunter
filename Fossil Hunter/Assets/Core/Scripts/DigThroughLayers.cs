@@ -58,8 +58,9 @@ public class DigThroughLayers : MonoBehaviour
                         SpriteMask sm = hole.AddComponent<SpriteMask>();
                         sm.sprite = holeSprite;
                         sm.isCustomRangeActive = true;
-                        sm.frontSortingLayerID = SortingLayer.NameToID(LayerMask.LayerToName(hitCollider.collider.gameObject.layer));
-                        sm.backSortingLayerID = SortingLayer.NameToID(LayerMask.LayerToName(hitCollider.collider.gameObject.layer + 1));
+                        sm.frontSortingLayerID = hitCollider.collider.gameObject.GetComponent<SpriteRenderer>().sortingLayerID;
+
+                        sm.backSortingLayerID = SortingLayer.layers[SortingLayer.GetLayerValueFromID(hitCollider.collider.gameObject.GetComponent<SpriteRenderer>().sortingLayerID) - 1].id;
                         hole.transform.localScale = new Vector2(holeSize, holeSize);
                         hole.AddComponent<CircleCollider2D>();
                     }
