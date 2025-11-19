@@ -131,6 +131,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MuseumItem (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2997799758343763005, guid: 15d2947a4115f2b47ba8264a9e15e7aa, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3765241752896765432, guid: 15d2947a4115f2b47ba8264a9e15e7aa, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.73
@@ -190,6 +194,7 @@ GameObject:
   m_Component:
   - component: {fileID: 376058572}
   - component: {fileID: 376058571}
+  - component: {fileID: 376058573}
   m_Layer: 0
   m_Name: BackgroundObject
   m_TagString: Untagged
@@ -267,6 +272,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &376058573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376058570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e9a7a140dd67ae4cabbe6ed3e37c523, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  museumItemPrefab: {fileID: 2997799758343763005, guid: 15d2947a4115f2b47ba8264a9e15e7aa, type: 3}
 --- !u!1001 &469215891
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -278,6 +296,10 @@ PrefabInstance:
     - target: {fileID: 2997799758343763005, guid: 15d2947a4115f2b47ba8264a9e15e7aa, type: 3}
       propertyPath: m_Name
       value: MuseumItem (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2997799758343763005, guid: 15d2947a4115f2b47ba8264a9e15e7aa, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3765241752896765432, guid: 15d2947a4115f2b47ba8264a9e15e7aa, type: 3}
       propertyPath: m_LocalPosition.x
@@ -336,6 +358,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MuseumItem (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 2997799758343763005, guid: 15d2947a4115f2b47ba8264a9e15e7aa, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3765241752896765432, guid: 15d2947a4115f2b47ba8264a9e15e7aa, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.6221986
@@ -392,6 +418,10 @@ PrefabInstance:
     - target: {fileID: 2997799758343763005, guid: 15d2947a4115f2b47ba8264a9e15e7aa, type: 3}
       propertyPath: m_Name
       value: MuseumItem (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2997799758343763005, guid: 15d2947a4115f2b47ba8264a9e15e7aa, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3765241752896765432, guid: 15d2947a4115f2b47ba8264a9e15e7aa, type: 3}
       propertyPath: m_LocalPosition.x
@@ -458,6 +488,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MuseumItem (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 2997799758343763005, guid: 15d2947a4115f2b47ba8264a9e15e7aa, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3765241752896765432, guid: 15d2947a4115f2b47ba8264a9e15e7aa, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.52
@@ -515,6 +549,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MuseumItem (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2997799758343763005, guid: 15d2947a4115f2b47ba8264a9e15e7aa, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3765241752896765432, guid: 15d2947a4115f2b47ba8264a9e15e7aa, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.82
@@ -557,12 +595,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5528622796680739575, guid: 15d2947a4115f2b47ba8264a9e15e7aa, type: 3}
       propertyPath: isUnlocked
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5528622796680739575, guid: 15d2947a4115f2b47ba8264a9e15e7aa, type: 3}
       propertyPath: fossileInfo
       value: 
-      objectReference: {fileID: 11400000, guid: d611d0088ec4ae04a85ac6635b4bc615, type: 2}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -579,6 +617,10 @@ PrefabInstance:
     - target: {fileID: 2997799758343763005, guid: 15d2947a4115f2b47ba8264a9e15e7aa, type: 3}
       propertyPath: m_Name
       value: MuseumItem (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2997799758343763005, guid: 15d2947a4115f2b47ba8264a9e15e7aa, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3765241752896765432, guid: 15d2947a4115f2b47ba8264a9e15e7aa, type: 3}
       propertyPath: m_LocalPosition.x
@@ -702,6 +744,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MuseumItem
       objectReference: {fileID: 0}
+    - target: {fileID: 2997799758343763005, guid: 15d2947a4115f2b47ba8264a9e15e7aa, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3765241752896765432, guid: 15d2947a4115f2b47ba8264a9e15e7aa, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7
@@ -744,12 +790,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5528622796680739575, guid: 15d2947a4115f2b47ba8264a9e15e7aa, type: 3}
       propertyPath: isUnlocked
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5528622796680739575, guid: 15d2947a4115f2b47ba8264a9e15e7aa, type: 3}
       propertyPath: fossileInfo
       value: 
-      objectReference: {fileID: 11400000, guid: dc87112b656769f4580fbdfb818cbe60, type: 2}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

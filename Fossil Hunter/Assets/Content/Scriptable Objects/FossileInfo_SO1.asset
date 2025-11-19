@@ -12,7 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8585d3a4c28b76640a9fedd802c8a8b4, type: 3}
   m_Name: FossileInfo_SO1
   m_EditorClassIdentifier: 
+  FossilSprites:
+  - {fileID: 0}
+  - {fileID: -6249800146077113139, guid: fc9a7b5c413264d4e90ee96ee2c1c698, type: 3}
+  - {fileID: -1053440399214087857, guid: b472503b2be3f7246b98434d8d083efa, type: 3}
+  - {fileID: -6220936499429582100, guid: df5ce3846da4e6c47b436f3dabac6509, type: 3}
+  - {fileID: -5133737679670703699, guid: 289694c806b633a4ebd904f22a1956db, type: 3}
   infoText: custom text look at me
+  sprite: {fileID: 0}
   Age: 203
   FossilType: 2
   Kvalitet: 1
