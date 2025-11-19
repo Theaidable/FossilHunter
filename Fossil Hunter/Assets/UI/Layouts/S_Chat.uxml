@@ -1,0 +1,7 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:ScrollView name="ScrollView" style="position: absolute; height: 344px; width: 837px; top: 723px; left: 17px; background-color: rgb(180, 180, 180);">
+        <ui:Label text="Chat:" name="ChatHeader" style="height: 49px; width: 129px; font-size: 36px; position: absolute; top: 5px; left: 10px;" />
+        <ui:Label text="&#10;" name="Chat" style="height: 100px; width: 800px; position: relative; top: 50px; left: 10px; font-size: 36px;" />
+        <ui:TextField placeholder-text="Write Message" style="position: absolute; top: 278px; left: 8px; width: 810px; font-size: 36px; height: 58px; align-items: stretch; justify-content: flex-start; align-self: stretch; flex-direction: row;" />
+    </ui:ScrollView>
+</ui:UXML>
