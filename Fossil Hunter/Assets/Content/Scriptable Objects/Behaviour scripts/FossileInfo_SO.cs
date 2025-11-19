@@ -1,15 +1,38 @@
+using UnityEditor;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using System.Collections.Generic;
 
 [CreateAssetMenu(fileName = "FossileInfo_SO", menuName = "Scriptable Objects/FossileInfo_SO")]
 public class FossileInfo_SO : ScriptableObject
 {
+    [SerializeField] private List<Sprite> FossilSprites = new List<Sprite>();
+
     [SerializeField][Tooltip("The fact text about the fossil.\nLeave empty for the fossil's deafult tekst.")] private string infoText;
+    [SerializeField][Tooltip("The fossils sprite.\nLeave empty for the fossil's deafult sprite.")] private Sprite sprite;
 
     [SerializeField][Tooltip("The age of the fossil in mio. years.")] public int Age;
     [SerializeField][Tooltip("The type of fossil.")] public FossilType FossilType;
     [SerializeField][Tooltip("The quality of the fossil.")] public Kvalitet Kvalitet;
-    
+
+    public Sprite GetSprite
+    {
+        get
+        {
+            // return custom value if one is set
+            if (sprite is null)
+            {
+                // returns a string based on the type of fossil
+                return FossilSprites[(int)FossilType];
+            }
+            else
+            {
+                return sprite;
+            }
+
+        }
+    }
+
     public string InfoText
     {
         get
@@ -38,10 +61,6 @@ public class FossileInfo_SO : ScriptableObject
                 return infoText;
             }
         }
-        //set
-        //{
-        //    infoText = value;
-        //}
     }
 
     public string GetInfoText()

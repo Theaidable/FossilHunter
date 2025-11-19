@@ -52,5 +52,8 @@ public class InfoPopUpManager : MonoBehaviour
 
         //formatere fossilets data og viser det.
         UIDocument.rootVisualElement.Q<Label>(name: "Lbl_InfoText").text = fossileInfo.GetInfoText();
+
+
+        //UIDocument.rootVisualElement.Q<VisualElement>(name: "VsE_Window").resolvedStyle.backgroundImage.sprite = fossileInfo.GetSprite;
     }
 }
