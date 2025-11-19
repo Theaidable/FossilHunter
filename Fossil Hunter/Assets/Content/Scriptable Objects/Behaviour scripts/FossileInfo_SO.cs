@@ -17,9 +17,10 @@ public class FossileInfo_SO : ScriptableObject
 
     private static FossileInfo_SO Instance;
 
-
+    // når værdierne fra inspectoren er givet
     private void OnValidate()
     {
+        // kun ét instance er blevet givet spritesne, hvis det er den her; bliver den det static 'Instance' som du andre referere til.
         if (FossilSprites.Count != 0)
         {
             Instance = this;
