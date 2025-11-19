@@ -45,6 +45,11 @@ public class EraseDirt : MonoBehaviour
         //only try to draw & update spriteif the mouse is clicking
         if (Input.GetMouseButton(0))
         {
+            if (!transform.parent.gameObject.GetComponent<AudioSource>().isPlaying)
+            {
+                transform.parent.gameObject.GetComponent<SFXManager>().DigSound();
+            }
+
             hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
             if (hit.collider == GetComponent<Collider2D>())
             {
@@ -114,7 +119,6 @@ public class EraseDirt : MonoBehaviour
         {
             //play feedback & remove dirt gameobject
             Debug.Log("clean!");
-            if(!transform.parent.gameObject.GetComponent<AudioSource>().isPlaying)
             transform.parent.gameObject.GetComponent<AudioSource>().Play();
             GameObject.Destroy(gameObject);
         }

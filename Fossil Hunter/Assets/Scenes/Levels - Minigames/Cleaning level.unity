@@ -177,6 +177,7 @@ GameObject:
   - component: {fileID: 1344209006}
   - component: {fileID: 1344209005}
   - component: {fileID: 1344209007}
+  - component: {fileID: 1344209008}
   m_Layer: 0
   m_Name: Ammonite_0
   m_TagString: Untagged
@@ -352,6 +353,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1344209008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1344209004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e1717657b33a1c409e018e08177903b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickUp: {fileID: 8300000, guid: bec1402017f8c9e42a23d4e203f41b2f, type: 3}
+  dig: {fileID: 8300000, guid: e8334b622fdb10f458734b3b1dde2c08, type: 3}
 --- !u!1001 &1395436292
 PrefabInstance:
   m_ObjectHideFlags: 0
