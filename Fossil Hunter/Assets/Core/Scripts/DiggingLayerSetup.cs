@@ -57,9 +57,9 @@ public class LayerSetup : MonoBehaviour
 
     void Awake()
     {
+        //get postion & size of the gameobject designating diggable area (said gameobject will be removed in first update)
         Vector2 digSpace = new Vector2(GameObject.Find("DiggingArea").GetComponent<BoxCollider2D>().size.x * GameObject.Find("DiggingArea").transform.localScale.x / 2, GameObject.Find("DiggingArea").GetComponent<BoxCollider2D>().size.y * GameObject.Find("DiggingArea").transform.localScale.y / 2);
         Vector2 digSpaceCenter = new Vector2(GameObject.Find("DiggingArea").transform.position.x, GameObject.Find("DiggingArea").transform.position.y);
-        GameObject.Find("DiggingArea").SetActive(false);
         newFossilPrefab = Resources.Load("Prefabs/PickUppableFossil_Prefab") as GameObject;
         //put fields in some arrays so we can create a for loop
         Sprite[] layerSprites = { layer1Sprite, layer2Sprite, layer3Sprite, layer4Sprite, layer5Sprite, layer6Sprite, layer7Sprite, layer8Sprite, layer9Sprite, layer10Sprite };
