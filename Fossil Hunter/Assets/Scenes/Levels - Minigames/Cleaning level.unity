@@ -468,6 +468,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: placeholder dirt
       objectReference: {fileID: 0}
+    - target: {fileID: 7283410047353668549, guid: b066d5cb2b9828245a5d87d74ea6478d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5549914305276230249, guid: b066d5cb2b9828245a5d87d74ea6478d, type: 3}
     m_RemovedGameObjects: []
@@ -477,8 +481,58 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 477601142}
   m_SourcePrefab: {fileID: 100100000, guid: b066d5cb2b9828245a5d87d74ea6478d, type: 3}
+--- !u!1 &1786404916
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1786404918}
+  - component: {fileID: 1786404917}
+  m_Layer: 0
+  m_Name: CleaningToolSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1786404917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1786404916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dec6cadc543238d489ed28d976b51d2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentTool: 0
+  brushSize: 10
+  worksOnLayers:
+    serializedVersion: 2
+    m_Bits: 1536
+--- !u!4 &1786404918
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1786404916}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.7574518, y: -0.0016712844, z: 0.4608657}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1344209006}
+  - {fileID: 1786404918}
