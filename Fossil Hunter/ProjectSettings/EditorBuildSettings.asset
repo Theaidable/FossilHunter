@@ -6,16 +6,16 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MainScene.unity
+    path: Assets/Scenes/Student/S_MainScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
-    path: Assets/Scenes/Levels - Minigames/Digging level 1.unity
+    path: Assets/Scenes/Student/Levels - Minigames/Digging level 1.unity
     guid: 21f1d0bd78a6ee74c912b6efbb6a5734
   - enabled: 1
-    path: Assets/Scenes/Levels - Minigames/Cleaning level.unity
+    path: Assets/Scenes/Student/Levels - Minigames/Cleaning level.unity
     guid: 69bc613dd4f964d459621d8ce8c99c77
   - enabled: 1
-    path: Assets/Scenes/InfoPopUpScene.unity
+    path: Assets/Scenes/Student/InfoPopUpScene.unity
     guid: 87fa939f2c7543a4689c9915cea2bade
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
