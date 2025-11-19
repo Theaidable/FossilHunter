@@ -11,34 +11,34 @@ public class LayerSetup : MonoBehaviour
     private int totalLayers;
     [Header("Layer 1")]
     [SerializeField] private Sprite layer1Sprite;
-    [SerializeField] private List<FossileInfo_SO> fossilsOnLayer1;
+    [SerializeField] private Dictionary<Vector2,FossileInfo_SO> fossilsOnLayer1;
     [Header("Layer 2")]
     [SerializeField] private Sprite layer2Sprite;
-    [SerializeField] private List<FossileInfo_SO> fossilsOnLayer2;
+    [SerializeField] private Dictionary<Vector2, FossileInfo_SO> fossilsOnLayer2;
     [Header("Layer 3")]
     [SerializeField] private Sprite layer3Sprite;
-    [SerializeField] private List<FossileInfo_SO> fossilsOnLayer3;
+    [SerializeField] private Dictionary<Vector2, FossileInfo_SO> fossilsOnLayer3;
     [Header("Layer 4")]
     [SerializeField] private Sprite layer4Sprite;
-    [SerializeField] private List<FossileInfo_SO> fossilsOnLayer4;
+    [SerializeField] private Dictionary<Vector2, FossileInfo_SO> fossilsOnLayer4;
     [Header("Layer 5")]
     [SerializeField] private Sprite layer5Sprite;
-    [SerializeField] private List<FossileInfo_SO> fossilsOnLayer5;
+    [SerializeField] private Dictionary<Vector2, FossileInfo_SO> fossilsOnLayer5;
     [Header("Layer 6")]
     [SerializeField] private Sprite layer6Sprite;
-    [SerializeField] private List<FossileInfo_SO> fossilsOnLayer6;
+    [SerializeField] private Dictionary<Vector2, FossileInfo_SO> fossilsOnLayer6;
     [Header("Layer 7")]
     [SerializeField] private Sprite layer7Sprite;
-    [SerializeField] private List<FossileInfo_SO> fossilsOnLayer7;
+    [SerializeField] private Dictionary<Vector2, FossileInfo_SO> fossilsOnLayer7;
     [Header("Layer 8")]
     [SerializeField] private Sprite layer8Sprite;
-    [SerializeField] private List<FossileInfo_SO> fossilsOnLayer8;
+    [SerializeField] private Dictionary<Vector2, FossileInfo_SO> fossilsOnLayer8;
     [Header("Layer 9")]
     [SerializeField] private Sprite layer9Sprite;
-    [SerializeField] private List<FossileInfo_SO> fossilsOnLayer9;
+    [SerializeField] private Dictionary<Vector2, FossileInfo_SO> fossilsOnLayer9;
     [Header("Layer 10")]
     [SerializeField] private Sprite layer10Sprite;
-    [SerializeField] private List<FossileInfo_SO> fossilsOnLayer10;
+    [SerializeField] private Dictionary<Vector2, FossileInfo_SO> fossilsOnLayer10;
 
     public int TotalLayers
     {
@@ -56,7 +56,7 @@ public class LayerSetup : MonoBehaviour
     {
         //put fields in some arrays so we can create a for loop
         Sprite[] layerSprites = { layer1Sprite, layer2Sprite, layer3Sprite, layer4Sprite, layer5Sprite, layer6Sprite, layer7Sprite, layer8Sprite, layer9Sprite, layer10Sprite };
-        List<FossileInfo_SO>[] fossilsOnLayers = { fossilsOnLayer1, fossilsOnLayer2, fossilsOnLayer3, fossilsOnLayer4, fossilsOnLayer5, fossilsOnLayer6, fossilsOnLayer7, fossilsOnLayer8, fossilsOnLayer9, fossilsOnLayer10 };
+        Dictionary<Vector2, FossileInfo_SO>[] fossilsOnLayers = { fossilsOnLayer1, fossilsOnLayer2, fossilsOnLayer3, fossilsOnLayer4, fossilsOnLayer5, fossilsOnLayer6, fossilsOnLayer7, fossilsOnLayer8, fossilsOnLayer9, fossilsOnLayer10 };
         //create as many new earth layers as specified from total layers & fields (no fossil spawning yet)
         for (int i = 0; i < totalLayers; i++)
         {
@@ -66,9 +66,20 @@ public class LayerSetup : MonoBehaviour
             sr.sortingLayerID = SortingLayer.layers[10-i].id;
             sr.maskInteraction = SpriteMaskInteraction.VisibleOutsideMask;
             sr.sprite = layerSprites[i];
+            if (layerSprites[i] == null) Debug.LogError($"ERROR: Layer {i} does not have a sprite!");
             newLayer.AddComponent<BoxCollider2D>();
             newLayer.transform.position = new Vector3(0, 0, i);
             if (i == (totalLayers - 1)) newLayer.tag = "Bottom Layer";
+
+            //for each fossil on specified layer
+            //create fossil prefab
+            //give fossil correct name
+            //generate random vector2 (within screen bounds)
+            //set prefab position to that, with a z of the layer -0.5
+            //set prefab sorting layer to that of layer
+            //set sorting order (+1 or -1?)
+            //give prefab the chosen fossil data
+            //give prefab correct sprite
         }
     }
 }
