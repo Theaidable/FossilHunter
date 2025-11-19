@@ -6,7 +6,7 @@ using System.Collections.Generic;
 [CreateAssetMenu(fileName = "FossileInfo_SO", menuName = "Scriptable Objects/FossileInfo_SO")]
 public class FossileInfo_SO : ScriptableObject
 {
-    [SerializeField] private List<Sprite> FossilSprites = new List<Sprite>();
+    [SerializeField][Tooltip("The is the sprites for every type. There should only one SO with a list of sprites.")] private List<Sprite> FossilSprites = new List<Sprite>();
 
     [SerializeField][Tooltip("The fact text about the fossil.\nLeave empty for the fossil's deafult tekst.")] private string infoText;
     [SerializeField][Tooltip("The fossils sprite.\nLeave empty for the fossil's deafult sprite.")] private Sprite sprite;
@@ -15,15 +15,26 @@ public class FossileInfo_SO : ScriptableObject
     [SerializeField][Tooltip("The type of fossil.")] public FossilType FossilType;
     [SerializeField][Tooltip("The quality of the fossil.")] public Kvalitet Kvalitet;
 
+    private static FossileInfo_SO Instance;
+
+
+    private void OnValidate()
+    {
+        if (FossilSprites.Count != 0)
+        {
+            Instance = this;
+        }        
+    }
+
     public Sprite GetSprite
     {
         get
         {
             // return custom value if one is set
-            if (sprite is null)
+            if (sprite == null)
             {
                 // returns a string based on the type of fossil
-                return FossilSprites[(int)FossilType];
+                return Instance.FossilSprites[(int)FossilType];
             }
             else
             {
