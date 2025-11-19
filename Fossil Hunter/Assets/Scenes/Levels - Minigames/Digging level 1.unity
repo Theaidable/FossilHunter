@@ -700,9 +700,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1688922590690258196, guid: c405d36be18518646a66085c25cbbb92, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1688922590690258196, guid: c405d36be18518646a66085c25cbbb92, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 2390689006979163563, guid: c405d36be18518646a66085c25cbbb92, type: 3}
       propertyPath: m_Name
       value: Digger
+      objectReference: {fileID: 0}
+    - target: {fileID: 2390689006979163563, guid: c405d36be18518646a66085c25cbbb92, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2390689006979163563, guid: c405d36be18518646a66085c25cbbb92, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4624799423402448341, guid: c405d36be18518646a66085c25cbbb92, type: 3}
       propertyPath: m_LocalPosition.x
@@ -743,6 +759,26 @@ PrefabInstance:
     - target: {fileID: 4624799423402448341, guid: c405d36be18518646a66085c25cbbb92, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6311231229349369741, guid: c405d36be18518646a66085c25cbbb92, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+    - target: {fileID: 6311231229349369741, guid: c405d36be18518646a66085c25cbbb92, type: 3}
+      propertyPath: m_RenderMode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6311231229349369741, guid: c405d36be18518646a66085c25cbbb92, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6311231229349369741, guid: c405d36be18518646a66085c25cbbb92, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6311231229349369741, guid: c405d36be18518646a66085c25cbbb92, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 596635699
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
