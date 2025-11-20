@@ -179,7 +179,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 1
   prewarm: 0
-  playOnAwake: 0
+  playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -4928,7 +4928,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 596635699
-  m_SortingLayer: 2
+  m_SortingLayer: 10
   m_SortingOrder: 3
   m_RenderMode: 4
   m_MeshDistribution: 0
