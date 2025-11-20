@@ -94,12 +94,18 @@ public class FossileInfo_SO : ScriptableObject
     }
 
 
-
-    public static FossileInfo_SO GetRandomizedData()
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="type"></param>
+    /// <returns></returns>
+    public static FossileInfo_SO GetRandomizedData(FossilType type = FossilType.None)
     {
         FossileInfo_SO DataSO = CreateInstance<FossileInfo_SO>();
         DataSO.Age = Random.Range(5, 500);
-        DataSO.FossilType = (FossilType)Random.Range(1, 5);
+
+        // if type isn't set, set a random one.
+        DataSO.FossilType = (type == FossilType.None) ? (FossilType)Random.Range(1, 5) : type;
         
         //giver fossilet en kvalitet
         float quality = Random.value;
