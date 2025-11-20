@@ -2,6 +2,7 @@ using UnityEditor;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 
 [CreateAssetMenu(fileName = "FossileInfo_SO", menuName = "Scriptable Objects/FossileInfo_SO")]
 public class FossileInfo_SO : ScriptableObject
@@ -91,4 +92,35 @@ public class FossileInfo_SO : ScriptableObject
 
         return finalText;
     }
+
+
+
+    public static FossileInfo_SO GetRandomizedData()
+    {
+        FossileInfo_SO DataSO = CreateInstance<FossileInfo_SO>();
+        DataSO.Age = Random.Range(5, 500);
+        DataSO.FossilType = (FossilType)Random.Range(1, 5);
+        
+        //giver fossilet en kvalitet
+        float quality = Random.value;
+        if (quality <= 0.5f) //50%
+        {
+            DataSO.Kvalitet = Kvalitet.Dårlig;
+        }
+        else if (quality <= 0.75f) //25%
+        {
+            DataSO.Kvalitet = Kvalitet.Middle;
+        }
+        else if (quality <= 0.9f) //15%
+        {
+            DataSO.Kvalitet = Kvalitet.God;
+        }
+        else //10%
+        {
+            DataSO.Kvalitet = Kvalitet.Perfekt;
+        }
+        
+        return DataSO;
+    }
+
 }
