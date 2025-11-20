@@ -16,7 +16,7 @@ public class FossileInfo_SO : ScriptableObject
     [SerializeField][Tooltip("The type of fossil.")] public FossilType FossilType;
     [SerializeField][Tooltip("The quality of the fossil.")] public Kvalitet Kvalitet;
 
-    public static FossileInfo_SO Instance;
+    private static FossileInfo_SO Instance;
 
     // når værdierne fra inspectoren er givet
     private void OnValidate()
@@ -28,7 +28,7 @@ public class FossileInfo_SO : ScriptableObject
         }        
     }
 
-    [SerializeField] public Sprite GetSprite
+    public Sprite GetSprite
     {
         get
         {
