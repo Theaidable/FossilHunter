@@ -74,7 +74,25 @@ public static class MuseumItemManager
         // hvis der stadig er plads i museet.
         if (museumFossilPlacements.Count >= museumFossildata.Count)
         {
-            museumFossildata.Add(museumFossildata.Count, fossileInfo);
+            //checks if there are any fossils of the same type.
+            int entryID = 0;
+            bool hasFossilOfSameType = museumFossildata.Any((entry) =>
+            {
+                entryID = entry.Key;
+                return entry.Value.FossilType == fossileInfo.FossilType;
+            });
+
+            if (hasFossilOfSameType)
+            {
+                if ((int)museumFossildata[entryID].Kvalitet < (int)fossileInfo.Kvalitet)
+                {
+                    museumFossildata[entryID] = fossileInfo;
+                }
+            }
+            else
+            {
+                museumFossildata.Add(museumFossildata.Count, fossileInfo);
+            }
         }
     }
 
