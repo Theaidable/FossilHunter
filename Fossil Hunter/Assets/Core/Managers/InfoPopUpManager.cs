@@ -1,10 +1,11 @@
+using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UIElements;
+using UnityEditor;
 
 public class InfoPopUpManager : MonoBehaviour
 {
     private static UIDocument UIDocument;
-    private static SpriteRenderer renderer;
     private static bool open;
     [Header("For testing")]
     [SerializeField][Tooltip("For testing purposes.")] private FossileInfo_SO FossileInfo;
@@ -15,7 +16,6 @@ public class InfoPopUpManager : MonoBehaviour
     void Start()
     {
         UIDocument = gameObject.GetComponent<UIDocument>();
-        renderer = gameObject.GetComponentInChildren<SpriteRenderer>();
 
         open = false;
         UIDocument.enabled = false;
@@ -35,7 +35,6 @@ public class InfoPopUpManager : MonoBehaviour
     {
         Debug.Log("closed UI");
         UIDocument.enabled = false;
-        renderer.enabled = false;
         open = false;
     }
 
@@ -48,7 +47,6 @@ public class InfoPopUpManager : MonoBehaviour
         Debug.Log("opened UI");
         
         UIDocument.enabled = true;
-        renderer.enabled = true;
         open = true;
 
         //opsætter et close-event når man trykker på den røde knap.
@@ -57,8 +55,8 @@ public class InfoPopUpManager : MonoBehaviour
         //formatere fossilets data og viser det.
         UIDocument.rootVisualElement.Q<Label>(name: "Lbl_InfoText").text = fossileInfo.GetInfoText();
 
-        //henter fossil sprite og asigner det til renderen.
-        renderer.sprite = fossileInfo.GetSprite;
-        
+        //henter fossil sprite og asigner det til UI spriten.
+        InfoBoxFossilPreview.ViewedSprite = fossileInfo.GetSprite;
+
     }
 }
