@@ -5,22 +5,23 @@ public class EraseDirt : MonoBehaviour
 {
     private Texture2D m_Texture;
     private Color[] m_Colors;
-    RaycastHit2D hit;
     SpriteRenderer spriteRend;
     Color zeroAlpha = Color.clear;
-    [SerializeField]
     private int eraserSize;
     private Vector2Int lastPos;
-    private bool Drawing = false;
+    private bool drawing = false;
     private Rect originalSpriteRect;
     private float totalColourSaturation;
     [SerializeField]
     [Range(0f, 100f)]
     private float cleanPercentage = 90;
-    void Start()
+
+    public int EraserSize {  get { return eraserSize; } set { eraserSize = value; } }
+    public bool Drawing {  get { return drawing; } set { drawing = value; } }
+    void Awake()
     {
         spriteRend = gameObject.GetComponent<SpriteRenderer>();
-        //set the rect of the sprite a bit differently, so it stays proportional
+        //set the rect of the sprite
         originalSpriteRect = new Rect(spriteRend.sprite.rect.x, spriteRend.sprite.rect.y, spriteRend.sprite.rect.width, spriteRend.sprite.rect.height);
         var tex = spriteRend.sprite.texture;
         //ready the texture that will be turning into a new sprite
@@ -42,21 +43,13 @@ public class EraseDirt : MonoBehaviour
 
     void Update()
     {
-        //only try to draw & update spriteif the mouse is clicking
-        if (Input.GetMouseButton(0))
+        if (!Input.GetMouseButton(0))
         {
-            hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
-            if (hit.collider == GetComponent<Collider2D>())
-            {
-                UpdateTexture();
-                Drawing = true;
-            }
+            drawing = false;
         }
-        else
-            Drawing = false;
     }
 
-    public void UpdateTexture()
+    public void UpdateTexture(RaycastHit2D hit)
     {
         //make sure we only interact within the collider bounds & at the correct mouse position
         int w = m_Texture.width;
@@ -69,7 +62,7 @@ public class EraseDirt : MonoBehaviour
         Vector2Int p = new Vector2Int((int)mousePos.x, (int)mousePos.y);
         Vector2Int start = new Vector2Int();
         Vector2Int end = new Vector2Int();
-        if (!Drawing)
+        if (!drawing)
             lastPos = p;
         start.x = Mathf.Clamp(Mathf.Min(p.x, lastPos.x) - eraserSize, 0, w);
         start.y = Mathf.Clamp(Mathf.Min(p.y, lastPos.y) - eraserSize, 0, h);
@@ -83,7 +76,7 @@ public class EraseDirt : MonoBehaviour
                 //erase pixels within eraser range of mouse movement
                 Vector2 pixel = new Vector2(x, y);
                 Vector2 linePos = p;
-                if (Drawing)
+                if (drawing)
                 {
                     float d = Vector2.Dot(pixel - lastPos, dir) / dir.sqrMagnitude;
                     d = Mathf.Clamp01(d);
