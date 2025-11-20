@@ -1,7 +1,7 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <ui:VisualElement style="flex-grow: 1;">
         <ui:Label text="IP Adress:" name="IpText" style="font-size: 96px; background-color: rgb(190, 190, 190); position: absolute; top: 101px; left: 112px; width: 1659px;" />
-        <ui:Label text="Number of Players:" name="PlayersText" style="font-size: 96px; background-color: rgb(190, 190, 190); position: absolute; top: 301px; left: 110px; width: 1659px;" />
+        <ui:Label text="Players:" name="PlayersText" style="font-size: 96px; background-color: rgb(190, 190, 190); position: absolute; top: 301px; left: 110px; width: 1659px;" />
         <ui:VisualElement name="Chat" style="flex-grow: 1; position: absolute; background-color: rgb(180, 180, 180); height: 498px; width: 1887px; top: 535px; left: 14px;">
             <ui:Label text="Chat:" name="Header" style="height: 68px; width: 137px; font-size: 48px; position: absolute; top: 5px; left: 10px;" />
             <ui:TextField placeholder-text="Write Message" name="InputField" style="position: absolute; top: 400px; left: 10px; width: 1475px; font-size: 48px; height: 70px; align-items: stretch; justify-content: flex-start; align-self: stretch; flex-direction: row;" />

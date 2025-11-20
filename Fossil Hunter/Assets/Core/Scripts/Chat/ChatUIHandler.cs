@@ -82,6 +82,7 @@ public class ChatUIHandler : MonoBehaviour, IChatUI
 
         //Send beskeden til server
         ChatNetwork.Instance.SendLocalMessage(text);
+        Debug.Log("Message has been send");
 
         //Clear ens besked (returnere inputfield til empty)
         _inputField.value = string.Empty;
