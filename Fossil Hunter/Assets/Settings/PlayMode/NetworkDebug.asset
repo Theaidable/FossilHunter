@@ -10,33 +10,40 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a689d91966dfb46499fb63f130d9b905, type: 3}
-  m_Name: Student
+  m_Name: NetworkDebug
   m_EditorClassIdentifier: 
-  m_Description: Debug af elevens build
+  m_Description: Debug af network med forskellige instances af editor, 2 clients
+    og 1 host/server
   m_EnableEditors: 1
   m_MainEditorInstance:
     Name: Main Editor
-    <CorrespondingNodeId>k__BackingField: 
-    m_Nodes: []
+    <CorrespondingNodeId>k__BackingField: Main Editor|0_run
+    m_Nodes:
+    - Main Editor|0_run
+    - Main Editor|0_deploy
     m_PlayerTag: 
-    m_InitialScene: {fileID: 102900000, guid: 64b0413aaca554b4a963c68179f7824f, type: 3}
+    m_InitialScene: {fileID: 102900000, guid: 91ddb4eb959c07b459d6b319878c9bd8, type: 3}
   m_EditorInstances:
   - Name: Player 2
-    <CorrespondingNodeId>k__BackingField: 
-    m_Nodes: []
+    <CorrespondingNodeId>k__BackingField: Player 2|1_run
+    m_Nodes:
+    - Player 2|1_run
+    - Player 2|1_deploy
     m_PlayerTag: 
     m_InitialScene: {fileID: 0}
     m_AdvancedConfiguration:
-      StreamLogsToMainEditor: 0
-      LogsColor: {r: 0.3643, g: 0.581, b: 0.8679, a: 1}
+      StreamLogsToMainEditor: 1
+      LogsColor: {r: 0, g: 1, b: 0.102636576, a: 1}
   - Name: Player 3
-    <CorrespondingNodeId>k__BackingField: 
-    m_Nodes: []
+    <CorrespondingNodeId>k__BackingField: Player 3|2_run
+    m_Nodes:
+    - Player 3|2_run
+    - Player 3|2_deploy
     m_PlayerTag: 
     m_InitialScene: {fileID: 0}
     m_AdvancedConfiguration:
-      StreamLogsToMainEditor: 0
-      LogsColor: {r: 0.3643, g: 0.581, b: 0.8679, a: 1}
+      StreamLogsToMainEditor: 1
+      LogsColor: {r: 1, g: 0, b: 0.04943371, a: 1}
   m_LocalInstances: []
   m_RemoteInstances: []
   m_OverridePort: 0
