@@ -16,7 +16,7 @@ public class FossileInfo_SO : ScriptableObject
     [SerializeField][Tooltip("The type of fossil.")] public FossilType FossilType;
     [SerializeField][Tooltip("The quality of the fossil.")] public Kvalitet Kvalitet;
 
-    private static FossileInfo_SO Instance;
+    public static FossileInfo_SO Instance;
 
     // når værdierne fra inspectoren er givet
     private void OnValidate()
@@ -28,7 +28,7 @@ public class FossileInfo_SO : ScriptableObject
         }        
     }
 
-    public Sprite GetSprite
+    [SerializeField] public Sprite GetSprite
     {
         get
         {
@@ -102,6 +102,7 @@ public class FossileInfo_SO : ScriptableObject
     public static FossileInfo_SO GetRandomizedData(FossilType type = FossilType.None)
     {
         FossileInfo_SO DataSO = CreateInstance<FossileInfo_SO>();
+        DataSO.infoText = "";
         DataSO.Age = Random.Range(5, 500);
 
         // if type isn't set, set a random one.

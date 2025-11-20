@@ -182,26 +182,25 @@ MonoBehaviour:
   newFossilPrefab: {fileID: 0}
   totalLayers: 3
   layer1Sprite: {fileID: -5704692716807404661, guid: 514b0c0076211bd46951fdd34d26c069, type: 3}
-  fossilsOnLayer1: []
+  fossilTypesOnLayer1: 
   layer2Sprite: {fileID: 2589881839042300461, guid: 0ada0e401a68d9747995fedaf987f1e1, type: 3}
-  fossilsOnLayer2:
-  - {fileID: 11400000, guid: d611d0088ec4ae04a85ac6635b4bc615, type: 2}
+  fossilTypesOnLayer2: 0100000003000000
   layer3Sprite: {fileID: 4244110540411089770, guid: ababbc00125174d498675cbb00628c23, type: 3}
-  fossilsOnLayer3: []
+  fossilTypesOnLayer3: 04000000
   layer4Sprite: {fileID: 0}
-  fossilsOnLayer4: []
+  fossilTypesOnLayer4: 
   layer5Sprite: {fileID: 0}
-  fossilsOnLayer5: []
+  fossilTypesOnLayer5: 
   layer6Sprite: {fileID: 0}
-  fossilsOnLayer6: []
+  fossilTypesOnLayer6: 
   layer7Sprite: {fileID: 0}
-  fossilsOnLayer7: []
+  fossilTypesOnLayer7: 
   layer8Sprite: {fileID: 0}
-  fossilsOnLayer8: []
+  fossilTypesOnLayer8: 
   layer9Sprite: {fileID: 0}
-  fossilsOnLayer9: []
+  fossilTypesOnLayer9: 
   layer10Sprite: {fileID: 0}
-  fossilsOnLayer10: []
+  fossilTypesOnLayer10: 
 --- !u!1 &615200346
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: df5ce3846da4e6c47b436f3dabac6509
+guid: 453bea7009a757948aa18beb678003e3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6220936499429582100
-    second: vettelys_0
+      213: -5229017718095481012
+    second: HajTand_Fossil_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: vettelys_0
+      name: HajTand_Fossil_0
       rect:
         serializedVersion: 2
-        x: 19
-        y: 14
-        width: 120
-        height: 99
+        x: 98
+        y: 60
+        width: 830
+        height: 905
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ceadc35b63bcaa9a0800000000000000
-      internalID: -6220936499429582100
+      spriteID: c47f1b4071cce67b0800000000000000
+      internalID: -5229017718095481012
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      vettelys_0: -6220936499429582100
+      HajTand_Fossil_0: -5229017718095481012
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
