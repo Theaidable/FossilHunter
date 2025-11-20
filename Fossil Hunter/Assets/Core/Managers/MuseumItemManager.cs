@@ -1,11 +1,16 @@
 using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
+using System.Linq;
+using Unity.VisualScripting;
 
 public static class MuseumItemManager
 {
-    [SerializeField] private static List<GameObject> museumFossilSpots = new List<GameObject>();
-    [SerializeField] private static int entries;
+    // fossil placement index, fossil data
+    private static Dictionary<int, FossileInfo_SO> museumFossildata = new Dictionary<int, FossileInfo_SO>();
+
+    // fossil placement value, fossil object
+    private static List<GameObject> museumFossilPlacements = new List<GameObject>();
     private static bool museumLoaded = false;
 
     /// <summary>
@@ -14,27 +19,49 @@ public static class MuseumItemManager
     /// </summary>
     public static void InitializeManager()
     {
+        // preps the fossil siloets
         if (!museumLoaded)
         {
-            museumFossilSpots.AddRange(GameObject.FindGameObjectsWithTag("MuseumItem"));
-            entries = 0;
             museumLoaded = true;
-        }
 
-        Debug.Log(museumFossilSpots.Count);
+            // sets up an event to update the museum when it's switched the that scene.
+            SceneManager.sceneLoaded += (scene, loadMode) =>
+            {
+                if (scene.name == "InfoPopUpScene")
+                {
+                    UpdateFossilObjects();
+                    UpdateMuseum();
+                    UpdateFossilData();
+                    Debug.Log("musuem updated");
+                }
+            };
+        }
     }
 
+
+
     /// <summary>
-    /// Updates the fossils stored in the museum.
+    /// Gathers and inserts the fossils to the museum.
     /// Is called after after the scene is loaded
     /// </summary>
     public static void UpdateMuseum()
     {
+
         foreach (FossileInfo_SO entry in PickedUpFossils.Instance.GetFossils())
         {
             UnlockFossil(entry);
         }
         PickedUpFossils.Instance.ClearFossils();
+    }
+
+    private static void UpdateFossilData()
+    {
+        // gives the data to the right objects
+        foreach (KeyValuePair<int, FossileInfo_SO> SO in museumFossildata)
+        {
+            museumFossilPlacements[SO.Key].GetComponent<MuseumUnlockable>().Unlock(SO.Value);
+
+        }
     }
 
     /// <summary>
@@ -44,10 +71,33 @@ public static class MuseumItemManager
     /// <param name="fossileInfo">The fossils <see cref="FossileInfo_SO"/>.</param>
     private static void UnlockFossil(FossileInfo_SO fossileInfo)
     {
-        if (museumFossilSpots.Count >= entries)
+        // hvis der stadig er plads i museet.
+        if (museumFossilPlacements.Count >= museumFossildata.Count)
         {
-            museumFossilSpots[entries].GetComponent<MuseumUnlockable>().Unlock(fossileInfo);
-            entries++;
+            museumFossildata.Add(museumFossildata.Count, fossileInfo);
         }
+    }
+
+    /// <summary>
+    /// Updates the fossil object. fx after scene change.
+    /// </summary>
+    private static void UpdateFossilObjects()
+    {
+        museumFossilPlacements.Clear();
+
+        // finds the objects in the scene
+        foreach (GameObject go in GameObject.FindGameObjectsWithTag("MuseumItem"))
+        {
+            museumFossilPlacements.Add(go);
+        }
+
+        // sorts them acording to position (origo first i think)
+        museumFossilPlacements.Sort((go1, go2) =>
+        {
+            Vector3 pos1 = go1.transform.position;
+            Vector3 pos2 = go2.transform.position;
+
+            return (int)(pos1.x + pos1.y * 10) - (int)(pos2.x + pos2.y * 10);
+        });
     }
 }

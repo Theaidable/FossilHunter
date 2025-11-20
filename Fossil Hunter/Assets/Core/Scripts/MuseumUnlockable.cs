@@ -57,7 +57,7 @@ public class MuseumUnlockable : MonoBehaviour
     {
         // gives object fossil data and its toggles unlocked state
         this.fossileInfo = fossileInfo;
-        //gameObject.GetComponent<SpriteRenderer>().sprite = sprite;
+        gameObject.GetComponent<SpriteRenderer>().sprite = fossileInfo.GetSprite;
         IsUnlocked = !IsUnlocked;
     }
 }

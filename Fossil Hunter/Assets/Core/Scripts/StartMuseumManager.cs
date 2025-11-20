@@ -8,10 +8,13 @@ public class StartMuseumManager : MonoBehaviour
         MuseumItemManager.InitializeManager();
     }
 
+
     // Update is called once per frame
     void Update()
     {
         
     }
+
+
 
 }

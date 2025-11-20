@@ -1,0 +1,14 @@
+C:\Users\david\OneDrive\Desktop\Skole\1. Eksamen\3. Semester\SCRUM-Eksamen\BasicChatTest\TCPServer\bin\Debug\net9.0\TCPServer.exe
+C:\Users\david\OneDrive\Desktop\Skole\1. Eksamen\3. Semester\SCRUM-Eksamen\BasicChatTest\TCPServer\bin\Debug\net9.0\TCPServer.deps.json
+C:\Users\david\OneDrive\Desktop\Skole\1. Eksamen\3. Semester\SCRUM-Eksamen\BasicChatTest\TCPServer\bin\Debug\net9.0\TCPServer.runtimeconfig.json
+C:\Users\david\OneDrive\Desktop\Skole\1. Eksamen\3. Semester\SCRUM-Eksamen\BasicChatTest\TCPServer\bin\Debug\net9.0\TCPServer.dll
+C:\Users\david\OneDrive\Desktop\Skole\1. Eksamen\3. Semester\SCRUM-Eksamen\BasicChatTest\TCPServer\bin\Debug\net9.0\TCPServer.pdb
+C:\Users\david\OneDrive\Desktop\Skole\1. Eksamen\3. Semester\SCRUM-Eksamen\BasicChatTest\TCPServer\obj\Debug\net9.0\TCPServer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\david\OneDrive\Desktop\Skole\1. Eksamen\3. Semester\SCRUM-Eksamen\BasicChatTest\TCPServer\obj\Debug\net9.0\TCPServer.AssemblyInfoInputs.cache
+C:\Users\david\OneDrive\Desktop\Skole\1. Eksamen\3. Semester\SCRUM-Eksamen\BasicChatTest\TCPServer\obj\Debug\net9.0\TCPServer.AssemblyInfo.cs
+C:\Users\david\OneDrive\Desktop\Skole\1. Eksamen\3. Semester\SCRUM-Eksamen\BasicChatTest\TCPServer\obj\Debug\net9.0\TCPServer.csproj.CoreCompileInputs.cache
+C:\Users\david\OneDrive\Desktop\Skole\1. Eksamen\3. Semester\SCRUM-Eksamen\BasicChatTest\TCPServer\obj\Debug\net9.0\TCPServer.dll
+C:\Users\david\OneDrive\Desktop\Skole\1. Eksamen\3. Semester\SCRUM-Eksamen\BasicChatTest\TCPServer\obj\Debug\net9.0\refint\TCPServer.dll
+C:\Users\david\OneDrive\Desktop\Skole\1. Eksamen\3. Semester\SCRUM-Eksamen\BasicChatTest\TCPServer\obj\Debug\net9.0\TCPServer.pdb
+C:\Users\david\OneDrive\Desktop\Skole\1. Eksamen\3. Semester\SCRUM-Eksamen\BasicChatTest\TCPServer\obj\Debug\net9.0\TCPServer.genruntimeconfig.cache
+C:\Users\david\OneDrive\Desktop\Skole\1. Eksamen\3. Semester\SCRUM-Eksamen\BasicChatTest\TCPServer\obj\Debug\net9.0\ref\TCPServer.dll

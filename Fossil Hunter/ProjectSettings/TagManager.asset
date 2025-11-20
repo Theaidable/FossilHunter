@@ -44,6 +44,30 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: 10th layer
+    uniqueID: 1676043037
+    locked: 0
+  - name: 9th layer
+    uniqueID: 2389330609
+    locked: 0
+  - name: 8th layer
+    uniqueID: 305830449
+    locked: 0
+  - name: 7th layer
+    uniqueID: 1419627259
+    locked: 0
+  - name: 6th layer
+    uniqueID: 159404181
+    locked: 0
+  - name: 5th layer
+    uniqueID: 1093011833
+    locked: 0
+  - name: 4th layer
+    uniqueID: 3459394721
+    locked: 0
+  - name: 3rd layer
+    uniqueID: 1364986305
+    locked: 0
   - name: 2nd layer
     uniqueID: 2801035269
     locked: 0
