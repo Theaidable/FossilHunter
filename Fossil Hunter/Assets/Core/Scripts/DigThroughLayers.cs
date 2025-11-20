@@ -14,6 +14,7 @@ public class DigThroughLayers : MonoBehaviour
     [SerializeField]
     Sprite holeSprite;
     ParticleSystem particles;
+    ParticleSystem.EmitParams emitParams;
 
 
     void Awake()
@@ -21,21 +22,26 @@ public class DigThroughLayers : MonoBehaviour
         layerMask = ~LayerMask.GetMask(layerMasks);
         mainCamera = Camera.main;
         particles = GetComponent<ParticleSystem>();
+        emitParams = new ParticleSystem.EmitParams();
+        emitParams.applyShapeToPosition = true;
+        emitParams.startSize = 0.5f;
+
     }
 
 
     void Update()
     {
         //only check for raycast collision when the left mouse button is clicked
+
         if (Input.GetMouseButtonDown(0))
         {
             RaycastHit2D[] hits = Physics2D.RaycastAll(mainCamera.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, 0, layerMask);
 
             GetComponent<SFXManager>().DigSound();
-            particles.Play();
-            Debug.Log(particles);
-            
-            GetComponent<ParticleSystem>().transform.position = Input.mousePosition;
+
+            emitParams.position = mainCamera.ScreenToWorldPoint(Input.mousePosition);
+            particles.Emit(emitParams, 15);
+
             //if the raycast hit anything in the non-masked layers, check for the colliders
             bool passThrough = false;
             foreach (RaycastHit2D hitCollider in hits)

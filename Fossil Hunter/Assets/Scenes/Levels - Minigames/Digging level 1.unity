@@ -701,8 +701,40 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1688922590690258196, guid: c405d36be18518646a66085c25cbbb92, type: 3}
+      propertyPath: looping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1688922590690258196, guid: c405d36be18518646a66085c25cbbb92, type: 3}
       propertyPath: playOnAwake
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1688922590690258196, guid: c405d36be18518646a66085c25cbbb92, type: 3}
+      propertyPath: ShapeModule.angle
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1688922590690258196, guid: c405d36be18518646a66085c25cbbb92, type: 3}
+      propertyPath: InitialModule.size3D
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1688922590690258196, guid: c405d36be18518646a66085c25cbbb92, type: 3}
+      propertyPath: ShapeModule.m_Rotation.x
+      value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1688922590690258196, guid: c405d36be18518646a66085c25cbbb92, type: 3}
+      propertyPath: ShapeModule.radius.value
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1688922590690258196, guid: c405d36be18518646a66085c25cbbb92, type: 3}
+      propertyPath: InitialModule.gravitySource
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1688922590690258196, guid: c405d36be18518646a66085c25cbbb92, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1688922590690258196, guid: c405d36be18518646a66085c25cbbb92, type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1688922590690258196, guid: c405d36be18518646a66085c25cbbb92, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
