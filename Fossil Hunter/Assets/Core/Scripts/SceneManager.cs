@@ -44,6 +44,7 @@ public class SceneButtonManager : MonoBehaviour
     //Skifter scene til scenen over den nuværrende scene
     private void OnLeftPressed()
     {
+        GetComponent<AudioSource>().Play();
         if (currentScene != 3)
         {
             SceneManager.UnloadSceneAsync(currentScene);
@@ -62,7 +63,7 @@ public class SceneButtonManager : MonoBehaviour
     //Kan skifte scenen til værdien en under den nuværrende scene
     private void OnRightPressed()
     {
-
+        GetComponent<AudioSource>().Play();
         if (currentScene != 1)
         {
             SceneManager.UnloadSceneAsync(currentScene);

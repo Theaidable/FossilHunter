@@ -17,6 +17,9 @@ public class EraseDirt : MonoBehaviour
     [SerializeField]
     [Range(0f, 100f)]
     private float cleanPercentage = 90;
+    private ParticleSystem particles;
+    ParticleSystem.EmitParams emitParams;
+
     void Start()
     {
         spriteRend = gameObject.GetComponent<SpriteRenderer>();
@@ -32,6 +35,10 @@ public class EraseDirt : MonoBehaviour
         m_Texture.Apply();
         //render sprite to test that it matches current settings
         spriteRend.sprite = Sprite.Create(m_Texture, originalSpriteRect, new Vector2(0.5f, 0.5f));
+        particles = GetComponent<ParticleSystem>();
+        emitParams = new ParticleSystem.EmitParams();
+        emitParams.applyShapeToPosition = true;
+        emitParams.startSize = 0.5f;
 
         //determine the total opacity of the dirt
         foreach (Color c in m_Colors)
@@ -45,9 +52,17 @@ public class EraseDirt : MonoBehaviour
         //only try to draw & update spriteif the mouse is clicking
         if (Input.GetMouseButton(0))
         {
+            if (!transform.parent.gameObject.GetComponent<AudioSource>().isPlaying)
+            {
+                transform.parent.gameObject.GetComponent<SFXManager>().DigSound();
+            }
+            emitParams.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+
             hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
             if (hit.collider == GetComponent<Collider2D>())
             {
+                particles.Emit(emitParams, 1);
                 UpdateTexture();
                 Drawing = true;
             }
@@ -114,7 +129,6 @@ public class EraseDirt : MonoBehaviour
         {
             //play feedback & remove dirt gameobject
             Debug.Log("clean!");
-            if(!transform.parent.gameObject.GetComponent<AudioSource>().isPlaying)
             transform.parent.gameObject.GetComponent<AudioSource>().Play();
             GameObject.Destroy(gameObject);
         }

@@ -7,6 +7,7 @@ public class InfoPopUpManager : MonoBehaviour
 {
     private static UIDocument UIDocument;
     private static bool open;
+    private static AudioSource Audio;
     [Header("For testing")]
     [SerializeField][Tooltip("For testing purposes.")] private FossileInfo_SO FossileInfo;
 
@@ -16,6 +17,7 @@ public class InfoPopUpManager : MonoBehaviour
     void Start()
     {
         UIDocument = gameObject.GetComponent<UIDocument>();
+        Audio = gameObject.GetComponent<AudioSource>();
 
         open = false;
         UIDocument.enabled = false;
@@ -33,6 +35,7 @@ public class InfoPopUpManager : MonoBehaviour
     /// </summary>
     public static void CloseUI()
     {
+        Audio.Play();
         Debug.Log("closed UI");
         UIDocument.enabled = false;
         open = false;

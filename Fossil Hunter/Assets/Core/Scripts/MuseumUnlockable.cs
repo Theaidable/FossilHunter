@@ -41,6 +41,7 @@ public class MuseumUnlockable : MonoBehaviour
             //if the raycast hit anything in the non-masked layers
             if (hit.collider == collider)
             {
+                GetComponent<AudioSource>().Play();
                 InfoPopUpManager.OpenUI(fossileInfo);
             }
         }

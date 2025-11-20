@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -12,6 +13,9 @@ public class DigThroughLayers : MonoBehaviour
     float holeSize = 2;
     [SerializeField]
     Sprite holeSprite;
+    ParticleSystem particles;
+    ParticleSystem.EmitParams emitParams;
+
     Vector2 digAreaSize;
     Vector2 digAreaCenter;
 
@@ -19,6 +23,11 @@ public class DigThroughLayers : MonoBehaviour
     {
         layerMask = ~LayerMask.GetMask(layerMasks);
         mainCamera = Camera.main;
+        particles = GetComponent<ParticleSystem>();
+        emitParams = new ParticleSystem.EmitParams();
+        emitParams.applyShapeToPosition = true;
+        emitParams.startSize = 0.5f;
+
         digAreaSize = GameObject.Find("DiggingArea").transform.localScale;
         digAreaCenter = GameObject.Find("DiggingArea").transform.position;
     }
@@ -31,8 +40,13 @@ public class DigThroughLayers : MonoBehaviour
             GameObject.Find("DiggingArea").SetActive(false);
         }
         //only check for raycast collision when the left mouse button is clicked
+
         if (Input.GetMouseButtonDown(0))
         {
+            GetComponent<SFXManager>().DigSound();
+
+            emitParams.position = mainCamera.ScreenToWorldPoint(Input.mousePosition);
+            particles.Emit(emitParams, 15);
             //check if the position is within bounds
             Vector2 mousePos = mainCamera.ScreenToWorldPoint(Input.mousePosition);
             if (mousePos.x < digAreaSize.x / 2 + digAreaCenter.x && mousePos.x > -digAreaSize.x / 2 + digAreaCenter.x && mousePos.y < digAreaSize.y / 2 + digAreaCenter.y && mousePos.y > -digAreaSize.y / 2 + digAreaCenter.y)
@@ -79,6 +93,7 @@ public class DigThroughLayers : MonoBehaviour
                         //if we're clicking on a fossil, don't make a hole, instead pick up the fossil
                         else if (hitCollider.collider.gameObject.GetComponent<PickupableFossil>() != null)
                         {
+                            GetComponent<SFXManager>().PickUpSound();
                             Debug.Log($"Picked up a {hitCollider.collider.gameObject.GetComponent<PickupableFossil>().Data.FossilType}");
                             hitCollider.collider.gameObject.GetComponent<PickupableFossil>().PickUp();
                         }
