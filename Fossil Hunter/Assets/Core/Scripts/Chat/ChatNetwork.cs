@@ -87,7 +87,7 @@ public class ChatNetwork : NetworkBehaviour
     /// <param name="sender"></param>
     /// <param name="text"></param>
     /// <param name="rpcParams"></param>
-    [ServerRpc]
+    [ServerRpc(InvokePermission = RpcInvokePermission.Everyone)]
     private void SendMessageServerRpc(string sender, string text, ServerRpcParams rpcParams = default)
     {
         string final = $"[{sender}] {text}";

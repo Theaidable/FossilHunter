@@ -42,6 +42,9 @@ public class ChatUIHandler : MonoBehaviour, IChatUI
         {
             gameObject.SetActive(false);
         }
+
+        Debug.Log($"SendButton found: {_sendButton != null}");
+        Debug.Log($"CloseButton found: {_closeButton != null}");
     }
 
     private void OnEnable()
@@ -60,6 +63,9 @@ public class ChatUIHandler : MonoBehaviour, IChatUI
         }
     }
 
+    #region Helpers
+
+    #region Button Events
     /// <summary>
     /// Event for hvad der skal ske når man trykker på Send knappen
     /// </summary>
@@ -86,9 +92,17 @@ public class ChatUIHandler : MonoBehaviour, IChatUI
     /// </summary>
     private void OnCloseClicked()
     {
+        StudenChatOpener opener = FindFirstObjectByType<StudenChatOpener>();
+        
+        if (opener != null)
+        {
+            opener.EnableCollider();
+        }
+
         //Luk Chatten
         gameObject.SetActive(false);
     }
+    #endregion
 
     /// <summary>
     /// Interface implentation
@@ -109,4 +123,6 @@ public class ChatUIHandler : MonoBehaviour, IChatUI
         //Scroll ned til den nyeste besked
         _messageScroll.ScrollTo(label);
     }
+
+    #endregion
 }
