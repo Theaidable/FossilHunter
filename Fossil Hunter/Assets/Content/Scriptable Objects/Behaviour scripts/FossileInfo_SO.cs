@@ -95,10 +95,10 @@ public class FossileInfo_SO : ScriptableObject
 
 
     /// <summary>
-    /// 
+    /// Makes a randomized <see cref="FossileInfo_SO"/>.
     /// </summary>
-    /// <param name="type"></param>
-    /// <returns></returns>
+    /// <param name="type">The type of fossil. Set to <see cref="FossilType.None"/> for a random type.</param>
+    /// <returns>The randomized <see cref="FossileInfo_SO"/> instance.</returns>
     public static FossileInfo_SO GetRandomizedData(FossilType type = FossilType.None)
     {
         FossileInfo_SO DataSO = CreateInstance<FossileInfo_SO>();
