@@ -1,7 +1,9 @@
+using Network_Handler;
 using System;
 using System.Net;
 using System.Net.Sockets;
 using Unity.Netcode;
+using Unity.Netcode.Transports.UTP;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -13,6 +15,8 @@ namespace UI_Handlers
     /// </summary>
     public class UI_Teacher : MonoBehaviour
     {
+        [SerializeField] private Network_Chat NetworkChatPrefab;
+
         private UIDocument _teacherSceneDocument;
 
         private Label _ipLabel;
@@ -30,17 +34,23 @@ namespace UI_Handlers
 
         private void Start()
         {
-            // Sæt IP-tekst
-            if (_ipLabel != null)
-            {
-                _ipLabel.text = "Server IP: " + GetLocalIPAddress();
-            }
-
             if (NetworkManager.Singleton != null)
             {
                 // Subscribe til client events
                 NetworkManager.Singleton.OnClientConnectedCallback += OnClientChanged;
                 NetworkManager.Singleton.OnClientDisconnectCallback += OnClientChanged;
+            }
+
+            if (NetworkManager.Singleton.IsServer == true)
+            {
+                var obj = Instantiate(NetworkChatPrefab);
+                obj.GetComponent<NetworkObject>().Spawn();
+            }
+
+            // Sæt IP-tekst
+            if (_ipLabel != null)
+            {
+                _ipLabel.text = "Server IP: " + GetLocalIPAddress();
             }
 
             UpdatePlayersLabel();
