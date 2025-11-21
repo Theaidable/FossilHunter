@@ -27,12 +27,18 @@ namespace UI_Handlers
             buttonSignUp = root.Q<Button>("SignUpButton");
         }
 
+        /// <summary>
+        /// Subscribe til button events
+        /// </summary>
         private void OnEnable()
         {
             buttonLogIn.clicked += OnLogInClicked;
             buttonSignUp.clicked += OnSignUpClicked;
         }
 
+        /// <summary>
+        /// Unsubscribe events
+        /// </summary>
         private void OnDisable()
         {
             buttonLogIn.clicked -= OnLogInClicked;

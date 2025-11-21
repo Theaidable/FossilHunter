@@ -36,7 +36,7 @@ namespace UI_Handlers
                 _ipLabel.text = "Server IP: " + GetLocalIPAddress();
             }
 
-            if(NetworkManager.Singleton != null)
+            if (NetworkManager.Singleton != null)
             {
                 // Subscribe til client events
                 NetworkManager.Singleton.OnClientConnectedCallback += OnClientChanged;
@@ -55,11 +55,18 @@ namespace UI_Handlers
             }
         }
 
+        /// <summary>
+        /// Opdatere PlayersLabel når en client forbinder eller forlader
+        /// </summary>
+        /// <param name="_"></param>
         private void OnClientChanged(ulong _)
         {
             UpdatePlayersLabel();
         }
 
+        /// <summary>
+        /// Skriv antallet af elever tilsluttet serveren
+        /// </summary>
         private void UpdatePlayersLabel()
         {
             // Sæt nummer af players
@@ -79,6 +86,10 @@ namespace UI_Handlers
             }
         }
 
+        /// <summary>
+        /// Få PC'ens lokale IP adresse og skriv det i feltet
+        /// </summary>
+        /// <returns></returns>
         private string GetLocalIPAddress()
         {
             try

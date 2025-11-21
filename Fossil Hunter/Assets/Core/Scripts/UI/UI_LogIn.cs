@@ -31,18 +31,9 @@ namespace UI_Handlers
             _logInButton.clicked += OnLogInClicked;
         }
 
-        /*
-        private void OnEnable()
-        {
-            _logInButton.clicked += OnLogInClicked;
-        }
-
-        private void OnDisable()
-        {
-            _logInButton.clicked -= OnLogInClicked;
-        }
-        */
-
+        /// <summary>
+        /// Hvad der sker når man trykker på "Log In"
+        /// </summary>
         private void OnLogInClicked()
         {
             //Her kan vi skrive selve login koden, som hvor username og password skal sammenlignes med databasen

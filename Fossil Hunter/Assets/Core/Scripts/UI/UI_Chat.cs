@@ -14,9 +14,42 @@ namespace UI_Handlers
         private Button _closeButton;
         private ScrollView _messageScroll;
 
+        private BoxCollider2D _collider;
+
         [SerializeField] private bool startHidden = false;
 
         private void Awake()
+        {
+            _collider = GetComponent<BoxCollider2D>();
+
+            if (startHidden == true)
+            {
+                _uiDocument.enabled = false;
+            }
+        }
+
+        /// <summary>
+        /// Event for når man klikker på objektets collider
+        /// </summary>
+        private void OnMouseDown()
+        {
+            if (_uiDocument != null)
+            {
+                _uiDocument.enabled = true;
+
+                if (_collider != null)
+                {
+                    _collider.enabled = false;
+                }
+
+                GetOverlay();
+            }
+        }
+
+        /// <summary>
+        /// Få fat i UIDocumentets layout
+        /// </summary>
+        private void GetOverlay()
         {
             var root = _uiDocument.rootVisualElement;
 
@@ -24,31 +57,28 @@ namespace UI_Handlers
             _sendButton = root.Q<Button>("SendButton");
             _closeButton = root.Q<Button>("CloseButton");
             _messageScroll = root.Q<ScrollView>("MessageScroll");
+
+            //Subscribe events
+            _sendButton.clicked += OnSendClicked;
+            _closeButton.clicked += OnCloseClicked;
         }
 
-        private void Start()
+        /// <summary>
+        /// Hvad der sker når man trykker "Send"
+        /// Send en besked til serveren
+        /// </summary>
+        private void OnSendClicked()
         {
-            if (startHidden == true)
-            {
-                gameObject.SetActive(false);
-            }
+            Debug.Log("Send Button has been clicked");
         }
 
-        private void OnEnable()
+        /// <summary>
+        /// Hvad der sker når man trykker "Close"
+        /// Luk chatten
+        /// </summary>
+        private void OnCloseClicked()
         {
-            if(_sendButton != null)
-            {
-                _sendButton.clicked += OnSendClicked;
-            }
-
-            if(_closeButton != null)
-            {
-                _closeButton.clicked += OnCloseClicked;
-            }
-        }
-
-        private void OnDisable()
-        {
+            //Unsubscribe events
             if (_sendButton != null)
             {
                 _sendButton.clicked -= OnSendClicked;
@@ -58,17 +88,12 @@ namespace UI_Handlers
             {
                 _closeButton.clicked -= OnCloseClicked;
             }
-        }
 
-        private void OnSendClicked()
-        {
-
-        }
-
-        private void OnCloseClicked()
-        {
             //Luk Chatten
-            gameObject.SetActive(false);
+            _uiDocument.enabled = false;
+
+            //Enable chat collider igen, så man kan åbne den
+            _collider.enabled = true;
         }
     }
 }
