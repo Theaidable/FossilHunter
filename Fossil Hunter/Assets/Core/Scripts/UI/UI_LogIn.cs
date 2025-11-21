@@ -50,7 +50,7 @@ namespace UI_Handlers
             else if( _username.value == "Student" && _password.value != string.Empty)
             {
                 NetworkManager.Singleton.StartClient();
-                SceneManager.LoadScene("S_MainScene");
+                SceneManager.LoadScene("S_JoinServer");
             }
             else
             {

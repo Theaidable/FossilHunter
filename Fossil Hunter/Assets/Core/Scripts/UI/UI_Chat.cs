@@ -1,4 +1,5 @@
 using System.Runtime.CompilerServices;
+using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -70,6 +71,34 @@ namespace UI_Handlers
         private void OnSendClicked()
         {
             Debug.Log("Send Button has been clicked");
+
+            if(_inputField != null)
+            {
+                var message = _inputField?.value;
+
+                string sender = $"Player {NetworkManager.Singleton.LocalClientId}";
+
+                SendMessageToServer(sender, message);
+            }
+        }
+
+        [ServerRpc]
+        private void SendMessageToServer(string sender, string message, ServerRpcParams rpcParams = default)
+        {
+            string finalMessage = $"[{sender}] {message}";
+            BroadcastMessageToAllClients(finalMessage);
+        }
+
+        [ClientRpc]
+        private void BroadcastMessageToAllClients(string message)
+        {
+            if(_messageScroll != null)
+            {
+                Label label = new Label(message);
+                _messageScroll.Add(label);
+
+                _messageScroll.ScrollTo(label);
+            }
         }
 
         /// <summary>
