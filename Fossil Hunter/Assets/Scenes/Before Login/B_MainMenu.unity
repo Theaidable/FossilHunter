@@ -183,8 +183,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4ffa071e281de94693c04d3566504da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _logInDocument: {fileID: 0}
-  _signUpDocument: {fileID: 0}
 --- !u!1 &1169260776
 GameObject:
   m_ObjectHideFlags: 0
@@ -396,7 +394,7 @@ MonoBehaviour:
     EnableTimeResync: 0
     TimeResyncInterval: 30
     EnsureNetworkVariableLengthSafety: 0
-    EnableSceneManagement: 1
+    EnableSceneManagement: 0
     ForceSamePrefabs: 1
     RecycleNetworkIds: 1
     NetworkIdRecycleDelay: 120
