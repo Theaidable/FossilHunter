@@ -1,10 +1,13 @@
 using System.Net;
 using System.Net.Sockets;
 using Unity.Netcode;
-using Unity.Netcode.Editor;
 using UnityEngine;
 using UnityEngine.UIElements;
 
+/// <summary>
+/// Håndtere UI systemet inde i lærerens main scene
+/// </summary>
+/// <author> David Gudmund Danielsen </author>
 public class TeacherMainSceneHandler : MonoBehaviour
 {
     [SerializeField] private ChatNetwork chatNetworkPrefab;
@@ -22,7 +25,6 @@ public class TeacherMainSceneHandler : MonoBehaviour
             _playersLabel = root.Q<Label>("PlayerText");
         }
     }
-
 
     private void Start()
     {

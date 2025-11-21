@@ -9,7 +9,7 @@ using UnityEngine.UIElements;
 public class ChatUIHandler : MonoBehaviour, IChatUI
 {
     #region Fields
-    private UIDocument _uiDocument;
+    [SerializeField] private UIDocument _uiDocument;
     private TextField _inputField;
     private Button _sendButton;
     private Button _closeButton;
@@ -20,23 +20,12 @@ public class ChatUIHandler : MonoBehaviour, IChatUI
 
     private void Awake()
     {
-        _uiDocument = GetComponent<UIDocument>();
         var root = _uiDocument.rootVisualElement;
 
         _messageScroll = root.Q<ScrollView>("MessageScroll");
         _inputField = root.Q<TextField>("InputField");
         _sendButton = root.Q<Button>("SendButton");
         _closeButton = root.Q<Button>("CloseButton");
-
-        if(_sendButton != null)
-        {
-            _sendButton.clicked += OnSendClicked;
-        }
-
-        if (_closeButton != null)
-        {
-            _closeButton.clicked += OnCloseClicked;
-        }
 
         if(startHidden == true)
         {
@@ -49,7 +38,17 @@ public class ChatUIHandler : MonoBehaviour, IChatUI
 
     private void OnEnable()
     {
-        if(ChatNetwork.Instance != null)
+        if (_sendButton != null)
+        {
+            _sendButton.clicked += OnSendClicked;
+        }
+
+        if (_closeButton != null)
+        {
+            _closeButton.clicked += OnCloseClicked;
+        }
+
+        if (ChatNetwork.Instance != null)
         {
             ChatNetwork.Instance.RegisterChatUI(this);
         }
@@ -57,7 +56,17 @@ public class ChatUIHandler : MonoBehaviour, IChatUI
 
     private void OnDisable()
     {
-        if(ChatNetwork.Instance != null)
+        if (_sendButton != null)
+        {
+            _sendButton.clicked -= OnSendClicked;
+        }
+
+        if (_closeButton != null)
+        {
+            _closeButton.clicked -= OnCloseClicked;
+        }
+
+        if (ChatNetwork.Instance != null)
         {
             ChatNetwork.Instance.UnRegisterChatUI(this);
         }

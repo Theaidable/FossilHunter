@@ -3,6 +3,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
+/// <summary>
+/// Hurtig kode til debug for at vælge om man er lærer eller elev
+/// </summary>
+/// /// <author> David Gudmund Danielsen </author>
 public class MainMenuHandler : MonoBehaviour
 {
     [SerializeField] private UIDocument _uiDocument;
