@@ -1,20 +1,27 @@
 using Network_Handler;
-using System.Runtime.CompilerServices;
-using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.UIElements;
 
 namespace UI_Handlers
 {
+    /// <summary>
+    /// Universel UI handler for chat-funktionen
+    /// Sørg for at have korrekt navngivning
+    /// </summary>
+    /// <author> David Gudmund Danielsen </author>
     public class UI_Chat : MonoBehaviour
     {
-        //Valgte UIDocument med en chat I
+        //Fields
+
+        //Reference til UIDocument
         [SerializeField] private UIDocument _uiDocument;
 
+        //Reference til alt INDE i UIDocumentet
         private TextField _inputField;
         private Button _sendButton;
         private Button _closeButton;
         private ScrollView _messageScroll;
+        private VisualElement _root;
 
         private BoxCollider2D _collider;
 
@@ -23,10 +30,12 @@ namespace UI_Handlers
         private void Awake()
         {
             _collider = GetComponent<BoxCollider2D>();
+            _root = _uiDocument.rootVisualElement;
 
             if (startHidden == true)
             {
-                _uiDocument.enabled = false;
+                //_uiDocument.enabled = false;
+                _root.style.display = DisplayStyle.None;
             }
             else
             {
@@ -34,14 +43,20 @@ namespace UI_Handlers
             }
         }
 
+        private void Start()
+        {
+            //Subscribe til network objekt for at sende besked
+            Network_Chat.Instance.OnMessageRecieved += OnMessageReceived;
+        }
+
         /// <summary>
         /// Event for når man klikker på objektets collider
         /// </summary>
         private void OnMouseDown()
         {
-            if (_uiDocument != null)
+            if(_root != null)
             {
-                _uiDocument.enabled = true;
+                _root.style.display = DisplayStyle.Flex;
 
                 if (_collider != null)
                 {
@@ -49,11 +64,8 @@ namespace UI_Handlers
                 }
 
                 GetOverlay();
-
-                if(Network_Chat.Instance != null)
-                {
-                    //Network_Chat.Instance.OnMessageRecieved += OnMessageReceived;
-                }
+                
+                Network_Chat.Instance.OnMessageRecieved += OnMessageReceived;
             }
         }
 
@@ -62,12 +74,11 @@ namespace UI_Handlers
         /// </summary>
         private void GetOverlay()
         {
-            var root = _uiDocument.rootVisualElement;
-
-            _inputField = root.Q<TextField>("InputField");
-            _sendButton = root.Q<Button>("SendButton");
-            _closeButton = root.Q<Button>("CloseButton");
-            _messageScroll = root.Q<ScrollView>("MessageScroll");
+            _root = _uiDocument.rootVisualElement;
+            _inputField = _root.Q<TextField>("InputField");
+            _sendButton = _root.Q<Button>("SendButton");
+            _closeButton = _root.Q<Button>("CloseButton");
+            _messageScroll = _root.Q<ScrollView>("MessageScroll");
 
             //Subscribe events
             if(_sendButton != null)
@@ -87,40 +98,27 @@ namespace UI_Handlers
         /// </summary>
         private void OnSendClicked()
         {
-            Debug.Log("Send Button has been clicked");
-
-            if(_inputField != null)
+            if (_inputField != null)
             {
                 var message = _inputField?.value;
-
                 Network_Chat.Instance.SendLocalMessage(message);
-
-                //string sender = $"Player {NetworkManager.Singleton.LocalClientId}";
-
-                //SendMessageToServer(sender, message);
+                _inputField.value = string.Empty;
             }
         }
 
-        /*
-        [ServerRpc]
-        private void SendMessageToServer(string sender, string message, ServerRpcParams rpcParams = default)
-        {
-            string finalMessage = $"[{sender}] {message}";
-            BroadcastMessageToAllClients(finalMessage);
-        }
-
-        [ClientRpc]
-        private void BroadcastMessageToAllClients(string message)
+        /// <summary>
+        /// Hvad der sker når man modtager en besked fra serveren
+        /// </summary>
+        /// <param name="message"></param>
+        private void OnMessageReceived(string message)
         {
             if(_messageScroll != null)
             {
-                Label label = new Label(message);
+                var label = new Label(message);
                 _messageScroll.Add(label);
-
                 _messageScroll.ScrollTo(label);
             }
         }
-        */
 
         /// <summary>
         /// Hvad der sker når man trykker "Close"
@@ -139,8 +137,13 @@ namespace UI_Handlers
                 _closeButton.clicked -= OnCloseClicked;
             }
 
-            //Luk Chatten
-            _uiDocument.enabled = false;
+            if (Network_Chat.Instance != null)
+            {
+                Network_Chat.Instance.OnMessageRecieved -= OnMessageReceived;
+            }
+
+            //Luk chatten
+            _root.style.display = DisplayStyle.None;
 
             //Enable chat collider igen, så man kan åbne den
             _collider.enabled = true;

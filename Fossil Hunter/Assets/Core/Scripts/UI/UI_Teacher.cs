@@ -13,12 +13,18 @@ namespace UI_Handlers
     /// <summary>
     /// Styrer UIen inde i vores Teacher Scene
     /// </summary>
+    /// <author> David Gudmund Danielsen </author>
     public class UI_Teacher : MonoBehaviour
     {
+        //Fields
+
+        //Reference til Network Object prefab
         [SerializeField] private Network_Chat NetworkChatPrefab;
 
+        //Reference til UIDocumentet
         private UIDocument _teacherSceneDocument;
 
+        //Reference til alt INDE i UIDocumentet
         private Label _ipLabel;
         private Label _playersLabel;
 

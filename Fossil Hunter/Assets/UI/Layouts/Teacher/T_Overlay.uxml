@@ -3,7 +3,7 @@
     <ui:Label text="Server IP:" name="IpLabel" style="font-size: 96px; align-self: center; background-color: rgb(188, 188, 188); width: 75%; -unity-text-align: upper-left; -unity-font-style: bold; top: 100px;" />
     <ui:Label text="Players:" name="PlayersLabel" style="font-size: 96px; align-self: center; background-color: rgb(188, 188, 188); width: 75%; top: 200px; -unity-font-style: bold;" />
     <ui:VisualElement name="ChatBox" style="flex-grow: 1; font-size: 48px; -unity-text-outline-color: rgb(128, 128, 128); top: 575px; width: 90%; left: 5%; height: 475px; background-color: rgb(188, 188, 188); position: absolute; align-self: center;" />
-    <ui:ScrollView name="MessageScroll" style="position: absolute; height: 335px; width: 1700px; top: 590px; left: 110px; align-self: center; color: rgb(0, 0, 0); -unity-text-outline-color: rgb(56, 56, 56);" />
+    <ui:ScrollView name="MessageScroll" style="position: absolute; height: 335px; width: 1700px; top: 590px; left: 110px; align-self: center; color: rgb(0, 0, 0); -unity-text-outline-color: rgb(56, 56, 56); font-size: 48px;" />
     <ui:TextField placeholder-text="Type Message" name="InputField" style="font-size: 48px; position: absolute; top: 950px; left: 100px; width: 1400px; height: 75px; align-self: center; visibility: visible; overflow: hidden; display: flex;" />
     <ui:Button text="Send" name="SendButton" style="position: absolute; top: 950px; left: 1510px; height: 75px; width: 300px; font-size: 48px; align-self: center; background-color: rgb(149, 149, 149);" />
 </ui:UXML>
