@@ -30,7 +30,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Teacher/T_MainScene.unity
     guid: 99159b8b0a452a64d98007b7111ea567
   - enabled: 1
-    path: Assets/Scenes/Student/S_Menu.unity
+    path: Assets/Scenes/Student/S_JoinServer.unity
     guid: 64b0413aaca554b4a963c68179f7824f
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
