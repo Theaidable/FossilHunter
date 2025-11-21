@@ -8,8 +8,11 @@ namespace UI_Handlers
     /// <summary>
     /// Styrer UIen inde i vores Main Menu
     /// </summary>
+    /// <author> David Gudmund Danielsen </author>
     public class UI_MainMenu : MonoBehaviour
     {
+        //Fields
+
         //Reference til UIDocumentet
         private UIDocument _mainMenuDocument;
 

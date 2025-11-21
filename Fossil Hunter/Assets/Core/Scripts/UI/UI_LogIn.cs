@@ -8,12 +8,15 @@ namespace UI_Handlers
     /// <summary>
     /// Styrer UIen inde i vores Log In
     /// </summary>
+    /// <author> David Gudmund Danielsen </author>
     public class UI_LogIn : MonoBehaviour
     {
+        //Fields
+
         //Reference til UIDocumentet
         private UIDocument _logInDocument;
 
-        //Reference til INDE i UIDocumentet
+        //Reference til alt INDE i UIDocumentet
         private TextField _username;
         private TextField _password;
         private Button _logInButton;

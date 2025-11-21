@@ -7,10 +7,18 @@ using UnityEngine.UIElements;
 
 namespace UI_Handlers
 {
+    /// <summary>
+    /// Styrer UIen inde i JoinServer Scenen
+    /// </summary>
+    /// <author> David Gudmund Danielsen </author>
     public class UI_JoinServer : MonoBehaviour
     {
+        //Fields
+
+        //Reference til UIDocument
         private UIDocument _joinServerDocument;
 
+        //Reference til alt INDE i UIDocumentet
         private TextField _ipField;
         private Button _joinServerButton;
 
@@ -52,6 +60,9 @@ namespace UI_Handlers
             }
         }
 
+        /// <summary>
+        /// Hvad der sker når man trykker på "Join Server" knappen
+        /// </summary>
         private void OnJoinServerClicked()
         {
             if(NetworkManager.Singleton != null)
@@ -73,6 +84,11 @@ namespace UI_Handlers
             }
         }
 
+        /// <summary>
+        /// Hvad der sker når client forbindes til serveren
+        /// Skift til Student Main Scene
+        /// </summary>
+        /// <param name="clientId"></param>
         private void OnClientConnected(ulong clientId)
         {
             if (clientId != NetworkManager.Singleton.LocalClientId)
@@ -83,6 +99,11 @@ namespace UI_Handlers
             SceneManager.LoadScene("S_MainScene");
         }
 
+        /// <summary>
+        /// Hvad der sker når Client disconnecter
+        /// Gå tilbage til første hovedmenu
+        /// </summary>
+        /// <param name="clientId"></param>
         private void OnClientDisconnected(ulong clientId)
         {
             if (clientId != NetworkManager.Singleton.LocalClientId)
@@ -90,8 +111,7 @@ namespace UI_Handlers
                 return;
             }
 
-            _joinServerButton.SetEnabled(true);
-            _ipField.value = string.Empty;
+            SceneManager.LoadScene("B_MainMenu");
         }
     }
 }
