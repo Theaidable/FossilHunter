@@ -1,3 +1,4 @@
+using Network_Handler;
 using System.Runtime.CompilerServices;
 using Unity.Netcode;
 using UnityEngine;
@@ -48,6 +49,11 @@ namespace UI_Handlers
                 }
 
                 GetOverlay();
+
+                if(Network_Chat.Instance != null)
+                {
+                    //Network_Chat.Instance.OnMessageRecieved += OnMessageReceived;
+                }
             }
         }
 
@@ -87,12 +93,15 @@ namespace UI_Handlers
             {
                 var message = _inputField?.value;
 
-                string sender = $"Player {NetworkManager.Singleton.LocalClientId}";
+                Network_Chat.Instance.SendLocalMessage(message);
 
-                SendMessageToServer(sender, message);
+                //string sender = $"Player {NetworkManager.Singleton.LocalClientId}";
+
+                //SendMessageToServer(sender, message);
             }
         }
 
+        /*
         [ServerRpc]
         private void SendMessageToServer(string sender, string message, ServerRpcParams rpcParams = default)
         {
@@ -111,6 +120,7 @@ namespace UI_Handlers
                 _messageScroll.ScrollTo(label);
             }
         }
+        */
 
         /// <summary>
         /// Hvad der sker når man trykker "Close"

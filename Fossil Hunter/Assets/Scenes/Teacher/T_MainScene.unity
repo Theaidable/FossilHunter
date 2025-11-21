@@ -276,6 +276,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10066e2075555c346bd175737a7f2433, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NetworkChatPrefab: {fileID: -6147978011701487189, guid: cbd910137b4133944bd47906a564fbb4, type: 3}
 --- !u!114 &1659036966
 MonoBehaviour:
   m_ObjectHideFlags: 0
