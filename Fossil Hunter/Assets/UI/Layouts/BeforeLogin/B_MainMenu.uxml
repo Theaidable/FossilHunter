@@ -1,6 +1,5 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI/Styles/SceneUIStyle.uss?fileID=7433441132597879392&amp;guid=7534f4e131c5db54caa48f959b59c5aa&amp;type=3#SceneUIStyle" />
-    <ui:VisualElement style="flex-grow: 1;">
-        <ui:Button text="Create server" name="CreateServerButton" style="position: absolute; height: 160px; top: 435px; left: 369px; width: 1200px; font-size: 96px; -unity-font-style: normal; align-items: center; align-self: center; align-content: center; justify-content: center; background-color: rgb(190, 190, 190);" />
-    </ui:VisualElement>
+    <ui:Button text="Log In" name="LogInButton" style="font-size: 96px; top: 25%; width: 50%; left: auto; align-items: auto; align-self: center; align-content: auto;" />
+    <ui:Button text="Sign Up" name="SignUpButton" style="font-size: 96px; top: 37.5%; align-self: center; width: 50%;" />
 </ui:UXML>

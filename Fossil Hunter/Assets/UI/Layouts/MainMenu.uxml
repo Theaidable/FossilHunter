@@ -1,6 +1,0 @@
-<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:VisualElement style="flex-grow: 1;">
-        <ui:Button text="Teacher" name="TeacherButton" style="position: absolute; top: 300px; left: 600px; height: 150px; width: 800px; font-size: 96px;" />
-        <ui:Button text="Student" name="StudentButton" style="position: absolute; top: 600px; left: 600px; height: 150px; width: 800px; font-size: 96px;" />
-    </ui:VisualElement>
-</ui:UXML>
