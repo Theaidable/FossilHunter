@@ -27,6 +27,10 @@ namespace UI_Handlers
             {
                 _uiDocument.enabled = false;
             }
+            else
+            {
+                GetOverlay();
+            }
         }
 
         /// <summary>
@@ -60,8 +64,15 @@ namespace UI_Handlers
             _messageScroll = root.Q<ScrollView>("MessageScroll");
 
             //Subscribe events
-            _sendButton.clicked += OnSendClicked;
-            _closeButton.clicked += OnCloseClicked;
+            if(_sendButton != null)
+            {
+                _sendButton.clicked += OnSendClicked;
+            }
+            
+            if(_closeButton != null)
+            {
+                _closeButton.clicked += OnCloseClicked;
+            }
         }
 
         /// <summary>
