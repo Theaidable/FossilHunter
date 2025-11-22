@@ -1,0 +1,3432 @@
+fileFormatVersion: 2
+guid: a441312dc0804be4d9e697ee019cfe84
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3469519364189022771
+    second: Tool_Brush2_0
+  - first:
+      213: -1352050911105797620
+    second: Tool_Brush2_1
+  - first:
+      213: 5653177603861319169
+    second: Tool_Brush2_2
+  - first:
+      213: 8977915731727144883
+    second: Tool_Brush2_3
+  - first:
+      213: 2202040804944933032
+    second: Tool_Brush2_4
+  - first:
+      213: -1627324974970386330
+    second: Tool_Brush2_5
+  - first:
+      213: 8510745447675185518
+    second: Tool_Brush2_6
+  - first:
+      213: 1296399651369973217
+    second: Tool_Brush2_7
+  - first:
+      213: 7198795650308583329
+    second: Tool_Brush2_8
+  - first:
+      213: -3787884679599547620
+    second: Tool_Brush2_9
+  - first:
+      213: -7898279471383104087
+    second: Tool_Brush2_10
+  - first:
+      213: -5811358516817888365
+    second: Tool_Brush2_11
+  - first:
+      213: 7773544040093848346
+    second: Tool_Brush2_12
+  - first:
+      213: 5961925614644041676
+    second: Tool_Brush2_13
+  - first:
+      213: -5831746607250871220
+    second: Tool_Brush2_14
+  - first:
+      213: 589351305608696966
+    second: Tool_Brush2_15
+  - first:
+      213: 7841833021461114105
+    second: Tool_Brush2_16
+  - first:
+      213: -7123979829440947603
+    second: Tool_Brush2_17
+  - first:
+      213: 2087242061530424185
+    second: Tool_Brush2_18
+  - first:
+      213: 7922047634424955960
+    second: Tool_Brush2_19
+  - first:
+      213: -8708939136573005842
+    second: Tool_Brush2_20
+  - first:
+      213: -8537160404056031255
+    second: Tool_Brush2_21
+  - first:
+      213: 6309146615325147894
+    second: Tool_Brush2_22
+  - first:
+      213: 1679680318194678351
+    second: Tool_Brush2_23
+  - first:
+      213: -5083707232146016655
+    second: Tool_Brush2_24
+  - first:
+      213: 2382031487190857227
+    second: Tool_Brush2_25
+  - first:
+      213: -6651262464136455217
+    second: Tool_Brush2_26
+  - first:
+      213: 296937898970519468
+    second: Tool_Brush2_27
+  - first:
+      213: -7389791934529396288
+    second: Tool_Brush2_28
+  - first:
+      213: -791679871753616245
+    second: Tool_Brush2_29
+  - first:
+      213: -5406967854254443084
+    second: Tool_Brush2_30
+  - first:
+      213: 1149943554135208729
+    second: Tool_Brush2_31
+  - first:
+      213: -166917537637557333
+    second: Tool_Brush2_32
+  - first:
+      213: -2038459338092011583
+    second: Tool_Brush2_33
+  - first:
+      213: 8739990864851233499
+    second: Tool_Brush2_34
+  - first:
+      213: 7378724438366656689
+    second: Tool_Brush2_35
+  - first:
+      213: -2230676655833249008
+    second: Tool_Brush2_36
+  - first:
+      213: -4021354899976002612
+    second: Tool_Brush2_37
+  - first:
+      213: 8748635399316180296
+    second: Tool_Brush2_38
+  - first:
+      213: 2021118314684944463
+    second: Tool_Brush2_39
+  - first:
+      213: -6538877920471062788
+    second: Tool_Brush2_40
+  - first:
+      213: -437010639675460688
+    second: Tool_Brush2_41
+  - first:
+      213: 1934676765661315065
+    second: Tool_Brush2_42
+  - first:
+      213: 8890332502109354977
+    second: Tool_Brush2_43
+  - first:
+      213: -431516760551077446
+    second: Tool_Brush2_44
+  - first:
+      213: -8971006936207062211
+    second: Tool_Brush2_45
+  - first:
+      213: -4175641236563521803
+    second: Tool_Brush2_46
+  - first:
+      213: -6448466142641776357
+    second: Tool_Brush2_47
+  - first:
+      213: -1629152367961696707
+    second: Tool_Brush2_48
+  - first:
+      213: 1699657401335700174
+    second: Tool_Brush2_49
+  - first:
+      213: -7935993278873587977
+    second: Tool_Brush2_50
+  - first:
+      213: -209620691101142722
+    second: Tool_Brush2_51
+  - first:
+      213: -2900262370531771699
+    second: Tool_Brush2_52
+  - first:
+      213: 3057679797497116645
+    second: Tool_Brush2_53
+  - first:
+      213: -5328537881387836443
+    second: Tool_Brush2_54
+  - first:
+      213: -2942581192164460480
+    second: Tool_Brush2_55
+  - first:
+      213: -8572282648970594576
+    second: Tool_Brush2_56
+  - first:
+      213: -8060881376601970606
+    second: Tool_Brush2_57
+  - first:
+      213: -8512401190341107874
+    second: Tool_Brush2_58
+  - first:
+      213: 2813990877559154436
+    second: Tool_Brush2_59
+  - first:
+      213: -2566963539532229541
+    second: Tool_Brush2_60
+  - first:
+      213: 8387031510352560594
+    second: Tool_Brush2_61
+  - first:
+      213: -4889424988195803453
+    second: Tool_Brush2_62
+  - first:
+      213: 9201094998512674560
+    second: Tool_Brush2_63
+  - first:
+      213: 7401604765557875691
+    second: Tool_Brush2_64
+  - first:
+      213: -6801131115895794034
+    second: Tool_Brush2_65
+  - first:
+      213: -9219588862950880011
+    second: Tool_Brush2_66
+  - first:
+      213: 4971270272595087131
+    second: Tool_Brush2_67
+  - first:
+      213: 7351940000640183193
+    second: Tool_Brush2_68
+  - first:
+      213: -5151600980263945670
+    second: Tool_Brush2_69
+  - first:
+      213: 1604678932686452003
+    second: Tool_Brush2_70
+  - first:
+      213: 6239836725101558940
+    second: Tool_Brush2_71
+  - first:
+      213: -6725011335930025943
+    second: Tool_Brush2_72
+  - first:
+      213: -5289597781990396678
+    second: Tool_Brush2_73
+  - first:
+      213: -7032310117241424929
+    second: Tool_Brush2_74
+  - first:
+      213: -7434829716959745089
+    second: Tool_Brush2_75
+  - first:
+      213: 5360403964714306841
+    second: Tool_Brush2_76
+  - first:
+      213: -1168686359509313618
+    second: Tool_Brush2_77
+  - first:
+      213: -5489228437316987001
+    second: Tool_Brush2_78
+  - first:
+      213: 5982528366451426865
+    second: Tool_Brush2_79
+  - first:
+      213: 5466633872869044112
+    second: Tool_Brush2_80
+  - first:
+      213: 8770846326996434225
+    second: Tool_Brush2_81
+  - first:
+      213: 4002209902044205692
+    second: Tool_Brush2_82
+  - first:
+      213: -6578755289263871409
+    second: Tool_Brush2_83
+  - first:
+      213: 7011772036674869455
+    second: Tool_Brush2_84
+  - first:
+      213: -3333614563675823193
+    second: Tool_Brush2_85
+  - first:
+      213: -1967918883113723644
+    second: Tool_Brush2_86
+  - first:
+      213: 1740650485244926294
+    second: Tool_Brush2_87
+  - first:
+      213: 6829441723690674278
+    second: Tool_Brush2_88
+  - first:
+      213: 1000169813004218913
+    second: Tool_Brush2_89
+  - first:
+      213: -2150646065223771364
+    second: Tool_Brush2_90
+  - first:
+      213: 4388298975269525167
+    second: Tool_Brush2_91
+  - first:
+      213: 5254882570329869488
+    second: Tool_Brush2_92
+  - first:
+      213: -1644320449136249226
+    second: Tool_Brush2_93
+  - first:
+      213: 5366635525977949037
+    second: Tool_Brush2_94
+  - first:
+      213: 7487928806899037515
+    second: Tool_Brush2_95
+  - first:
+      213: 2211170459169316758
+    second: Tool_Brush2_96
+  - first:
+      213: 8347420537633501605
+    second: Tool_Brush2_97
+  - first:
+      213: 8624141105227240657
+    second: Tool_Brush2_98
+  - first:
+      213: 3233979100815105295
+    second: Tool_Brush2_99
+  - first:
+      213: -1864979937882390267
+    second: Tool_Brush2_100
+  - first:
+      213: -5726611962015336446
+    second: Tool_Brush2_101
+  - first:
+      213: -1750008325970543856
+    second: Tool_Brush2_102
+  - first:
+      213: -8478225486949780168
+    second: Tool_Brush2_103
+  - first:
+      213: -2373487409967983208
+    second: Tool_Brush2_104
+  - first:
+      213: -3315275334501623618
+    second: Tool_Brush2_105
+  - first:
+      213: -5527036625796551630
+    second: Tool_Brush2_106
+  - first:
+      213: -5855829556594006394
+    second: Tool_Brush2_107
+  - first:
+      213: 7581942697400211777
+    second: Tool_Brush2_108
+  - first:
+      213: 1809047893980717603
+    second: Tool_Brush2_109
+  - first:
+      213: 7335070677070076175
+    second: Tool_Brush2_110
+  - first:
+      213: 481970133777155683
+    second: Tool_Brush2_111
+  - first:
+      213: 3819184046454341119
+    second: Tool_Brush2_112
+  - first:
+      213: -4933074790451861331
+    second: Tool_Brush2_113
+  - first:
+      213: 3960226073602134219
+    second: Tool_Brush2_114
+  - first:
+      213: 8275655904696915952
+    second: Tool_Brush2_115
+  - first:
+      213: -3145405269350984840
+    second: Tool_Brush2_116
+  - first:
+      213: -2129855969471403679
+    second: Tool_Brush2_117
+  - first:
+      213: 2646123610992761524
+    second: Tool_Brush2_118
+  - first:
+      213: -8492470455910203942
+    second: Tool_Brush2_119
+  - first:
+      213: -4287364202571160002
+    second: Tool_Brush2_120
+  - first:
+      213: -7483940383080702900
+    second: Tool_Brush2_121
+  - first:
+      213: 7988019274045846159
+    second: Tool_Brush2_122
+  - first:
+      213: 3262016107697439124
+    second: Tool_Brush2_123
+  - first:
+      213: 2999831791214628057
+    second: Tool_Brush2_124
+  - first:
+      213: 6092591050405078506
+    second: Tool_Brush2_125
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Tool_Brush2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 89
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33a63dbba75362030800000000000000
+      internalID: 3469519364189022771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_1
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 0
+        width: 158
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c02bb4d1cdc8c3de0800000000000000
+      internalID: -1352050911105797620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_2
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 0
+        width: 1299
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10e0952341f147e40800000000000000
+      internalID: 5653177603861319169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_3
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 1016
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b7dcfc7ac6f79c70800000000000000
+      internalID: 8977915731727144883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_4
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 1010
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a078a7f1783f8e10800000000000000
+      internalID: 2202040804944933032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_5
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 1008
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 668c4c4ae849a69e0800000000000000
+      internalID: -1627324974970386330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_6
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 1003
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e69c37e84ed3c1670800000000000000
+      internalID: 8510745447675185518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_7
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 984
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e5f8d24d9cbdf110800000000000000
+      internalID: 1296399651369973217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_8
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 991
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1af254bc08247e360800000000000000
+      internalID: 7198795650308583329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_9
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 976
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1b1356f3fabe6bc0800000000000000
+      internalID: -3787884679599547620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_10
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 976
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a5337beaaca36290800000000000000
+      internalID: -7898279471383104087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_11
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 975
+        width: 7
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39bf0a60838e95fa0800000000000000
+      internalID: -5811358516817888365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_12
+      rect:
+        serializedVersion: 2
+        x: 1091
+        y: 971
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1316a35e1d21eb60800000000000000
+      internalID: 7773544040093848346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_13
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 960
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc7192642c30db250800000000000000
+      internalID: 5961925614644041676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_14
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 952
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4ce8becb59711fa0800000000000000
+      internalID: -5831746607250871220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_15
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 959
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68418b2d3ebcd2800800000000000000
+      internalID: 589351305608696966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_16
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 962
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fc2e10d599c3dc60800000000000000
+      internalID: 7841833021461114105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_17
+      rect:
+        serializedVersion: 2
+        x: 1091
+        y: 956
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6adf1fe61a822d90800000000000000
+      internalID: -7123979829440947603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_18
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 944
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97366c5a89f57fc10800000000000000
+      internalID: 2087242061530424185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_19
+      rect:
+        serializedVersion: 2
+        x: 1042
+        y: 950
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8348f97c954c0fd60800000000000000
+      internalID: 7922047634424955960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_20
+      rect:
+        serializedVersion: 2
+        x: 1042
+        y: 943
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eef911a4ff1a32780800000000000000
+      internalID: -8708939136573005842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_21
+      rect:
+        serializedVersion: 2
+        x: 1089
+        y: 947
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9efb5b528d9e58980800000000000000
+      internalID: -8537160404056031255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_22
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 939
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f2405a5b679e8750800000000000000
+      internalID: 6309146615325147894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_23
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 926
+        width: 7
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4a753e995c6f4710800000000000000
+      internalID: 1679680318194678351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_24
+      rect:
+        serializedVersion: 2
+        x: 1042
+        y: 935
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1763addf43b0379b0800000000000000
+      internalID: -5083707232146016655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_25
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 928
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b067ecd540dae0120800000000000000
+      internalID: 2382031487190857227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_26
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 904
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcbd14d5708f1b3a0800000000000000
+      internalID: -6651262464136455217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_27
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 905
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca71d74227fee1400800000000000000
+      internalID: 296937898970519468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_28
+      rect:
+        serializedVersion: 2
+        x: 1089
+        y: 898
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c1245a636f227990800000000000000
+      internalID: -7389791934529396288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_29
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 888
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b848c44e9536305f0800000000000000
+      internalID: -791679871753616245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_30
+      rect:
+        serializedVersion: 2
+        x: 1089
+        y: 866
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b53537426796f4b0800000000000000
+      internalID: -5406967854254443084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_31
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 846
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 913baffd19b65ff00800000000000000
+      internalID: 1149943554135208729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_32
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 855
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bab9456426dfeadf0800000000000000
+      internalID: -166917537637557333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_33
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 838
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cf92ff3800f5b3e0800000000000000
+      internalID: -2038459338092011583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_34
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 830
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdaed97926faa4970800000000000000
+      internalID: 8739990864851233499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_35
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 798
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b8965458ce766660800000000000000
+      internalID: 7378724438366656689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_36
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 727
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01b8d40766b0b01e0800000000000000
+      internalID: -2230676655833249008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_37
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 718
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc3672746074138c0800000000000000
+      internalID: -4021354899976002612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_38
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 712
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84d06ad1b85696970800000000000000
+      internalID: 8748635399316180296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_39
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 702
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4015db16647c0c10800000000000000
+      internalID: 2021118314684944463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_40
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 683
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf66da00d2d3145a0800000000000000
+      internalID: -6538877920471062788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_41
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 678
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b3f31b732d6fe9f0800000000000000
+      internalID: -437010639675460688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_42
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 646
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ffb17c944a59da10800000000000000
+      internalID: 1934676765661315065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_43
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 513
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1eb7653ce4ec06b70800000000000000
+      internalID: 8890332502109354977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_44
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 502
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab9c9b4eac1f20af0800000000000000
+      internalID: -431516760551077446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_45
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 488
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3b00d1d8b4908380800000000000000
+      internalID: -8971006936207062211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_46
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 479
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fe88293b642d06c0800000000000000
+      internalID: -4175641236563521803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_47
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 467
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1914bd65327286a0800000000000000
+      internalID: -6448466142641776357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_48
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 462
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3618ae8d861469e0800000000000000
+      internalID: -1629152367961696707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_49
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 446
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eca5a7eb665669710800000000000000
+      internalID: 1699657401335700174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_50
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 422
+        width: 7
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fe2ad8d820bdd190800000000000000
+      internalID: -7935993278873587977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_51
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 438
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3138519717471df0800000000000000
+      internalID: -209620691101142722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_52
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 408
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dca75018db230c7d0800000000000000
+      internalID: -2900262370531771699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_53
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 414
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e734b6539f0f6a20800000000000000
+      internalID: 3057679797497116645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_54
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 390
+        width: 10
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5eb5aa7570b3d06b0800000000000000
+      internalID: -5328537881387836443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_55
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 350
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 048ba460ff9d927d0800000000000000
+      internalID: -2942581192164460480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_56
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 339
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f6fcd14952290980800000000000000
+      internalID: -8572282648970594576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_57
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 326
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 258e31ba81ff12090800000000000000
+      internalID: -8060881376601970606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_58
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 318
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5f1b10d730edd980800000000000000
+      internalID: -8512401190341107874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_59
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 300
+        width: 8
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4076a124bcd4d0720800000000000000
+      internalID: 2813990877559154436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_60
+      rect:
+        serializedVersion: 2
+        x: 1147
+        y: 298
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b545dcad240506cd0800000000000000
+      internalID: -2566963539532229541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_61
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 275
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d18296e8b8b46470800000000000000
+      internalID: 8387031510352560594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_62
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 286
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ceaba6e0e5452cb0800000000000000
+      internalID: -4889424988195803453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_63
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 262
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 007a8f2d62bd0bf70800000000000000
+      internalID: 9201094998512674560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_64
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 267
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be36ae2a158c7b660800000000000000
+      internalID: 7401604765557875691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_65
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 237
+        width: 8
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e86dc26b8478d91a0800000000000000
+      internalID: -6801131115895794034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_66
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 222
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fc4aa0d6c07d0080800000000000000
+      internalID: -9219588862950880011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_67
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 208
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1f4d7859ff7df440800000000000000
+      internalID: 4971270272595087131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_68
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 200
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99ba4247a76570660800000000000000
+      internalID: 7351940000640183193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_69
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 192
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3a30dae336d188b0800000000000000
+      internalID: -5151600980263945670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_70
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 195
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3253451ccf6f44610800000000000000
+      internalID: 1604678932686452003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_71
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 174
+        width: 10
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9c7d10017a589650800000000000000
+      internalID: 6239836725101558940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_72
+      rect:
+        serializedVersion: 2
+        x: 1089
+        y: 186
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9286a6312d5fba2a0800000000000000
+      internalID: -6725011335930025943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_73
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 175
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afca4cfb7d29796b0800000000000000
+      internalID: -5289597781990396678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_74
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 166
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd370770537386e90800000000000000
+      internalID: -7032310117241424929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_75
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 163
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbba81b83cd22d890800000000000000
+      internalID: -7434829716959745089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_76
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 149
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91d4469510bf36a40800000000000000
+      internalID: 5360403964714306841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_77
+      rect:
+        serializedVersion: 2
+        x: 993
+        y: 152
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea75a9fa2fdf7cfe0800000000000000
+      internalID: -1168686359509313618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_78
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 147
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7879fb6c1d752d3b0800000000000000
+      internalID: -5489228437316987001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_79
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 146
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 136090d3ad5360350800000000000000
+      internalID: 5982528366451426865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_80
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 134
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09f2a7d3b826ddb40800000000000000
+      internalID: 5466633872869044112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_81
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 130
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13d7924b34e48b970800000000000000
+      internalID: 8770846326996434225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_82
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 137
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7255e783b4ba8730800000000000000
+      internalID: 4002209902044205692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_83
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 126
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4a643f8be093b4a0800000000000000
+      internalID: -6578755289263871409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_84
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 118
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc8d5047481de4160800000000000000
+      internalID: 7011772036674869455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_85
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 127
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a3a802773f9cb1d0800000000000000
+      internalID: -3333614563675823193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_86
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 120
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4091939c33c80b4e0800000000000000
+      internalID: -1967918883113723644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_87
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 111
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 659922bd468082810800000000000000
+      internalID: 1740650485244926294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_88
+      rect:
+        serializedVersion: 2
+        x: 1089
+        y: 115
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66860d2501d07ce50800000000000000
+      internalID: 6829441723690674278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_89
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 94
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1227f23552151ed00800000000000000
+      internalID: 1000169813004218913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_90
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 106
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1bdebc5cce5722e0800000000000000
+      internalID: -2150646065223771364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_91
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 103
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa69625faae56ec30800000000000000
+      internalID: 4388298975269525167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_92
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 92
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bc47ec2bd71de840800000000000000
+      internalID: 5254882570329869488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_93
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 96
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 676b25473433e29e0800000000000000
+      internalID: -1644320449136249226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_94
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 95
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6348e4c39e1a7a40800000000000000
+      internalID: 5366635525977949037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_95
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 88
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b45b1aeb3977ae760800000000000000
+      internalID: 7487928806899037515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_96
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 88
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69fdf9c31d7afae10800000000000000
+      internalID: 2211170459169316758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_97
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 90
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a1f170a0cef7d370800000000000000
+      internalID: 8347420537633501605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_98
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 72
+        width: 7
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d41aed74aa1fa770800000000000000
+      internalID: 8624141105227240657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_99
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 80
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0d1f1b9bd661ec20800000000000000
+      internalID: 3233979100815105295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_100
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 83
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5014a49a0a24e16e0800000000000000
+      internalID: -1864979937882390267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_101
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 63
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 208b29de2ccf680b0800000000000000
+      internalID: -5726611962015336446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_102
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 72
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01bbc8013b8b6b7e0800000000000000
+      internalID: -1750008325970543856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_103
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 59
+        width: 6
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 835f1b4d6da475a80800000000000000
+      internalID: -8478225486949780168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_104
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 74
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8951ff1a6cdaf0fd0800000000000000
+      internalID: -2373487409967983208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_105
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 52
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb89a6af5a6cdf1d0800000000000000
+      internalID: -3315275334501623618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_106
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 53
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23ca2dae8750c43b0800000000000000
+      internalID: -5527036625796551630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_107
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 46
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6862bf53b0aebbea0800000000000000
+      internalID: -5855829556594006394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_108
+      rect:
+        serializedVersion: 2
+        x: 1089
+        y: 51
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14918e166b8783960800000000000000
+      internalID: 7581942697400211777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_109
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 38
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 322a36e89770b1910800000000000000
+      internalID: 1809047893980717603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_110
+      rect:
+        serializedVersion: 2
+        x: 946
+        y: 43
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f09552dfae76bc560800000000000000
+      internalID: 7335070677070076175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_111
+      rect:
+        serializedVersion: 2
+        x: 993
+        y: 40
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3668228784d40b600800000000000000
+      internalID: 481970133777155683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_112
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 39
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffdffb4c7a7700530800000000000000
+      internalID: 3819184046454341119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_113
+      rect:
+        serializedVersion: 2
+        x: 1087
+        y: 41
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da8aea85d923a8bb0800000000000000
+      internalID: -4933074790451861331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_114
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 14
+        width: 10
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc09b4bb1ac85f630800000000000000
+      internalID: 3960226073602134219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_115
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 29
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f7d2d2f23909d270800000000000000
+      internalID: 8275655904696915952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_116
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 35
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87351b592964954d0800000000000000
+      internalID: -3145405269350984840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_117
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 18
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16969ecb74b3172e0800000000000000
+      internalID: -2129855969471403679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_118
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 23
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ba5ff8876be8b420800000000000000
+      internalID: 2646123610992761524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_119
+      rect:
+        serializedVersion: 2
+        x: 1087
+        y: 16
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: addf8f98d1fa42a80800000000000000
+      internalID: -8492470455910203942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_120
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 0
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e36250329f83084c0800000000000000
+      internalID: -4287364202571160002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_121
+      rect:
+        serializedVersion: 2
+        x: 993
+        y: 8
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4c164a8fd3b32890800000000000000
+      internalID: -7483940383080702900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_122
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 5
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f82f97815352bde60800000000000000
+      internalID: 7988019274045846159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_123
+      rect:
+        serializedVersion: 2
+        x: 1042
+        y: 10
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49188e6fd52054d20800000000000000
+      internalID: 3262016107697439124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_124
+      rect:
+        serializedVersion: 2
+        x: 1087
+        y: 10
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9dc854dce1b81a920800000000000000
+      internalID: 2999831791214628057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tool_Brush2_125
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 0
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae56e19c74b3d8450800000000000000
+      internalID: 6092591050405078506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Tool_Brush2_0: 3469519364189022771
+      Tool_Brush2_1: -1352050911105797620
+      Tool_Brush2_10: -7898279471383104087
+      Tool_Brush2_100: -1864979937882390267
+      Tool_Brush2_101: -5726611962015336446
+      Tool_Brush2_102: -1750008325970543856
+      Tool_Brush2_103: -8478225486949780168
+      Tool_Brush2_104: -2373487409967983208
+      Tool_Brush2_105: -3315275334501623618
+      Tool_Brush2_106: -5527036625796551630
+      Tool_Brush2_107: -5855829556594006394
+      Tool_Brush2_108: 7581942697400211777
+      Tool_Brush2_109: 1809047893980717603
+      Tool_Brush2_11: -5811358516817888365
+      Tool_Brush2_110: 7335070677070076175
+      Tool_Brush2_111: 481970133777155683
+      Tool_Brush2_112: 3819184046454341119
+      Tool_Brush2_113: -4933074790451861331
+      Tool_Brush2_114: 3960226073602134219
+      Tool_Brush2_115: 8275655904696915952
+      Tool_Brush2_116: -3145405269350984840
+      Tool_Brush2_117: -2129855969471403679
+      Tool_Brush2_118: 2646123610992761524
+      Tool_Brush2_119: -8492470455910203942
+      Tool_Brush2_12: 7773544040093848346
+      Tool_Brush2_120: -4287364202571160002
+      Tool_Brush2_121: -7483940383080702900
+      Tool_Brush2_122: 7988019274045846159
+      Tool_Brush2_123: 3262016107697439124
+      Tool_Brush2_124: 2999831791214628057
+      Tool_Brush2_125: 6092591050405078506
+      Tool_Brush2_13: 5961925614644041676
+      Tool_Brush2_14: -5831746607250871220
+      Tool_Brush2_15: 589351305608696966
+      Tool_Brush2_16: 7841833021461114105
+      Tool_Brush2_17: -7123979829440947603
+      Tool_Brush2_18: 2087242061530424185
+      Tool_Brush2_19: 7922047634424955960
+      Tool_Brush2_2: 5653177603861319169
+      Tool_Brush2_20: -8708939136573005842
+      Tool_Brush2_21: -8537160404056031255
+      Tool_Brush2_22: 6309146615325147894
+      Tool_Brush2_23: 1679680318194678351
+      Tool_Brush2_24: -5083707232146016655
+      Tool_Brush2_25: 2382031487190857227
+      Tool_Brush2_26: -6651262464136455217
+      Tool_Brush2_27: 296937898970519468
+      Tool_Brush2_28: -7389791934529396288
+      Tool_Brush2_29: -791679871753616245
+      Tool_Brush2_3: 8977915731727144883
+      Tool_Brush2_30: -5406967854254443084
+      Tool_Brush2_31: 1149943554135208729
+      Tool_Brush2_32: -166917537637557333
+      Tool_Brush2_33: -2038459338092011583
+      Tool_Brush2_34: 8739990864851233499
+      Tool_Brush2_35: 7378724438366656689
+      Tool_Brush2_36: -2230676655833249008
+      Tool_Brush2_37: -4021354899976002612
+      Tool_Brush2_38: 8748635399316180296
+      Tool_Brush2_39: 2021118314684944463
+      Tool_Brush2_4: 2202040804944933032
+      Tool_Brush2_40: -6538877920471062788
+      Tool_Brush2_41: -437010639675460688
+      Tool_Brush2_42: 1934676765661315065
+      Tool_Brush2_43: 8890332502109354977
+      Tool_Brush2_44: -431516760551077446
+      Tool_Brush2_45: -8971006936207062211
+      Tool_Brush2_46: -4175641236563521803
+      Tool_Brush2_47: -6448466142641776357
+      Tool_Brush2_48: -1629152367961696707
+      Tool_Brush2_49: 1699657401335700174
+      Tool_Brush2_5: -1627324974970386330
+      Tool_Brush2_50: -7935993278873587977
+      Tool_Brush2_51: -209620691101142722
+      Tool_Brush2_52: -2900262370531771699
+      Tool_Brush2_53: 3057679797497116645
+      Tool_Brush2_54: -5328537881387836443
+      Tool_Brush2_55: -2942581192164460480
+      Tool_Brush2_56: -8572282648970594576
+      Tool_Brush2_57: -8060881376601970606
+      Tool_Brush2_58: -8512401190341107874
+      Tool_Brush2_59: 2813990877559154436
+      Tool_Brush2_6: 8510745447675185518
+      Tool_Brush2_60: -2566963539532229541
+      Tool_Brush2_61: 8387031510352560594
+      Tool_Brush2_62: -4889424988195803453
+      Tool_Brush2_63: 9201094998512674560
+      Tool_Brush2_64: 7401604765557875691
+      Tool_Brush2_65: -6801131115895794034
+      Tool_Brush2_66: -9219588862950880011
+      Tool_Brush2_67: 4971270272595087131
+      Tool_Brush2_68: 7351940000640183193
+      Tool_Brush2_69: -5151600980263945670
+      Tool_Brush2_7: 1296399651369973217
+      Tool_Brush2_70: 1604678932686452003
+      Tool_Brush2_71: 6239836725101558940
+      Tool_Brush2_72: -6725011335930025943
+      Tool_Brush2_73: -5289597781990396678
+      Tool_Brush2_74: -7032310117241424929
+      Tool_Brush2_75: -7434829716959745089
+      Tool_Brush2_76: 5360403964714306841
+      Tool_Brush2_77: -1168686359509313618
+      Tool_Brush2_78: -5489228437316987001
+      Tool_Brush2_79: 5982528366451426865
+      Tool_Brush2_8: 7198795650308583329
+      Tool_Brush2_80: 5466633872869044112
+      Tool_Brush2_81: 8770846326996434225
+      Tool_Brush2_82: 4002209902044205692
+      Tool_Brush2_83: -6578755289263871409
+      Tool_Brush2_84: 7011772036674869455
+      Tool_Brush2_85: -3333614563675823193
+      Tool_Brush2_86: -1967918883113723644
+      Tool_Brush2_87: 1740650485244926294
+      Tool_Brush2_88: 6829441723690674278
+      Tool_Brush2_89: 1000169813004218913
+      Tool_Brush2_9: -3787884679599547620
+      Tool_Brush2_90: -2150646065223771364
+      Tool_Brush2_91: 4388298975269525167
+      Tool_Brush2_92: 5254882570329869488
+      Tool_Brush2_93: -1644320449136249226
+      Tool_Brush2_94: 5366635525977949037
+      Tool_Brush2_95: 7487928806899037515
+      Tool_Brush2_96: 2211170459169316758
+      Tool_Brush2_97: 8347420537633501605
+      Tool_Brush2_98: 8624141105227240657
+      Tool_Brush2_99: 3233979100815105295
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

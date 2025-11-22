@@ -17,7 +17,7 @@ public static class MuseumItemManager
     /// Is called by the camera, when the musuem scene is opened.
     /// Makes the manager ready for operation.
     /// </summary>
-    public static void InitializeManager(GameObject museumItemPrefab)
+    public static void InitializeManager()
     {
         // preps the fossil siloets
         if (!museumLoaded)
@@ -35,35 +35,23 @@ public static class MuseumItemManager
                     Debug.Log("musuem updated");
                 }
             };
-
-            SceneManager.sceneUnloaded += (scene) =>
-            {
-                if (scene.name == "InfoPopUpScene")
-                {
-
-                }
-            };
-
-
-            Debug.Log(museumFossilPlacements.Count);
         }
     }
 
 
 
     /// <summary>
-    /// Updates the fossils stored in the museum.
+    /// Gathers and inserts the fossils to the museum.
     /// Is called after after the scene is loaded
     /// </summary>
     public static void UpdateMuseum()
     {
+
         foreach (FossileInfo_SO entry in PickedUpFossils.Instance.GetFossils())
         {
             UnlockFossil(entry);
         }
         PickedUpFossils.Instance.ClearFossils();
-
-
     }
 
     private static void UpdateFossilData()
@@ -83,9 +71,28 @@ public static class MuseumItemManager
     /// <param name="fossileInfo">The fossils <see cref="FossileInfo_SO"/>.</param>
     private static void UnlockFossil(FossileInfo_SO fossileInfo)
     {
+        // hvis der stadig er plads i museet.
         if (museumFossilPlacements.Count >= museumFossildata.Count)
         {
-            museumFossildata.Add(museumFossildata.Count, fossileInfo);
+            //checks if there are any fossils of the same type.
+            int entryID = 0;
+            bool hasFossilOfSameType = museumFossildata.Any((entry) =>
+            {
+                entryID = entry.Key;
+                return entry.Value.FossilType == fossileInfo.FossilType;
+            });
+
+            if (hasFossilOfSameType)
+            {
+                if ((int)museumFossildata[entryID].Kvalitet < (int)fossileInfo.Kvalitet)
+                {
+                    museumFossildata[entryID] = fossileInfo;
+                }
+            }
+            else
+            {
+                museumFossildata.Add(museumFossildata.Count, fossileInfo);
+            }
         }
     }
 

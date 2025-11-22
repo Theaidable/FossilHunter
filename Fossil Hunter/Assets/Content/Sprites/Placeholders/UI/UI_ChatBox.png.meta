@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5d1dddeb3a394b84e9fdd6072544c7ca
+guid: 1080a7749611e5e438ee3b98772e1275
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3547801648469258843
-    second: right_arrow_0
+      213: 2947282450127639721
+    second: UI_ChatBox_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,17 +96,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: right_arrow_0
+      name: UI_ChatBox_0
       rect:
         serializedVersion: 2
-        x: 7
-        y: 7
-        width: 94
-        height: 173
+        x: 64
+        y: 118
+        width: 894
+        height: 796
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5adc171a23da3cec0800000000000000
-      internalID: -3547801648469258843
+      spriteID: 9a4d994e5c9d6e820800000000000000
+      internalID: 2947282450127639721
       vertices: []
       indices: 
       edges: []
@@ -135,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      right_arrow_0: -3547801648469258843
+      UI_ChatBox_0: 2947282450127639721
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

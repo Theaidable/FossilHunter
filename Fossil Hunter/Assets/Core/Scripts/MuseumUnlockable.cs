@@ -41,6 +41,7 @@ public class MuseumUnlockable : MonoBehaviour
             //if the raycast hit anything in the non-masked layers
             if (hit.collider == collider)
             {
+                GetComponent<AudioSource>().Play();
                 InfoPopUpManager.OpenUI(fossileInfo);
             }
         }
@@ -56,7 +57,7 @@ public class MuseumUnlockable : MonoBehaviour
     {
         // gives object fossil data and its toggles unlocked state
         this.fossileInfo = fossileInfo;
-        //gameObject.GetComponent<SpriteRenderer>().sprite = sprite;
+        gameObject.GetComponent<SpriteRenderer>().sprite = fossileInfo.GetSprite;
         IsUnlocked = !IsUnlocked;
     }
 }

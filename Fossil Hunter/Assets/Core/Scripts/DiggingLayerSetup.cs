@@ -14,34 +14,34 @@ public class LayerSetup : MonoBehaviour
     private int totalLayers;
     [Header("Layer 1")]
     [SerializeField] private Sprite layer1Sprite;
-    [SerializeField] private List<FossileInfo_SO> fossilsOnLayer1;
+    [SerializeField] private List<FossilType> fossilTypesOnLayer1;
     [Header("Layer 2")]
     [SerializeField] private Sprite layer2Sprite;
-    [SerializeField] private List<FossileInfo_SO> fossilsOnLayer2;
+    [SerializeField] private List<FossilType> fossilTypesOnLayer2;
     [Header("Layer 3")]
     [SerializeField] private Sprite layer3Sprite;
-    [SerializeField] private List<FossileInfo_SO> fossilsOnLayer3;
+    [SerializeField] private List<FossilType> fossilTypesOnLayer3;
     [Header("Layer 4")]
     [SerializeField] private Sprite layer4Sprite;
-    [SerializeField] private List<FossileInfo_SO> fossilsOnLayer4;
+    [SerializeField] private List<FossilType> fossilTypesOnLayer4;
     [Header("Layer 5")]
     [SerializeField] private Sprite layer5Sprite;
-    [SerializeField] private List<FossileInfo_SO> fossilsOnLayer5;
+    [SerializeField] private List<FossilType> fossilTypesOnLayer5;
     [Header("Layer 6")]
     [SerializeField] private Sprite layer6Sprite;
-    [SerializeField] private List<FossileInfo_SO> fossilsOnLayer6;
+    [SerializeField] private List<FossilType> fossilTypesOnLayer6;
     [Header("Layer 7")]
     [SerializeField] private Sprite layer7Sprite;
-    [SerializeField] private List<FossileInfo_SO> fossilsOnLayer7;
+    [SerializeField] private List<FossilType> fossilTypesOnLayer7;
     [Header("Layer 8")]
     [SerializeField] private Sprite layer8Sprite;
-    [SerializeField] private List<FossileInfo_SO> fossilsOnLayer8;
+    [SerializeField] private List<FossilType> fossilTypesOnLayer8;
     [Header("Layer 9")]
     [SerializeField] private Sprite layer9Sprite;
-    [SerializeField] private List<FossileInfo_SO> fossilsOnLayer9;
+    [SerializeField] private List<FossilType> fossilTypesOnLayer9;
     [Header("Layer 10")]
     [SerializeField] private Sprite layer10Sprite;
-    [SerializeField] private List<FossileInfo_SO> fossilsOnLayer10;
+    [SerializeField] private List<FossilType> fossilTypesOnLayer10;
 
     public int TotalLayers
     {
@@ -63,7 +63,7 @@ public class LayerSetup : MonoBehaviour
         newFossilPrefab = Resources.Load("Prefabs/PickUppableFossil_Prefab") as GameObject;
         //put fields in some arrays so we can create a for loop
         Sprite[] layerSprites = { layer1Sprite, layer2Sprite, layer3Sprite, layer4Sprite, layer5Sprite, layer6Sprite, layer7Sprite, layer8Sprite, layer9Sprite, layer10Sprite };
-        List<FossileInfo_SO>[] fossilsOnLayers = { fossilsOnLayer1, fossilsOnLayer2, fossilsOnLayer3, fossilsOnLayer4, fossilsOnLayer5, fossilsOnLayer6, fossilsOnLayer7, fossilsOnLayer8, fossilsOnLayer9, fossilsOnLayer10 };
+        List<FossilType>[] fossilTypesOnLayers = { fossilTypesOnLayer1, fossilTypesOnLayer2, fossilTypesOnLayer3, fossilTypesOnLayer4, fossilTypesOnLayer5, fossilTypesOnLayer6, fossilTypesOnLayer7, fossilTypesOnLayer8, fossilTypesOnLayer9, fossilTypesOnLayer10 };
         //create as many new earth layers as specified from total layers & fields
         for (int i = 0; i < totalLayers; i++)
         {
@@ -79,10 +79,11 @@ public class LayerSetup : MonoBehaviour
             if (i == (totalLayers - 1)) newLayer.tag = "Bottom Layer";
 
             //set up each fossil on this layer
-            foreach (FossileInfo_SO fossil in fossilsOnLayers[i])
+            foreach (FossilType fossilType in fossilTypesOnLayers[i])
             {
+                FossileInfo_SO fossil = FossileInfo_SO.GetRandomizedData(fossilType);
                 GameObject newFossil = Instantiate(newFossilPrefab, new Vector3(UnityEngine.Random.Range(-digSpace.x/2+digSpaceCenter.x, digSpace.x / 2 + digSpaceCenter.x), UnityEngine.Random.Range(-digSpace.y / 2 + digSpaceCenter.y, digSpace.y / 2 + digSpaceCenter.y), newLayer.transform.position.z - 0.5f), Quaternion.identity) as GameObject;
-                newFossil.name = fossil.FossilType.ToString();
+                newFossil.name = fossilType.ToString();
                 newFossil.GetComponent<SpriteRenderer>().sprite = fossil.GetSprite;
                 newFossil.GetComponent<PickupableFossil>().Data = fossil;
                 newFossil.GetComponent<SpriteRenderer>().sortingLayerID = sr.sortingLayerID;
@@ -91,6 +92,8 @@ public class LayerSetup : MonoBehaviour
         }
     }
 }
+
+
 [Serializable]
 public class SerializableDictionary<TKey, TValue> : Dictionary<TKey, TValue>, ISerializationCallbackReceiver
 {
