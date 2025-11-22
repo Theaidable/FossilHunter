@@ -27,6 +27,8 @@ namespace UI_Handlers
 
         [SerializeField] private bool startHidden = false;
 
+        private Network_Chat _chat;
+
         private void Awake()
         {
             _collider = GetComponent<BoxCollider2D>();
@@ -45,8 +47,20 @@ namespace UI_Handlers
 
         private void Start()
         {
-            //Subscribe til network objekt for at sende besked
-            Network_Chat.Instance.OnMessageRecieved += OnMessageReceived;
+            if(startHidden == false)
+            {
+                _chat = FindFirstObjectByType<Network_Chat>();
+
+                if (_chat != null)
+                {
+                    //Subscribe til network objekt for at sende besked
+                    _chat.OnMessageRecieved += OnMessageReceived;
+                }
+                else
+                {
+                    Debug.Log("Network_chat could not be found");
+                }
+            }
         }
 
         /// <summary>
@@ -64,8 +78,18 @@ namespace UI_Handlers
                 }
 
                 GetOverlay();
-                
-                Network_Chat.Instance.OnMessageRecieved += OnMessageReceived;
+
+                _chat = FindFirstObjectByType<Network_Chat>();
+
+                if (_chat != null)
+                {
+                    //Subscribe til network objekt for at sende besked
+                    _chat.OnMessageRecieved += OnMessageReceived;
+                }
+                else
+                {
+                    Debug.Log("Network_chat could not be found");
+                }
             }
         }
 
@@ -100,8 +124,14 @@ namespace UI_Handlers
         {
             if (_inputField != null)
             {
-                var message = _inputField?.value;
-                Network_Chat.Instance.SendLocalMessage(message);
+                var message = _inputField.value;
+
+                if(_chat.IsSpawned == false)
+                {
+                    Debug.Log("Network_Chat has not been spawned");
+                }
+
+                _chat.SendLocalMessage(message);
                 _inputField.value = string.Empty;
             }
         }
@@ -137,9 +167,9 @@ namespace UI_Handlers
                 _closeButton.clicked -= OnCloseClicked;
             }
 
-            if (Network_Chat.Instance != null)
+            if (_chat != null)
             {
-                Network_Chat.Instance.OnMessageRecieved -= OnMessageReceived;
+                _chat.OnMessageRecieved -= OnMessageReceived;
             }
 
             //Luk chatten

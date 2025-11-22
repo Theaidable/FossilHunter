@@ -12,23 +12,24 @@ namespace Network_Handler
     {
         //Fields
 
-        //Singleton pattern
-        public static Network_Chat Instance { get; private set; }
-
         //Event for når man modtager en besked fra server
         public event Action<string> OnMessageRecieved;
 
+        private Network_Chat() { }
+
+        /*
         private void Awake()
         {
-            if (Instance == null)
+            if (instance == null)
             {
-                Instance = this;
+                instance = this;
             }
             else
             {
                 Destroy(gameObject);
             }
         }
+        */
 
         /// <summary>
         /// Send besked til server
@@ -77,6 +78,9 @@ namespace Network_Handler
         public override void OnNetworkSpawn()
         {
             base.OnNetworkSpawn();
+
+            DontDestroyOnLoad(gameObject);
+
             Debug.Log($"Network_Chat spawned on {(IsServer ? "SERVER" : "CLIENT")} – Owner: {OwnerClientId}");
         }
     }
