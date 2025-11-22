@@ -17,8 +17,6 @@ public class EraseDirt : MonoBehaviour
     private float cleanPercentage = 90;
     public int EraserSize {  get { return eraserSize; } set { eraserSize = value; } }
     public bool Drawing {  get { return drawing; } set { drawing = value; } }
-    private ParticleSystem particles;
-    ParticleSystem.EmitParams emitParams;
 
 void Awake()
     {
@@ -35,11 +33,6 @@ void Awake()
         m_Texture.Apply();
         //render sprite to test that it matches current settings
         spriteRend.sprite = Sprite.Create(m_Texture, originalSpriteRect, new Vector2(0.5f, 0.5f));
-        particles = GetComponent<ParticleSystem>();
-        emitParams = new ParticleSystem.EmitParams();
-        emitParams.applyShapeToPosition = true;
-        emitParams.startSize = 0.5f;
-
         //determine the total opacity of the dirt
         foreach (Color c in m_Colors)
         {
@@ -52,22 +45,11 @@ void Awake()
         if (!Input.GetMouseButton(0))
         {
             drawing = false;
-            if (!transform.parent.gameObject.GetComponent<AudioSource>().isPlaying)
-            {
-                transform.parent.gameObject.GetComponent<SFXManager>().DigSound();
-            }
-            emitParams.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
         }
     }
 
     public void UpdateTexture(RaycastHit2D hit)
     {
-if (hit.collider == GetComponent<Collider2D>())
-            {
-                particles.Emit(emitParams, 1);
-            }
-
         //make sure we only interact within the collider bounds & at the correct mouse position
         int w = m_Texture.width;
         int h = m_Texture.height;

@@ -36,7 +36,7 @@ public class FossileInfo_SO : ScriptableObject
             if (sprite == null)
             {
                 // returns a string based on the type of fossil
-                return Instance.FossilSprites[(int)FossilType];
+                return FossilSprites[(int)FossilType];
             }
             else
             {
