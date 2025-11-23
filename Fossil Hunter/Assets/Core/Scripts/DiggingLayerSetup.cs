@@ -64,6 +64,7 @@ public class LayerSetup : MonoBehaviour
         //put fields in some arrays so we can create a for loop
         Sprite[] layerSprites = { layer1Sprite, layer2Sprite, layer3Sprite, layer4Sprite, layer5Sprite, layer6Sprite, layer7Sprite, layer8Sprite, layer9Sprite, layer10Sprite };
         List<FossilType>[] fossilTypesOnLayers = { fossilTypesOnLayer1, fossilTypesOnLayer2, fossilTypesOnLayer3, fossilTypesOnLayer4, fossilTypesOnLayer5, fossilTypesOnLayer6, fossilTypesOnLayer7, fossilTypesOnLayer8, fossilTypesOnLayer9, fossilTypesOnLayer10 };
+        int shovelSize= GameObject.Find("Digger").GetComponent<DigThroughLayers>().GetHoleSize;
         //create as many new earth layers as specified from total layers & fields
         for (int i = 0; i < totalLayers; i++)
         {
@@ -75,6 +76,8 @@ public class LayerSetup : MonoBehaviour
             sr.sprite = layerSprites[i];
             if (layerSprites[i] == null) Debug.LogError($"ERROR: Layer {i} does not have a sprite!");
             newLayer.AddComponent<BoxCollider2D>();
+            newLayer.AddComponent<DiggableLayer>();
+            newLayer.GetComponent<DiggableLayer>().EraserSize = shovelSize;
             newLayer.transform.position = new Vector3(0, 0, i);
             if (i == (totalLayers - 1)) newLayer.tag = "Bottom Layer";
 

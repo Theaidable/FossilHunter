@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   layerMasks: []
-  holeSize: 2
+  holeSize: 80
   holeSprite: {fileID: 8177471321811730583, guid: 87aaca0a643d54397ba969dab4fc8875, type: 3}
 --- !u!4 &313772129
 Transform:
@@ -185,11 +185,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   newFossilPrefab: {fileID: 0}
   totalLayers: 3
-  layer1Sprite: {fileID: -5704692716807404661, guid: 514b0c0076211bd46951fdd34d26c069, type: 3}
+  layer1Sprite: {fileID: 8547753652136361683, guid: c9b924ace0f759b45bb84996b10303ae, type: 3}
   fossilTypesOnLayer1: 
-  layer2Sprite: {fileID: 2589881839042300461, guid: 0ada0e401a68d9747995fedaf987f1e1, type: 3}
+  layer2Sprite: {fileID: 4823382702429700698, guid: 94757fe8ee3c24440b857f24a750b7ff, type: 3}
   fossilTypesOnLayer2: 0100000003000000
-  layer3Sprite: {fileID: 4244110540411089770, guid: ababbc00125174d498675cbb00628c23, type: 3}
+  layer3Sprite: {fileID: 3895382488454125955, guid: 2bcf21dffd7781742a8f833a5b6cb36f, type: 3}
   fossilTypesOnLayer3: 04000000
   layer4Sprite: {fileID: 0}
   fossilTypesOnLayer4: 

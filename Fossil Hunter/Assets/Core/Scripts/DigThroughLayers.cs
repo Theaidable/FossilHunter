@@ -4,13 +4,13 @@ using UnityEngine.SceneManagement;
 
 public class DigThroughLayers : MonoBehaviour
 {
-    LayerMask layerMask;
+    private LayerMask layerMask;
     [SerializeField]
     [Tooltip("The layer(s) that the click should not interact with")]
-    string[] layerMasks;
-    Camera mainCamera;
+    private string[] layerMasks;
+    private Camera mainCamera;
     [SerializeField]
-    float holeSize = 2;
+    private int holeSize = 2;
     [SerializeField]
     Sprite holeSprite;
     ParticleSystem particles;
@@ -18,6 +18,10 @@ public class DigThroughLayers : MonoBehaviour
 
     Vector2 digAreaSize;
     Vector2 digAreaCenter;
+    public int GetHoleSize
+    {
+        get { return (int)(holeSize); }
+    }
 
     void Awake()
     {
@@ -56,6 +60,16 @@ public class DigThroughLayers : MonoBehaviour
                 bool passThrough = false;
                 foreach (RaycastHit2D hitCollider in hits)
                 {
+                    if (hitCollider.collider.gameObject.GetComponent<DiggableLayer>() != null)
+                    {
+                        if (!hitCollider.collider.gameObject.GetComponent<DiggableLayer>().HasHoleAtPoint(hitCollider))
+                        {
+                            hitCollider.collider.gameObject.GetComponent<DiggableLayer>().Drawing = true;
+                            hitCollider.collider.gameObject.GetComponent<DiggableLayer>().UpdateTexture(hitCollider);
+                            break;
+                        }
+                    }
+                    /*
                     Debug.Log($"hit! {hitCollider.collider.gameObject.name}");
                     //if we've hit a sprite mask, aka a hole, pass through the layer onto the next
                     if (hitCollider.collider.gameObject.TryGetComponent<SpriteMask>(out SpriteMask mask))
@@ -100,7 +114,7 @@ public class DigThroughLayers : MonoBehaviour
                         passThrough = false;
                         break;
                     }
-
+*/
                 }
                 if (hits.Length < 1)
                 {
