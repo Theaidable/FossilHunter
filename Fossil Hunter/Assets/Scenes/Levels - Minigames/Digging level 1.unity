@@ -155,6 +155,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layerMasks: []
   holeSize: 80
+  layerCoverPercentage: 80
   holeSprite: {fileID: 8177471321811730583, guid: 87aaca0a643d54397ba969dab4fc8875, type: 3}
 --- !u!4 &313772129
 Transform:

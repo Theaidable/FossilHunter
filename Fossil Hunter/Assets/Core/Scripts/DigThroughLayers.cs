@@ -12,6 +12,10 @@ public class DigThroughLayers : MonoBehaviour
     [SerializeField]
     private int holeSize = 2;
     [SerializeField]
+    [Tooltip("How much of the previous layer must be clear before we dig to the next, in percent")]
+    [Range(0, 100)]
+    float layerCoverPercentage;
+    [SerializeField]
     Sprite holeSprite;
     ParticleSystem particles;
     ParticleSystem.EmitParams emitParams;
@@ -60,13 +64,18 @@ public class DigThroughLayers : MonoBehaviour
                 bool passThrough = false;
                 foreach (RaycastHit2D hitCollider in hits)
                 {
-                    if (hitCollider.collider.gameObject.GetComponent<DiggableLayer>() != null)
+                    //if it's a layer, dig through
+                    if (hitCollider.collider.gameObject.GetComponent<DiggableLayer>() != null && hitCollider.collider.gameObject.tag != "Bottom Layer")
                     {
-                        if (!hitCollider.collider.gameObject.GetComponent<DiggableLayer>().HasHoleAtPoint(hitCollider))
+                        //if the layer covers the next layer too much, do not move to next layer
+                        if (!hitCollider.collider.gameObject.GetComponent<DiggableLayer>().HasHoleAtPoint(hitCollider, layerCoverPercentage))
                         {
-                            hitCollider.collider.gameObject.GetComponent<DiggableLayer>().Drawing = true;
                             hitCollider.collider.gameObject.GetComponent<DiggableLayer>().UpdateTexture(hitCollider);
                             break;
+                        }
+                        else
+                        {
+                            hitCollider.collider.gameObject.GetComponent<DiggableLayer>().UpdateTexture(hitCollider);
                         }
                     }
                     /*
@@ -104,17 +113,15 @@ public class DigThroughLayers : MonoBehaviour
                             hole.transform.localScale = new Vector2(holeSize, holeSize);
                             hole.AddComponent<CircleCollider2D>();
                         }
-                        //if we're clicking on a fossil, don't make a hole, instead pick up the fossil
-                        else if (hitCollider.collider.gameObject.GetComponent<PickupableFossil>() != null)
-                        {
-                            GetComponent<SFXManager>().PickUpSound();
-                            Debug.Log($"Picked up a {hitCollider.collider.gameObject.GetComponent<PickupableFossil>().Data.FossilType}");
-                            hitCollider.collider.gameObject.GetComponent<PickupableFossil>().PickUp();
-                        }
-                        passThrough = false;
-                        break;
+                    //if we're clicking on a fossil, don't make a hole, instead pick up the fossil
+                    else if (hitCollider.collider.gameObject.GetComponent<PickupableFossil>() != null)
+                    {
+                        GetComponent<SFXManager>().PickUpSound();
+                        Debug.Log($"Picked up a {hitCollider.collider.gameObject.GetComponent<PickupableFossil>().Data.FossilType}");
+                        hitCollider.collider.gameObject.GetComponent<PickupableFossil>().PickUp();
                     }
-*/
+                    passThrough = false;
+                    break;*/
                 }
                 if (hits.Length < 1)
                 {
@@ -122,6 +129,8 @@ public class DigThroughLayers : MonoBehaviour
                     Debug.Log("did not hit");
                 }
             }
+
         }
     }
 }
+

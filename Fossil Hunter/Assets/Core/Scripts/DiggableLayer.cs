@@ -9,10 +9,8 @@ public class DiggableLayer : MonoBehaviour
     Color zeroAlpha = Color.clear;
     private int eraserSize;
     private Vector2Int lastPos;
-    private bool drawing = false;
     private Rect originalSpriteRect;
     public int EraserSize { get { return eraserSize; } set { eraserSize = value; } }
-    public bool Drawing { get { return drawing; } set { drawing = value; } }
 
     void Awake()
     {
@@ -20,7 +18,7 @@ public class DiggableLayer : MonoBehaviour
         //set the rect of the sprite
         originalSpriteRect = new Rect(spriteRend.sprite.rect.x, spriteRend.sprite.rect.y, spriteRend.sprite.rect.width, spriteRend.sprite.rect.height);
         var tex = spriteRend.sprite.texture;
-        
+
         //ready the texture that will be turning into a new sprite
         m_Texture = new Texture2D(tex.width, tex.height, TextureFormat.ARGB32, false);
         m_Texture.filterMode = FilterMode.Bilinear;
@@ -75,7 +73,7 @@ public class DiggableLayer : MonoBehaviour
         m_Texture.Apply();
         spriteRend.sprite = Sprite.Create(m_Texture, originalSpriteRect, new Vector2(0.5f, 0.5f));
     }
-    public bool HasHoleAtPoint(RaycastHit2D hit)
+    public bool HasHoleAtPoint(RaycastHit2D hit, float allowedCover)
     {
         //make sure we only interact within the collider bounds & at the correct mouse position
         int w = m_Texture.width;
@@ -94,6 +92,7 @@ public class DiggableLayer : MonoBehaviour
         end.y = Mathf.Clamp(Mathf.Max(p.y) + eraserSize, 0, h);
         Vector2 dir = p - lastPos;
         float totalColourInRadius = 0;
+        float totalPossibleColourInRadius = 0;
         for (int x = start.x; x < end.x; x++)
         {
             for (int y = start.y; y < end.y; y++)
@@ -104,12 +103,14 @@ public class DiggableLayer : MonoBehaviour
 
                 if ((pixel - linePos).sqrMagnitude <= eraserSize * eraserSize)
                 {
-                    totalColourInRadius += m_Colors[x + y * w].a;
+                    totalPossibleColourInRadius += 1;
+                    totalColourInRadius += 1 - m_Colors[x + y * w].a;
                 }
             }
         }
         //answer
-        if(totalColourInRadius > 0) {return false;}
-        else {return true;}
+        float result = 100 / totalPossibleColourInRadius * totalColourInRadius;
+        if (result < allowedCover) { return false; }
+        else { return true; }
     }
 }
