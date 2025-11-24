@@ -126,7 +126,6 @@ public class FossileInfo_SO : ScriptableObject
         {
             DataSO.Kvalitet = Kvalitet.Perfekt;
         }
-        
         return DataSO;
     }
 

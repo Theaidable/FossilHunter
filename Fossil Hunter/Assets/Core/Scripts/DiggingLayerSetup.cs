@@ -43,6 +43,7 @@ public class LayerSetup : MonoBehaviour
     [SerializeField] private Sprite layer10Sprite;
     [SerializeField] private List<FossilType> fossilTypesOnLayer10;
 
+    [SerializeField] private List<Sprite> fossilSprites;
     public int TotalLayers
     {
         get => totalLayers;
@@ -87,7 +88,26 @@ public class LayerSetup : MonoBehaviour
                 FossileInfo_SO fossil = FossileInfo_SO.GetRandomizedData(fossilType);
                 GameObject newFossil = Instantiate(newFossilPrefab, new Vector3(UnityEngine.Random.Range(-digSpace.x/2+digSpaceCenter.x, digSpace.x / 2 + digSpaceCenter.x), UnityEngine.Random.Range(-digSpace.y / 2 + digSpaceCenter.y, digSpace.y / 2 + digSpaceCenter.y), newLayer.transform.position.z - 0.5f), Quaternion.identity) as GameObject;
                 newFossil.name = fossilType.ToString();
-                newFossil.GetComponent<SpriteRenderer>().sprite = fossil.GetSprite;
+                //newFossil.GetComponent<SpriteRenderer>().sprite = fossil.GetSprite;
+                //duct tape solution
+                switch (fossilType)
+                {
+                    case FossilType.Ammonit:
+                        newFossil.GetComponent<SpriteRenderer>().sprite= fossilSprites[0];
+                        break;
+                    case FossilType.Søpindsvin:
+                        newFossil.GetComponent<SpriteRenderer>().sprite = fossilSprites[1];
+                        break;
+                    case FossilType.Vettelys:
+                        newFossil.GetComponent<SpriteRenderer>().sprite = fossilSprites[2];
+                        break;
+                    case FossilType.HajTand:
+                        newFossil.GetComponent<SpriteRenderer>().sprite = fossilSprites[3];
+                        break;
+                    default:
+                        Debug.Log("ERROR: no sprite");
+                        break;
+                }
                 newFossil.GetComponent<PickupableFossil>().Data = fossil;
                 newFossil.GetComponent<SpriteRenderer>().sortingLayerID = sr.sortingLayerID;
                 newFossil.GetComponent<SpriteRenderer>().sortingOrder = 1;
