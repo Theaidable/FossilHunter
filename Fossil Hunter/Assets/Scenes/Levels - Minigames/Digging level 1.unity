@@ -206,6 +206,11 @@ MonoBehaviour:
   fossilTypesOnLayer9: 
   layer10Sprite: {fileID: 0}
   fossilTypesOnLayer10: 
+  fossilSprites:
+  - {fileID: 8214954244256243037, guid: 80e0ec5e1298dc3468c026fbcf07885e, type: 3}
+  - {fileID: 362642305050631739, guid: c11e67e7fadb81c44a70cf4ad32a176b, type: 3}
+  - {fileID: 800856444961185489, guid: ab60c5c63abb3934b9dfaf93812f5b4f, type: 3}
+  - {fileID: -5229017718095481012, guid: 453bea7009a757948aa18beb678003e3, type: 3}
 --- !u!82 &313772131
 AudioSource:
   m_ObjectHideFlags: 0
