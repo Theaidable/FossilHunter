@@ -78,6 +78,15 @@ public class DigThroughLayers : MonoBehaviour
                             hitCollider.collider.gameObject.GetComponent<DiggableLayer>().UpdateTexture(hitCollider);
                         }
                     }
+                    //if we're clicking on a fossil, don't make a hole, instead pick up the fossil
+                    else if (hitCollider.collider.gameObject.GetComponent<PickupableFossil>() != null)
+                    {
+                        GetComponent<SFXManager>().PickUpSound();
+                        Debug.Log($"Picked up a {hitCollider.collider.gameObject.GetComponent<PickupableFossil>().Data.FossilType}");
+                        hitCollider.collider.gameObject.GetComponent<PickupableFossil>().PickUp();
+                        break;
+                    }
+
                     /*
                     Debug.Log($"hit! {hitCollider.collider.gameObject.name}");
                     //if we've hit a sprite mask, aka a hole, pass through the layer onto the next
@@ -113,15 +122,8 @@ public class DigThroughLayers : MonoBehaviour
                             hole.transform.localScale = new Vector2(holeSize, holeSize);
                             hole.AddComponent<CircleCollider2D>();
                         }
-                    //if we're clicking on a fossil, don't make a hole, instead pick up the fossil
-                    else if (hitCollider.collider.gameObject.GetComponent<PickupableFossil>() != null)
-                    {
-                        GetComponent<SFXManager>().PickUpSound();
-                        Debug.Log($"Picked up a {hitCollider.collider.gameObject.GetComponent<PickupableFossil>().Data.FossilType}");
-                        hitCollider.collider.gameObject.GetComponent<PickupableFossil>().PickUp();
-                    }
                     passThrough = false;
-                    break;*/
+                    */
                 }
                 if (hits.Length < 1)
                 {
