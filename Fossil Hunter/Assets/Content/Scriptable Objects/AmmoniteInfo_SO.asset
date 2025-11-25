@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8585d3a4c28b76640a9fedd802c8a8b4, type: 3}
+  m_Name: AmmoniteInfo_SO
+  m_EditorClassIdentifier: 
+  FossilSprites: []
+  infoText: 
+  sprite: {fileID: -6249800146077113139, guid: fc9a7b5c413264d4e90ee96ee2c1c698, type: 3}
+  Age: 20
+  FossilType: 1
+  Kvalitet: 2

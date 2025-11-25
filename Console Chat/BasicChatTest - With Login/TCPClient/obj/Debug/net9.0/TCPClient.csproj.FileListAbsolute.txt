@@ -1,0 +1,28 @@
+C:\Users\david\OneDrive\Desktop\Skole\1. Eksamen\3. Semester\SCRUM-Eksamen\BasicChatTest\TCPClient\bin\Debug\net9.0\TCPClient.exe
+C:\Users\david\OneDrive\Desktop\Skole\1. Eksamen\3. Semester\SCRUM-Eksamen\BasicChatTest\TCPClient\bin\Debug\net9.0\TCPClient.deps.json
+C:\Users\david\OneDrive\Desktop\Skole\1. Eksamen\3. Semester\SCRUM-Eksamen\BasicChatTest\TCPClient\bin\Debug\net9.0\TCPClient.runtimeconfig.json
+C:\Users\david\OneDrive\Desktop\Skole\1. Eksamen\3. Semester\SCRUM-Eksamen\BasicChatTest\TCPClient\bin\Debug\net9.0\TCPClient.dll
+C:\Users\david\OneDrive\Desktop\Skole\1. Eksamen\3. Semester\SCRUM-Eksamen\BasicChatTest\TCPClient\bin\Debug\net9.0\TCPClient.pdb
+C:\Users\david\OneDrive\Desktop\Skole\1. Eksamen\3. Semester\SCRUM-Eksamen\BasicChatTest\TCPClient\obj\Debug\net9.0\TCPClient.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\david\OneDrive\Desktop\Skole\1. Eksamen\3. Semester\SCRUM-Eksamen\BasicChatTest\TCPClient\obj\Debug\net9.0\TCPClient.AssemblyInfoInputs.cache
+C:\Users\david\OneDrive\Desktop\Skole\1. Eksamen\3. Semester\SCRUM-Eksamen\BasicChatTest\TCPClient\obj\Debug\net9.0\TCPClient.AssemblyInfo.cs
+C:\Users\david\OneDrive\Desktop\Skole\1. Eksamen\3. Semester\SCRUM-Eksamen\BasicChatTest\TCPClient\obj\Debug\net9.0\TCPClient.csproj.CoreCompileInputs.cache
+C:\Users\david\OneDrive\Desktop\Skole\1. Eksamen\3. Semester\SCRUM-Eksamen\BasicChatTest\TCPClient\obj\Debug\net9.0\TCPClient.dll
+C:\Users\david\OneDrive\Desktop\Skole\1. Eksamen\3. Semester\SCRUM-Eksamen\BasicChatTest\TCPClient\obj\Debug\net9.0\refint\TCPClient.dll
+C:\Users\david\OneDrive\Desktop\Skole\1. Eksamen\3. Semester\SCRUM-Eksamen\BasicChatTest\TCPClient\obj\Debug\net9.0\TCPClient.pdb
+C:\Users\david\OneDrive\Desktop\Skole\1. Eksamen\3. Semester\SCRUM-Eksamen\BasicChatTest\TCPClient\obj\Debug\net9.0\TCPClient.genruntimeconfig.cache
+C:\Users\david\OneDrive\Desktop\Skole\1. Eksamen\3. Semester\SCRUM-Eksamen\BasicChatTest\TCPClient\obj\Debug\net9.0\ref\TCPClient.dll
+C:\Users\david\OneDrive\Desktop\Skole\1. Eksamen\3. Semester\SCRUM-Eksamen\BasicChatTest - With Login\TCPClient\bin\Debug\net9.0\TCPClient.exe
+C:\Users\david\OneDrive\Desktop\Skole\1. Eksamen\3. Semester\SCRUM-Eksamen\BasicChatTest - With Login\TCPClient\bin\Debug\net9.0\TCPClient.deps.json
+C:\Users\david\OneDrive\Desktop\Skole\1. Eksamen\3. Semester\SCRUM-Eksamen\BasicChatTest - With Login\TCPClient\bin\Debug\net9.0\TCPClient.runtimeconfig.json
+C:\Users\david\OneDrive\Desktop\Skole\1. Eksamen\3. Semester\SCRUM-Eksamen\BasicChatTest - With Login\TCPClient\bin\Debug\net9.0\TCPClient.dll
+C:\Users\david\OneDrive\Desktop\Skole\1. Eksamen\3. Semester\SCRUM-Eksamen\BasicChatTest - With Login\TCPClient\bin\Debug\net9.0\TCPClient.pdb
+C:\Users\david\OneDrive\Desktop\Skole\1. Eksamen\3. Semester\SCRUM-Eksamen\BasicChatTest - With Login\TCPClient\obj\Debug\net9.0\TCPClient.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\david\OneDrive\Desktop\Skole\1. Eksamen\3. Semester\SCRUM-Eksamen\BasicChatTest - With Login\TCPClient\obj\Debug\net9.0\TCPClient.AssemblyInfoInputs.cache
+C:\Users\david\OneDrive\Desktop\Skole\1. Eksamen\3. Semester\SCRUM-Eksamen\BasicChatTest - With Login\TCPClient\obj\Debug\net9.0\TCPClient.AssemblyInfo.cs
+C:\Users\david\OneDrive\Desktop\Skole\1. Eksamen\3. Semester\SCRUM-Eksamen\BasicChatTest - With Login\TCPClient\obj\Debug\net9.0\TCPClient.csproj.CoreCompileInputs.cache
+C:\Users\david\OneDrive\Desktop\Skole\1. Eksamen\3. Semester\SCRUM-Eksamen\BasicChatTest - With Login\TCPClient\obj\Debug\net9.0\TCPClient.dll
+C:\Users\david\OneDrive\Desktop\Skole\1. Eksamen\3. Semester\SCRUM-Eksamen\BasicChatTest - With Login\TCPClient\obj\Debug\net9.0\refint\TCPClient.dll
+C:\Users\david\OneDrive\Desktop\Skole\1. Eksamen\3. Semester\SCRUM-Eksamen\BasicChatTest - With Login\TCPClient\obj\Debug\net9.0\TCPClient.pdb
+C:\Users\david\OneDrive\Desktop\Skole\1. Eksamen\3. Semester\SCRUM-Eksamen\BasicChatTest - With Login\TCPClient\obj\Debug\net9.0\TCPClient.genruntimeconfig.cache
+C:\Users\david\OneDrive\Desktop\Skole\1. Eksamen\3. Semester\SCRUM-Eksamen\BasicChatTest - With Login\TCPClient\obj\Debug\net9.0\ref\TCPClient.dll
