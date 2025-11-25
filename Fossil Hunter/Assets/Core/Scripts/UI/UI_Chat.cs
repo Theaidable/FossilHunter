@@ -1,4 +1,5 @@
 using Network_Handler;
+using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -54,6 +55,8 @@ namespace UI_Handlers
 
                 if (_chat != null)
                 {
+                    _chat.RequestHistoryFromServer();
+
                     //Subscribe til network objekt for at sende besked
                     _chat.OnMessageRecieved += OnMessageReceived;
                 }
@@ -85,6 +88,8 @@ namespace UI_Handlers
 
                 if (_chat != null)
                 {
+                    _chat.RequestHistoryFromServer();
+
                     //Subscribe til network objekt for at sende besked
                     _chat.OnMessageRecieved += OnMessageReceived;
                 }
