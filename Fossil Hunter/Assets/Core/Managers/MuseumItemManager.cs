@@ -4,6 +4,8 @@ using UnityEngine.SceneManagement;
 using System.Linq;
 using Unity.VisualScripting;
 
+//Author - Malthe
+
 public static class MuseumItemManager
 {
     // fossil placement index, fossil data
@@ -82,14 +84,15 @@ public static class MuseumItemManager
                 return entry.Value.FossilType == fossileInfo.FossilType;
             });
 
-            if (hasFossilOfSameType)
+            
+            if (hasFossilOfSameType & fossileInfo.Kvalitet != Kvalitet.Unik)
             {
                 if ((int)museumFossildata[entryID].Kvalitet < (int)fossileInfo.Kvalitet)
                 {
                     museumFossildata[entryID] = fossileInfo;
                 }
             }
-            else
+            else // hvis du har fundet en ny type eller et unikt fossil.
             {
                 museumFossildata.Add(museumFossildata.Count, fossileInfo);
             }

@@ -7,4 +7,5 @@ public enum FossilType
     Søpindsvin = 2,
     Vettelys = 3,
     HajTand = 4,
+    Rav = 5,
 }

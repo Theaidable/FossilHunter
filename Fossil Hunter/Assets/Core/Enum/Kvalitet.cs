@@ -7,4 +7,5 @@ public enum Kvalitet
     Middle = 2,
     God = 3,
     Perfekt = 4,
+    Unik = 5,
 }
