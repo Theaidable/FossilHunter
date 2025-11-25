@@ -136,7 +136,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e9a7a140dd67ae4cabbe6ed3e37c523, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  museumItemPrefab: {fileID: 0}
 --- !u!1001 &804321293
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -151,7 +150,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1531264079063407182, guid: c7e6694a46f186540a8e09dedc7c972d, type: 3}
       propertyPath: currentScene
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5205068698285476636, guid: c7e6694a46f186540a8e09dedc7c972d, type: 3}
       propertyPath: m_LocalPosition.x

@@ -21,6 +21,11 @@ public class SceneButtonManager : MonoBehaviour
     {
         SceneManager.LoadSceneAsync(currentScene, LoadSceneMode.Additive);
     }
+    private void Update()
+    {
+
+    }
+  
 
     //Når UI er interegeret med køres denne kode og håndtere events
     private void OnEnable()
@@ -48,6 +53,13 @@ public class SceneButtonManager : MonoBehaviour
         if (currentScene != 3)
         {
             SceneManager.UnloadSceneAsync(currentScene);
+            for (int i = 0; i < 3; i++)
+            {
+                if (SceneManager.GetSceneByName($"Digging level {i}").isLoaded)
+                {
+                    SceneManager.UnloadSceneAsync($"Digging level {i}");
+                }
+            }
             currentScene++;
             SceneManager.LoadSceneAsync(currentScene, LoadSceneMode.Additive);
             Debug.Log(currentScene);
@@ -79,4 +91,6 @@ public class SceneButtonManager : MonoBehaviour
             Debug.Log(currentScene);
         }
     }
+
+
 }
