@@ -61,15 +61,15 @@ public class FossileInfo_SO : ScriptableObject
                     case FossilType.None:
                         return "?";
                     case FossilType.Ammonit:
-                        return "Ammoniter er en gruppe af uddøde blæksprutter, der levede fra midten af Palæozoikum til kridttiden. Dyrene havde skaller, der kan findes som forsteninger.";
+                        return "Ammoniter er en gruppe af uddøde blæksprutter, der levede fra midten\naf Palæozoikum til kridttiden. Dyrene havde skaller, der kan findes\nsom forsteninger.";
                     case FossilType.Søpindsvin:
-                        return "perioden fra den sene Kridttid til den tidlige del af Paleocæn - tidsrummet for 71-61 mio. år siden, hvor langt de fleste forstenede søpindsvin levede.";
+                        return "perioden fra den sene Kridttid til den tidlige del af\nPaleocæn - tidsrummet for 71-61 mio. år siden, hvor langt de\nfleste forstenede søpindsvin levede.";
                     case FossilType.Vettelys:
-                        return "Vættelys er den fossile skal fra belemnitter (blæksprutter), der levede i kridttiden. Vættelys hører til de almindelige forsteninger.";
+                        return "Vættelys er den fossile skal fra belemnitter (blæksprutter), der levede\ni kridttiden. Vættelys hører til de almindelige forsteninger.";
                     case FossilType.HajTand:
-                        return "Små tænder på nogle få millimeter er mest almindelige. Som regel er det tændernes centrale spids, som er bevaret som fossil. Tænder med rødder er derimod meget sjældne.";
+                        return "Små tænder på nogle få millimeter er mest almindelige. Som regel er det\ntændernes centrale spids, som er bevaret som fossil.\nTænder med rødder er derimod meget sjældne.";
                     case FossilType.Rav:
-                        return "Rav antages at være dannet for ca. 57-35 mio. år siden i skove i Østersøområdet og herfra at være skyllet ud i havet i Oligocæn.";
+                        return "Rav antages at være dannet for ca. 57-35 mio. år siden i skove i\nØstersøområdet og herfra at være skyllet ud i havet i Oligocæn.";
                     default:
                         return "Fantastisk Fund";
                 }
@@ -111,7 +111,7 @@ public class FossileInfo_SO : ScriptableObject
         DataSO.infoText = "";
 
         // if type isn't set, set a random one.
-        DataSO.FossilType = (type == FossilType.None) ? (FossilType)Random.Range(1, 5) : type;
+        DataSO.FossilType = (type == FossilType.None) ? (FossilType)Random.Range(1, 6) : type;
         
         // give a random age.
         DataSO.Age = GetRandomizedAge(DataSO.FossilType);

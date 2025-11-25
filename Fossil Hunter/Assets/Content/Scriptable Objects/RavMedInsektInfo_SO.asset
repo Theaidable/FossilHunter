@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: RavMedInsektInfo_SO
   m_EditorClassIdentifier: 
   FossilSprites: []
-  infoText: 
-  sprite: {fileID: 0}
-  Age: 0
-  FossilType: 0
-  Kvalitet: 0
+  infoText: "Dette er et meget sj\xE6ldent stykke rav som indeholder et insekt"
+  sprite: {fileID: 7122920455204081357, guid: 7f3c984e0df0a5e489cbd1683dfd4cb6, type: 3}
+  Age: 55
+  FossilType: 5
+  Kvalitet: 5
