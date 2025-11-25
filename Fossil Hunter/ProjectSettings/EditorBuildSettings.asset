@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Student/Levels - Minigames/Cleaning level.unity
     guid: 69bc613dd4f964d459621d8ce8c99c77
   - enabled: 1
-    path: Assets/Scenes/Student/InfoPopUpScene.unity
+    path: Assets/Scenes/Student/S_Museum.unity
     guid: 87fa939f2c7543a4689c9915cea2bade
   - enabled: 1
     path: Assets/Scenes/Before Login/B_MainMenu.unity
