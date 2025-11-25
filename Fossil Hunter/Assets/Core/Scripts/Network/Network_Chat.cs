@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Unity.Netcode;
 using UnityEngine;
 
@@ -15,27 +16,16 @@ namespace Network_Handler
         //Event for når man modtager en besked fra server
         public event Action<string> OnMessageRecieved;
 
-        private Network_Chat() { }
+        //Liste for at gemme beskeder så nye clients kan se dem
+        private readonly List<string> chatHistory = new List<string>();
 
-        /*
-        private void Awake()
-        {
-            if (instance == null)
-            {
-                instance = this;
-            }
-            else
-            {
-                Destroy(gameObject);
-            }
-        }
-        */
+        private Network_Chat() { }
 
         /// <summary>
         /// Send besked til server
         /// </summary>
         /// <param name="message"></param>
-        public void SendLocalMessage(string message)
+        public void SendLocalMessage(string message, bool toTeacherOnly)
         {
             if (string.IsNullOrEmpty(message))
             {
@@ -44,7 +34,7 @@ namespace Network_Handler
 
             ulong sender = NetworkManager.Singleton.LocalClientId;
 
-            SendMessageToServerRpc(sender, message);
+            SendMessageToServerRpc(sender, message, toTeacherOnly);
         }
 
         /// <summary>
@@ -55,11 +45,31 @@ namespace Network_Handler
         /// <param name="message"></param>
         /// <param name="rpcParams"></param>
         [ServerRpc(RequireOwnership = false)]
-        private void SendMessageToServerRpc(ulong sender, string message, ServerRpcParams rpcParams = default)
+        private void SendMessageToServerRpc(ulong sender, string message, bool toTeacherOnly, ServerRpcParams rpcParams = default)
         {
-            string finalMessage = $"[Player {sender}] {message}";
+            string prefix = toTeacherOnly ? "[Privat] " : "";
+            string finalMessage = $"{prefix}[Player {sender}] {message}";
 
-            SendMessageToClientRpc(finalMessage);
+            if(toTeacherOnly == true)
+            {
+                ulong teacherId = NetworkManager.ServerClientId;
+
+                var rpcParamsToTeacherAndSender = new ClientRpcParams
+                {
+                    Send = new ClientRpcSendParams
+                    {
+                        TargetClientIds = new[] { teacherId }
+                    }
+                };
+
+                SendMessageToClientRpc(finalMessage, rpcParamsToTeacherAndSender);
+            }
+            else
+            {
+
+                chatHistory.Add(finalMessage);
+                SendMessageToClientRpc(finalMessage);
+            }
         }
 
         /// <summary>
@@ -67,13 +77,13 @@ namespace Network_Handler
         /// </summary>
         /// <param name="message"></param>
         [ClientRpc]
-        private void SendMessageToClientRpc(string message)
+        private void SendMessageToClientRpc(string message, ClientRpcParams rpcParams = default)
         {
             OnMessageRecieved?.Invoke(message);
         }
 
         /// <summary>
-        /// Debug
+        /// Subscribe til events ved network spawn
         /// </summary>
         public override void OnNetworkSpawn()
         {

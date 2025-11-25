@@ -19,6 +19,7 @@ namespace UI_Handlers
         //Reference til alt INDE i UIDocumentet
         private TextField _inputField;
         private Button _sendButton;
+        private Button _handUpButton;
         private Button _closeButton;
         private ScrollView _messageScroll;
         private VisualElement _root;
@@ -72,6 +73,7 @@ namespace UI_Handlers
             {
                 _root.style.display = DisplayStyle.Flex;
 
+
                 if (_collider != null)
                 {
                     _collider.enabled = false;
@@ -101,6 +103,7 @@ namespace UI_Handlers
             _root = _uiDocument.rootVisualElement;
             _inputField = _root.Q<TextField>("InputField");
             _sendButton = _root.Q<Button>("SendButton");
+            _handUpButton = _root.Q<Button>("HandUpButton");
             _closeButton = _root.Q<Button>("CloseButton");
             _messageScroll = _root.Q<ScrollView>("MessageScroll");
 
@@ -108,6 +111,11 @@ namespace UI_Handlers
             if(_sendButton != null)
             {
                 _sendButton.clicked += OnSendClicked;
+            }
+
+            if(_handUpButton != null)
+            {
+                _handUpButton.clicked += OnHandUpClicked;
             }
             
             if(_closeButton != null)
@@ -131,9 +139,21 @@ namespace UI_Handlers
                     Debug.Log("Network_Chat has not been spawned");
                 }
 
-                _chat.SendLocalMessage(message);
+                _chat.SendLocalMessage(message, false);
                 _inputField.value = string.Empty;
             }
+        }
+
+        private void OnHandUpClicked()
+        {
+            var message = "Rækker hånden op";
+
+            if (_chat.IsSpawned == false)
+            {
+                Debug.Log("Network_Chat has not been spawned");
+            }
+
+            _chat.SendLocalMessage(message, true);
         }
 
         /// <summary>
@@ -145,6 +165,12 @@ namespace UI_Handlers
             if(_messageScroll != null)
             {
                 var label = new Label(message);
+
+                if (message.StartsWith("[Privat]"))
+                {
+                    label.style.color = new StyleColor(Color.red);
+                }
+
                 _messageScroll.Add(label);
                 _messageScroll.ScrollTo(label);
             }
