@@ -1,0 +1,9 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/Styles/SceneUIStyle.uss?fileID=7433441132597879392&amp;guid=7534f4e131c5db54caa48f959b59c5aa&amp;type=3#SceneUIStyle" />
+    <ui:VisualElement name="ChatBox" style="flex-grow: 1; font-size: 48px; -unity-text-outline-color: rgb(128, 128, 128); top: 847px; width: 760px; left: 16px; height: 219px; background-color: rgb(188, 188, 188); position: absolute; align-self: center;" />
+    <ui:ScrollView name="MessageScroll" style="position: absolute; height: 88px; width: 718px; top: 893px; left: 42px; align-self: center; color: rgb(0, 0, 0); -unity-text-outline-color: rgb(56, 56, 56); font-size: 36px;" />
+    <ui:TextField placeholder-text="Type Message" name="InputField" style="font-size: 36px; position: absolute; top: 1000px; left: 20px; width: 555px; height: 60px; align-self: center; visibility: visible; overflow: hidden; display: flex;" />
+    <ui:Button text="Send" name="SendButton" style="position: absolute; top: 1000px; left: 580px; height: 60px; width: 90px; font-size: 36px; align-self: center; background-color: rgb(149, 149, 149);" />
+    <ui:Button text="X" name="CloseButton" style="font-size: 14px; -unity-font-style: bold; background-color: rgb(255, 0, 0); position: absolute; top: 848px; left: 736px; height: 30px; width: 32px;" />
+    <ui:Button text="Hand" name="HandUpButton" style="position: absolute; top: 1000px; left: 675px; height: 60px; width: 90px; font-size: 36px; align-self: center; background-color: rgb(255, 148, 78);" />
+</ui:UXML>
