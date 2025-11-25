@@ -37,6 +37,16 @@ namespace Network_Handler
             SendMessageToServerRpc(sender, message, toTeacherOnly);
         }
 
+        public void RequestHistoryFromServer()
+        {
+            if(IsClient == true)
+            {
+                Debug.Log("History from server has been requested");
+
+                RequestHistoryServerRpc();
+            }
+        }
+
         /// <summary>
         /// Server modtager beskeden fra client gennem ServerRPC
         /// og sender beskeden til alle clients
@@ -70,6 +80,27 @@ namespace Network_Handler
                 chatHistory.Add(finalMessage);
                 SendMessageToClientRpc(finalMessage);
             }
+        }
+
+        [ServerRpc(RequireOwnership = false)]
+        private void RequestHistoryServerRpc(ServerRpcParams rpcParams = default)
+        {
+            ulong clientId = rpcParams.Receive.SenderClientId;
+
+            var rpcParamsToClient = new ClientRpcParams
+            {
+                Send = new ClientRpcSendParams
+                {
+                    TargetClientIds = new[] { clientId }
+                }
+            };
+
+            foreach(var message in chatHistory)
+            {
+                SendMessageToClientRpc(message, rpcParamsToClient);
+            }
+
+            Debug.Log("History from server has been requested through RPC");
         }
 
         /// <summary>
