@@ -19,16 +19,12 @@ public class FossileInfo_SO : ScriptableObject
     [SerializeField][Tooltip("The quality of the fossil.")] public Kvalitet Kvalitet;
 
     private static FossileInfo_SO Instance;
-
-    // når værdierne fra inspectoren er givet
-    private void OnValidate()
-    {
-        // kun ét instance er blevet givet spritesne, hvis det er den her; bliver den det static 'Instance' som du andre referere til.
-        if (FossilSprites.Count != 0)
-        {
-            Instance = this;
-        }        
-    }
+    private bool found = false;
+    /// <summary>
+    /// Shows whether or not the fossil has been found.
+    /// Is only used for unik fossils.
+    /// </summary>
+    public bool Found { get => found; set => found = value; }
 
     public Sprite GetSprite
     {
@@ -80,6 +76,16 @@ public class FossileInfo_SO : ScriptableObject
                 return infoText;
             }
         }
+    }
+
+    // når værdierne fra inspectoren er givet
+    private void OnValidate()
+    {
+        // kun ét instance er blevet givet spritesne, hvis det er den her; bliver den det static 'Instance' som du andre referere til.
+        if (FossilSprites.Count != 0)
+        {
+            Instance = this;
+        }        
     }
 
     public string GetInfoText()

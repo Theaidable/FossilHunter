@@ -12,7 +12,7 @@ public class LayerSetup : MonoBehaviour
     [SerializeField]
     GameObject newFossilPrefab;
 
-    private bool unikFound = false;
+
     [SerializeField] private FossileInfo_SO unikFossil;
     [SerializeField]
     [Range(0, 100)]
@@ -117,18 +117,20 @@ public class LayerSetup : MonoBehaviour
     private FossileInfo_SO GetRandomFossilInfo(List<FossilType> fossilPool)
     {
         // 5% chance for the fossil to be unik.
-        if (UnityEngine.Random.Range(0, 101) <= unikChance & unikFossil != null & !unikFound)
+        if (UnityEngine.Random.Range(0, 101) <= unikChance & unikFossil != null)
         {
-            unikFound = true;
-            return unikFossil;
+            if (!unikFossil.Found)
+            {
+                unikFossil.Found = true;
+                return unikFossil;
+            }
         }
-        else
-        {
-            //picks a random fossil from the 'pool'
-            FossilType fossilType = fossilPool[UnityEngine.Random.Range(0, fossilPool.Count)];
-            //make random fossil
-            return FossileInfo_SO.GetRandomizedData(fossilType);
-        }
+
+        //else pick a random from the pool.
+        //picks a random fossil from the 'pool'
+        FossilType fossilType = fossilPool[UnityEngine.Random.Range(0, fossilPool.Count)];
+        //make random fossil
+        return FossileInfo_SO.GetRandomizedData(fossilType);
 
     }
 }
