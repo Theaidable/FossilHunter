@@ -18,7 +18,7 @@ MonoBehaviour:
   - {fileID: 362642305050631739, guid: c11e67e7fadb81c44a70cf4ad32a176b, type: 3}
   - {fileID: 800856444961185489, guid: ab60c5c63abb3934b9dfaf93812f5b4f, type: 3}
   - {fileID: -5229017718095481012, guid: 453bea7009a757948aa18beb678003e3, type: 3}
-  - {fileID: 2729350325688010803, guid: 2b7d664bd5ad1034da9915912516aa3f, type: 3}
+  - {fileID: 7474277006017341443, guid: acc56475896787f48a93c47da11f4885, type: 3}
   infoText: Instace object
   sprite: {fileID: 0}
   Age: 0

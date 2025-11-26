@@ -12,6 +12,7 @@ public class PickupableFossil : MonoBehaviour
     /// </summary>
     public void PickUp()
     {
+        Data.Found = true;
         PickedUpFossils.Instance.AddFossil(data);
         string fossils = "";
         foreach (FossileInfo_SO fossil in PickedUpFossils.Instance.GetFossils())

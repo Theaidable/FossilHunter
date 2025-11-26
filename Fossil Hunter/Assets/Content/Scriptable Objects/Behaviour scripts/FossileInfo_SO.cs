@@ -24,7 +24,14 @@ public class FossileInfo_SO : ScriptableObject
     /// Shows whether or not the fossil has been found.
     /// Is only used for unik fossils.
     /// </summary>
-    public bool Found { get => found; set => found = value; }
+    public bool Found 
+    {
+        get => found;
+        set
+        {
+            found = value;
+        }
+    }
 
     public Sprite GetSprite
     {

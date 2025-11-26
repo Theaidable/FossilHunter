@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 7f3c984e0df0a5e489cbd1683dfd4cb6
+guid: 843634ae50dc3ab4796a04b792ba92e5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7122920455204081357
-    second: rav_med_bug_0
+      213: -6066194706618427751
+    second: Rav_Fossil_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: rav_med_bug_0
+      name: Rav_Fossil_0
       rect:
         serializedVersion: 2
-        x: 23
-        y: 38
-        width: 407
-        height: 282
+        x: 0
+        y: 0
+        width: 1024
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dce8dc74a62b9d260800000000000000
-      internalID: 7122920455204081357
+      spriteID: 99657aded0c80dba0800000000000000
+      internalID: -6066194706618427751
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      rav_med_bug_0: 7122920455204081357
+      Rav_Fossil_0: -6066194706618427751
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

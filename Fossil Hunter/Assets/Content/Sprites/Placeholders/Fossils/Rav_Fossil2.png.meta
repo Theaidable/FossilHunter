@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 2b7d664bd5ad1034da9915912516aa3f
+guid: acc56475896787f48a93c47da11f4885
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2729350325688010803
-    second: rav_spritee_0
+      213: 7474277006017341443
+    second: Rav_Fossil2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: rav_spritee_0
+      name: Rav_Fossil2_0
       rect:
         serializedVersion: 2
-        x: 17
-        y: 23
-        width: 407
-        height: 282
+        x: 101
+        y: 79
+        width: 812
+        height: 870
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3380b3619a990e520800000000000000
-      internalID: 2729350325688010803
+      spriteID: 308a8882657f9b760800000000000000
+      internalID: 7474277006017341443
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      rav_spritee_0: 2729350325688010803
+      Rav_Fossil2_0: 7474277006017341443
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FossilSprites: []
   infoText: "Dette er et meget sj\xE6ldent stykke rav som indeholder et insekt"
-  sprite: {fileID: 7122920455204081357, guid: 7f3c984e0df0a5e489cbd1683dfd4cb6, type: 3}
+  sprite: {fileID: -6066194706618427751, guid: 843634ae50dc3ab4796a04b792ba92e5, type: 3}
   Age: 55
   FossilType: 5
   Kvalitet: 5
