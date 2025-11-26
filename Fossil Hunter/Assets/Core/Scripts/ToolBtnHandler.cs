@@ -1,6 +1,10 @@
 using UnityEngine;
 using UnityEngine.UIElements;
 
+/// <summary>
+/// Fungerer sammen med CleaningToolSysten (Unity UI) til at gøre knapperne deri funktionelle
+/// primært lavet af emma
+/// </summary>
 public class ToolBtnHandler : MonoBehaviour
 {
     private Button brushBtn;
