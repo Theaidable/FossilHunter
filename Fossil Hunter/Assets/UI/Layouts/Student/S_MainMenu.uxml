@@ -1,5 +1,0 @@
-<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <Style src="project://database/Assets/UI/Styles/SceneUIStyle.uss?fileID=7433441132597879392&amp;guid=7534f4e131c5db54caa48f959b59c5aa&amp;type=3#SceneUIStyle" />
-    <ui:TextField placeholder-text="Write IP Adress here" name="IpField" hide-placeholder-on-focus="false" style="position: absolute; top: 383px; left: 384px; width: 1142px; height: 122px; font-size: 96px; flex-direction: column; -unity-text-align: upper-center; background-color: rgb(188, 188, 188); -unity-font-style: normal; background-image: none;" />
-    <ui:Button text="Join server" name="JoinServerButton" style="position: absolute; top: 525px; left: 385px; height: 141px; width: 1142px; font-size: 96px; background-image: none; background-color: rgb(188, 188, 188);" />
-</ui:UXML>
