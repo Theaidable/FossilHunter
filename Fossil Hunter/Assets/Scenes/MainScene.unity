@@ -150,7 +150,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1531264079063407182, guid: c7e6694a46f186540a8e09dedc7c972d, type: 3}
       propertyPath: currentScene
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5205068698285476636, guid: c7e6694a46f186540a8e09dedc7c972d, type: 3}
       propertyPath: m_LocalPosition.x

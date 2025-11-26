@@ -67,6 +67,13 @@ public class SceneButtonManager : MonoBehaviour
         else
         {
             SceneManager.UnloadSceneAsync(currentScene);
+            for (int i = 0; i < 3; i++)
+            {
+                if (SceneManager.GetSceneByName($"Digging level {i}").isLoaded)
+                {
+                    SceneManager.UnloadSceneAsync($"Digging level {i}");
+                }
+            }
             currentScene = 1;
             SceneManager.LoadSceneAsync(currentScene, LoadSceneMode.Additive);
             Debug.Log(currentScene);
@@ -79,6 +86,13 @@ public class SceneButtonManager : MonoBehaviour
         if (currentScene != 1)
         {
             SceneManager.UnloadSceneAsync(currentScene);
+            for (int i = 0; i < 3; i++)
+            {
+                if (SceneManager.GetSceneByName($"Digging level {i}").isLoaded)
+                {
+                    SceneManager.UnloadSceneAsync($"Digging level {i}");
+                }
+            }
             currentScene--;
             SceneManager.LoadSceneAsync(currentScene, LoadSceneMode.Additive);
             Debug.Log(currentScene);
@@ -86,6 +100,13 @@ public class SceneButtonManager : MonoBehaviour
         else
         {
             SceneManager.UnloadSceneAsync(currentScene);
+            for (int i = 0; i < 3; i++)
+            {
+                if (SceneManager.GetSceneByName($"Digging level {i}").isLoaded)
+                {
+                    SceneManager.UnloadSceneAsync($"Digging level {i}");
+                }
+            }
             currentScene = 3;
             SceneManager.LoadSceneAsync(currentScene, LoadSceneMode.Additive);
             Debug.Log(currentScene);
