@@ -4,6 +4,6 @@
     <ui:ScrollView name="MessageScroll" style="position: absolute; height: 88px; width: 718px; top: 893px; left: 42px; align-self: center; color: rgb(0, 0, 0); -unity-text-outline-color: rgb(56, 56, 56); font-size: 36px;" />
     <ui:TextField placeholder-text="Type Message" name="InputField" style="font-size: 36px; position: absolute; top: 1000px; left: 20px; width: 555px; height: 60px; align-self: center; visibility: visible; overflow: hidden; display: flex;" />
     <ui:Button text="Send" name="SendButton" style="position: absolute; top: 1000px; left: 580px; height: 60px; width: 90px; font-size: 36px; align-self: center; background-color: rgb(149, 149, 149);" />
-    <ui:Button text="X" name="CloseButton" style="font-size: 14px; -unity-font-style: bold; background-color: rgb(255, 0, 0); position: absolute; top: 848px; left: 736px; height: 30px; width: 32px;" />
+    <ui:Button text="´&#10;" name="CloseButton" style="font-size: 14px; -unity-font-style: bold; background-color: rgba(255, 0, 0, 0); position: absolute; top: 848px; left: 736px; height: 30px; width: 32px; background-image: url(&quot;project://database/Assets/Content/Sprites/Placeholders/UI/UI_X.png?fileID=2800000&amp;guid=6ebbcb327411c364685f682cb08653da&amp;type=3#UI_X&quot;);" />
     <ui:Button text="Hand" name="HandUpButton" style="position: absolute; top: 1000px; left: 675px; height: 60px; width: 90px; font-size: 36px; align-self: center; background-color: rgb(255, 148, 78);" />
 </ui:UXML>

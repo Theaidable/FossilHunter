@@ -1,3 +1,5 @@
+using Database;
+using Session;
 using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -32,6 +34,9 @@ namespace UI_Handlers
             _logInButton = root.Q<Button>("LogInButton");
 
             _logInButton.clicked += OnLogInClicked;
+
+            //Opret test brugere
+            UserDatabase.EnsureTestUsers();
         }
 
         /// <summary>
@@ -39,24 +44,31 @@ namespace UI_Handlers
         /// </summary>
         private void OnLogInClicked()
         {
-            //Her kan vi skrive selve login koden, som hvor username og password skal sammenlignes med databasen
-            //Databasen skal laves
-            //Husk at password skal hases og saltes
+            string username = _username.value;
+            string password = _password.value;
 
-            //Nem løsning nu for at komme videre til chat-funktionen
-
-            if(_username.value == "Teacher" && _password.value != string.Empty)
+            if (UserDatabase.TryValidateUser(username, password, out var user, out string error) == false)
             {
-                NetworkManager.Singleton.StartHost();
-                SceneManager.LoadScene("T_MainScene");
-            }
-            else if( _username.value == "Student" && _password.value != string.Empty)
-            {
-                SceneManager.LoadScene("S_JoinServer");
-            }
-            else
-            {
+                Debug.LogWarning($"Login failed: {error}");
+                //Man kan vise fejl i UI
                 return;
+            }
+
+            Debug.Log($"Login success: {user.Username} ({user.Role})");
+            SessionData.Username = user.Username;
+
+            switch (user.Role)
+            {
+                case UserRole.Teacher:
+                    // Teacher: start host + gå til lærerens main scene
+                    NetworkManager.Singleton.StartHost();
+                    SceneManager.LoadScene("T_MainScene");
+                    break;
+
+                case UserRole.Student:
+                    // Student: gå til "join server" flow
+                    SceneManager.LoadScene("S_JoinServer");
+                    break;
             }
         }
     }
