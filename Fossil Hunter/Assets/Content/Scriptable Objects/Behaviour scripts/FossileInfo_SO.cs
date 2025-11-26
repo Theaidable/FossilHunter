@@ -16,7 +16,7 @@ public class FossileInfo_SO : ScriptableObject
 
     [SerializeField][Tooltip("The age of the fossil in mio. years.")] public int Age;
     [SerializeField][Tooltip("The type of fossil.")] public FossilType FossilType;
-    [SerializeField][Tooltip("The quality of the fossil.")] public Kvalitet Kvalitet;
+    [SerializeField][Tooltip("The quality of the fossil.\nChoose 'Unik' for a one of one fossil.")] public Kvalitet Kvalitet;
 
     private static FossileInfo_SO Instance;
     private bool found = false;
