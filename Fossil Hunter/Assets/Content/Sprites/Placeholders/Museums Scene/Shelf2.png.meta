@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: e98a9949a5572524f8b7d52498da6558
+guid: 5d1dddeb3a394b84e9fdd6072544c7ca
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2504304345697139834
-    second: Shelf2_0
+      213: -3547801648469258843
+    second: right_arrow_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -97,7 +97,33 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
     buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -113,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Shelf2_0
+      name: right_arrow_0
       rect:
         serializedVersion: 2
-        x: 122
-        y: 88
-        width: 1291
-        height: 808
+        x: 7
+        y: 7
+        width: 94
+        height: 173
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a7cbeb6b88311c220800000000000000
-      internalID: 2504304345697139834
+      spriteID: 5adc171a23da3cec0800000000000000
+      internalID: -3547801648469258843
       vertices: []
       indices: 
       edges: []
@@ -148,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Shelf2_0: 2504304345697139834
+      right_arrow_0: -3547801648469258843
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
