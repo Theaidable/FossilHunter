@@ -81,11 +81,11 @@ public static class MuseumItemManager
             bool hasFossilOfSameType = museumFossildata.Any((entry) =>
             {
                 entryID = entry.Key;
-                return entry.Value.FossilType == fossileInfo.FossilType;
+                return entry.Value.FossilType == fossileInfo.FossilType & entry.Value.Kvalitet != Kvalitet.Unik & fossileInfo.Kvalitet != Kvalitet.Unik;
             });
 
             
-            if (hasFossilOfSameType & fossileInfo.Kvalitet != Kvalitet.Unik)
+            if (hasFossilOfSameType)
             {
                 if ((int)museumFossildata[entryID].Kvalitet < (int)fossileInfo.Kvalitet)
                 {
