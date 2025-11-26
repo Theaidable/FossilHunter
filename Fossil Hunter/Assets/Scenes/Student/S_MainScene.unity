@@ -136,7 +136,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e9a7a140dd67ae4cabbe6ed3e37c523, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  museumItemPrefab: {fileID: 0}
 --- !u!1001 &804321293
 PrefabInstance:
   m_ObjectHideFlags: 0
