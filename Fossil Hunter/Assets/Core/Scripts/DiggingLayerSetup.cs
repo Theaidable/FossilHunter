@@ -1,13 +1,24 @@
 using System;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
+
+//Author - 90% Emma, 10% Malthe
 
 public class LayerSetup : MonoBehaviour
 {
     [SerializeField]
     GameObject newFossilPrefab;
+
+    private bool unikSpawned;
+    [SerializeField] private FossileInfo_SO unikFossil;
+    [SerializeField]
+    [Range(0, 100)]
+    [Tooltip("The chance that a fossil is spawned as a unik.")]
+    private int unikChance;
+
     //these will hopefully be shortened
     [SerializeField]
     [Range(1, 10)]
@@ -57,6 +68,8 @@ public class LayerSetup : MonoBehaviour
 
     void Awake()
     {
+        unikSpawned = false;
+
         //get postion & size of the gameobject designating diggable area (said gameobject will be removed in first update)
         Vector2 digSpace = new Vector2(GameObject.Find("DiggingArea").GetComponent<BoxCollider2D>().size.x * GameObject.Find("DiggingArea").transform.localScale.x / 2, GameObject.Find("DiggingArea").GetComponent<BoxCollider2D>().size.y * GameObject.Find("DiggingArea").transform.localScale.y / 2);
         Vector2 digSpaceCenter = new Vector2(GameObject.Find("DiggingArea").transform.position.x, GameObject.Find("DiggingArea").transform.position.y);
@@ -64,7 +77,7 @@ public class LayerSetup : MonoBehaviour
         //put fields in some arrays so we can create a for loop
         Sprite[] layerSprites = { layer1Sprite, layer2Sprite, layer3Sprite, layer4Sprite, layer5Sprite, layer6Sprite, layer7Sprite, layer8Sprite, layer9Sprite, layer10Sprite };
         List<FossilType>[] fossilTypesOnLayers = { fossilTypesOnLayer1, fossilTypesOnLayer2, fossilTypesOnLayer3, fossilTypesOnLayer4, fossilTypesOnLayer5, fossilTypesOnLayer6, fossilTypesOnLayer7, fossilTypesOnLayer8, fossilTypesOnLayer9, fossilTypesOnLayer10 };
-        int shovelSize= GameObject.Find("Digger").GetComponent<DigThroughLayers>().GetHoleSize;
+        int shovelSize = GameObject.Find("Digger").GetComponent<DigThroughLayers>().GetHoleSize;
         //create as many new earth layers as specified from total layers & fields
         for (int i = 0; i < totalLayers; i++)
         {
@@ -80,19 +93,49 @@ public class LayerSetup : MonoBehaviour
             newLayer.GetComponent<DiggableLayer>().EraserSize = shovelSize;
             newLayer.transform.position = new Vector3(0, 0, i);
             if (i == (totalLayers - 1)) newLayer.tag = "Bottom Layer";
-
-            //set up each fossil on this layer
-            foreach (FossilType fossilType in fossilTypesOnLayers[i])
+            int y = 0 / 2;
+            // set up each fossil on this layer
+            //random number based on bellcurve between 0 and 2, unless the 'pool' is empty
+            int amount = (fossilTypesOnLayers[i].Count == 0) ? 0 : (int)math.round((UnityEngine.Random.Range(0, 3) + UnityEngine.Random.Range(0, 3)) / 2f);
+            for (int count = 0; count < amount; count++)
             {
-                FossileInfo_SO fossil = FossileInfo_SO.GetRandomizedData(fossilType);
-                GameObject newFossil = Instantiate(newFossilPrefab, new Vector3(UnityEngine.Random.Range(-digSpace.x/2+digSpaceCenter.x, digSpace.x / 2 + digSpaceCenter.x), UnityEngine.Random.Range(-digSpace.y / 2 + digSpaceCenter.y, digSpace.y / 2 + digSpaceCenter.y), newLayer.transform.position.z - 0.5f), Quaternion.identity) as GameObject;
-                newFossil.name = fossilType.ToString();
-                newFossil.GetComponent<SpriteRenderer>().sprite = fossil.GetSprite;
-                newFossil.GetComponent<PickupableFossil>().Data = fossil;
+                FossileInfo_SO fossilData = GetRandomFossilInfo(fossilTypesOnLayers[i]);
+                GameObject newFossil = Instantiate(newFossilPrefab, new Vector3(UnityEngine.Random.Range(-digSpace.x / 2 + digSpaceCenter.x, digSpace.x / 2 + digSpaceCenter.x), UnityEngine.Random.Range(-digSpace.y / 2 + digSpaceCenter.y, digSpace.y / 2 + digSpaceCenter.y), newLayer.transform.position.z - 0.5f), Quaternion.identity) as GameObject;
+                newFossil.name = fossilData.FossilType.ToString();
+                newFossil.GetComponent<SpriteRenderer>().sprite = fossilData.GetSprite;
+                newFossil.GetComponent<PickupableFossil>().Data = fossilData;
                 newFossil.GetComponent<SpriteRenderer>().sortingLayerID = sr.sortingLayerID;
                 newFossil.GetComponent<SpriteRenderer>().sortingOrder = 1;
             }
         }
+    }
+
+
+    /// <summary>
+    /// Makes a random fossil from the fossil pool
+    /// </summary>
+    /// <param name="fossilPool"></param>
+    /// <returns></returns>
+    private FossileInfo_SO GetRandomFossilInfo(List<FossilType> fossilPool)
+    {
+        // 5% chance for the fossil to be unik.
+        int ranNum = UnityEngine.Random.Range(0, 101);
+        if (ranNum <= unikChance & !unikSpawned & unikFossil != null)
+        {
+            if (!unikFossil.Found)
+            {
+                unikSpawned = true;
+                Debug.Log("unik spawned.");
+                return unikFossil;
+            }
+        }
+
+        //else pick a random from the pool.
+        //picks a random fossil from the 'pool'
+        FossilType fossilType = fossilPool[UnityEngine.Random.Range(0, fossilPool.Count)];
+        //make random fossil
+        return FossileInfo_SO.GetRandomizedData(fossilType);
+
     }
 }
 

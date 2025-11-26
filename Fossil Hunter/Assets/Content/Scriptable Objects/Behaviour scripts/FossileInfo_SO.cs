@@ -4,6 +4,8 @@ using UnityEngine;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 
+//Author - Malthe
+
 [CreateAssetMenu(fileName = "FossileInfo_SO", menuName = "Scriptable Objects/FossileInfo_SO")]
 public class FossileInfo_SO : ScriptableObject
 {
@@ -17,15 +19,18 @@ public class FossileInfo_SO : ScriptableObject
     [SerializeField][Tooltip("The quality of the fossil.")] public Kvalitet Kvalitet;
 
     private static FossileInfo_SO Instance;
-
-    // når værdierne fra inspectoren er givet
-    private void OnValidate()
+    private bool found = false;
+    /// <summary>
+    /// Shows whether or not the fossil has been found.
+    /// Is only used for unik fossils.
+    /// </summary>
+    public bool Found 
     {
-        // kun ét instance er blevet givet spritesne, hvis det er den her; bliver den det static 'Instance' som du andre referere til.
-        if (FossilSprites.Count != 0)
+        get => found;
+        set
         {
-            Instance = this;
-        }        
+            found = value;
+        }
     }
 
     public Sprite GetSprite
@@ -56,16 +61,20 @@ public class FossileInfo_SO : ScriptableObject
                 // returns a string based on the type of fossil
                 switch (FossilType)
                 {
-                    case FossilType.Ammonit:
-                        return "amoniter er seje";
-                    case FossilType.Søpindsvin:
-                        return "der her er et søpindsvin";
-                    case FossilType.Vettelys:
-                        return "tf even is a vettelys";
-                    case FossilType.HajTand:
-                        return "tooth of shork";
-                    default:
+                    case FossilType.None:
                         return "?";
+                    case FossilType.Ammonit:
+                        return "Ammoniter er en gruppe af uddøde blæksprutter, der levede fra midten\naf Palæozoikum til kridttiden. Dyrene havde skaller, der kan findes\nsom forsteninger.";
+                    case FossilType.Søpindsvin:
+                        return "perioden fra den sene Kridttid til den tidlige del af\nPaleocæn - tidsrummet for 71-61 mio. år siden, hvor langt de\nfleste forstenede søpindsvin levede.";
+                    case FossilType.Vettelys:
+                        return "Vættelys er den fossile skal fra belemnitter (blæksprutter), der levede\ni kridttiden. Vættelys hører til de almindelige forsteninger.";
+                    case FossilType.HajTand:
+                        return "Små tænder på nogle få millimeter er mest almindelige. Som regel er det\ntændernes centrale spids, som er bevaret som fossil.\nTænder med rødder er derimod meget sjældne.";
+                    case FossilType.Rav:
+                        return "Rav antages at være dannet for ca. 57-35 mio. år siden i skove i\nØstersøområdet og herfra at være skyllet ud i havet i Oligocæn.";
+                    default:
+                        return "Fantastisk Fund";
                 }
 
             }
@@ -74,6 +83,16 @@ public class FossileInfo_SO : ScriptableObject
                 return infoText;
             }
         }
+    }
+
+    // når værdierne fra inspectoren er givet
+    private void OnValidate()
+    {
+        // kun ét instance er blevet givet spritesne, hvis det er den her; bliver den det static 'Instance' som du andre referere til.
+        if (FossilSprites.Count != 0)
+        {
+            Instance = this;
+        }        
     }
 
     public string GetInfoText()
@@ -103,10 +122,12 @@ public class FossileInfo_SO : ScriptableObject
     {
         FossileInfo_SO DataSO = CreateInstance<FossileInfo_SO>();
         DataSO.infoText = "";
-        DataSO.Age = Random.Range(5, 500);
 
         // if type isn't set, set a random one.
-        DataSO.FossilType = (type == FossilType.None) ? (FossilType)Random.Range(1, 5) : type;
+        DataSO.FossilType = (type == FossilType.None) ? (FossilType)Random.Range(1, 6) : type;
+        
+        // give a random age.
+        DataSO.Age = GetRandomizedAge(DataSO.FossilType);
         
         //giver fossilet en kvalitet
         float quality = Random.value;
@@ -128,6 +149,32 @@ public class FossileInfo_SO : ScriptableObject
         }
         
         return DataSO;
+    }
+
+
+    /// <summary>
+    /// Makes a randomized age, that is fitting for the fossiltype.
+    /// This randomization is based on bellcurves.
+    /// </summary>
+    /// <param name="type">The <see cref="FossilType"/> to make an age for.</param>
+    /// <returns>A random age for the <see cref="FossilType"/>, in mio. years.</returns>
+    private static int GetRandomizedAge(FossilType type)
+    {
+        switch (type)
+        {
+            case FossilType.Ammonit: //65.5 - 410 mio år (midt palæzoikum til kridt tiden)
+                return Random.Range(33, 206) + Random.Range(33, 206);
+            case FossilType.Søpindsvin: // 62 - 70 mio år (sen kridt tiden til tidlige danien)
+                return Random.Range(31, 46) + Random.Range(31, 46);
+            case FossilType.Vettelys: //65.5 - 145.5 mio år (kridt tiden)
+                return Random.Range(33, 74) + Random.Range(33, 74);
+            case FossilType.HajTand: //61 - 65 mio år (danien, findes i danien limestone/kalksten)
+                return Random.Range(31, 34) + Random.Range(30, 33);
+            case FossilType.Rav: //35 - 57 mio år (kom hertil omkring oligocene)
+                return Random.Range(17, 28) + Random.Range(18, 29);
+            default:
+                return 0;
+        }
     }
 
 }
