@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 4322640069021919794}
   - component: {fileID: 3440499216037246071}
   - component: {fileID: 1442043528664607648}
-  - component: {fileID: 2780748492966977695}
   m_Layer: 7
   m_Name: PickUppableFossil_Prefab
   m_TagString: Fossil
@@ -135,20 +134,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 6967099039927861175}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df419d618b2cd944c87bc9a3cb9b96e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  particleEffect: {fileID: 2761031120420671044, guid: 0ab720e3bac495e47bdca2b3477e900c, type: 3}
---- !u!114 &2780748492966977695
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6967099039927861175}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 59daaecd3bd652b45bc0e7c5eb8c2f7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 0}
+  data: {fileID: 11400000, guid: d611d0088ec4ae04a85ac6635b4bc615, type: 2}
+  pickupEffectPrefab: {fileID: 2761031120420671044, guid: 0ab720e3bac495e47bdca2b3477e900c, type: 3}
