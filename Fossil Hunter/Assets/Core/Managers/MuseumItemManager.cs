@@ -29,7 +29,7 @@ public static class MuseumItemManager
             // sets up an event to update the museum when it's switched the that scene.
             SceneManager.sceneLoaded += (scene, loadMode) =>
             {
-                if (scene.name == "InfoPopUpScene")
+                if (scene.name.Contains("Museum"))
                 {
                     UpdateFossilObjects();
                     UpdateMuseum();
