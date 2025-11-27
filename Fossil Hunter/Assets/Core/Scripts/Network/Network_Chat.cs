@@ -1,3 +1,4 @@
+using Session;
 using System;
 using System.Collections.Generic;
 using Unity.Netcode;
@@ -32,9 +33,9 @@ namespace Network_Handler
                 return;
             }
 
-            ulong sender = NetworkManager.Singleton.LocalClientId;
+            string username = SessionData.Username;
 
-            SendMessageToServerRpc(sender, message, toTeacherOnly);
+            SendMessageToServerRpc(username, message, toTeacherOnly);
         }
 
         public void RequestHistoryFromServer()
@@ -55,10 +56,10 @@ namespace Network_Handler
         /// <param name="message"></param>
         /// <param name="rpcParams"></param>
         [ServerRpc(RequireOwnership = false)]
-        private void SendMessageToServerRpc(ulong sender, string message, bool toTeacherOnly, ServerRpcParams rpcParams = default)
+        private void SendMessageToServerRpc(string senderUsername, string message, bool toTeacherOnly, ServerRpcParams rpcParams = default)
         {
             string prefix = toTeacherOnly ? "[Privat] " : "";
-            string finalMessage = $"{prefix}[Player {sender}] {message}";
+            string finalMessage = $"{prefix}[{senderUsername}] {message}";
 
             if(toTeacherOnly == true)
             {
