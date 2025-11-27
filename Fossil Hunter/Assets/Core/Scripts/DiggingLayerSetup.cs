@@ -96,13 +96,13 @@ public class LayerSetup : MonoBehaviour
             int y = 0 / 2;
             // set up each fossil on this layer
             //random number based on bellcurve between 0 and 2, unless the 'pool' is empty
-            int amount = (fossilTypesOnLayers[i].Count == 0) ? 0 : (int)math.round((UnityEngine.Random.Range(0, 3) + UnityEngine.Random.Range(0, 3)) / 2f);
+            int amount = (fossilTypesOnLayers[i].Count == 0) ? 0 : (int)math.round((UnityEngine.Random.Range(1, 3) + UnityEngine.Random.Range(1, 3)) / 2f);
             for (int count = 0; count < amount; count++)
             {
                 FossileInfo_SO fossilData = GetRandomFossilInfo(fossilTypesOnLayers[i]);
                 GameObject newFossil = Instantiate(newFossilPrefab, new Vector3(UnityEngine.Random.Range(-digSpace.x / 2 + digSpaceCenter.x, digSpace.x / 2 + digSpaceCenter.x), UnityEngine.Random.Range(-digSpace.y / 2 + digSpaceCenter.y, digSpace.y / 2 + digSpaceCenter.y), newLayer.transform.position.z - 0.5f), Quaternion.identity) as GameObject;
                 newFossil.name = fossilData.FossilType.ToString();
-                newFossil.GetComponent<SpriteRenderer>().sprite = fossilData.GetSprite;
+                newFossil.GetComponent<SpriteRenderer>().sprite = fossilData.GetDirtySpite;
                 newFossil.GetComponent<PickupableFossil>().Data = fossilData;
                 newFossil.GetComponent<SpriteRenderer>().sortingLayerID = sr.sortingLayerID;
                 newFossil.GetComponent<SpriteRenderer>().sortingOrder = 1;
