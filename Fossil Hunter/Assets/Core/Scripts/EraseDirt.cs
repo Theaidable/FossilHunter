@@ -94,6 +94,7 @@ void Awake()
         spriteRend.sprite = Sprite.Create(m_Texture, originalSpriteRect, new Vector2(0.5f, 0.5f));
         CheckIfClean();
     }
+
     void CheckIfClean()
     {
         //compare current opacity to starting opacity & check if it meets the clean percentage
