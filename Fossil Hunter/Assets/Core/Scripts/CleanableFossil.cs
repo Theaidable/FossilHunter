@@ -25,6 +25,10 @@ public class CleanableFossil : MonoBehaviour
     {
         this.fossilData = fossilData;
         GetComponent<SpriteRenderer>().sprite = this.fossilData.GetSprite;
+        GetComponent<SpriteMask>().sprite = this.fossilData.GetSprite;
+
+        gameObject.transform.GetChild(0).gameObject.GetComponent<EraseDirt>().UpdateIgnoredOppasity(); 
+        gameObject.transform.GetChild(1).gameObject.GetComponent<EraseDirt>().UpdateIgnoredOppasity();
         gameObject.transform.GetChild(2).gameObject.GetComponent<SpriteRenderer>().sprite = this.fossilData.GetDirtySpite;
     }
 

@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class EraseDirt : MonoBehaviour
 {
-    [SerializeField] private Texture2D dirtTexture;
-    private Texture2D fossilTexture;
+    private float ignoredOppasity;
+    private const float dirtMapOppasity = 641134.9f;
 
     private Texture2D m_Texture;
     private Color[] m_Colors;
@@ -25,39 +25,8 @@ public class EraseDirt : MonoBehaviour
     void Awake()
     {
 
+
         spriteRend = gameObject.GetComponent<SpriteRenderer>();
-        fossilTexture = gameObject.transform.parent.gameObject.GetComponent<SpriteRenderer>().sprite.texture;
-
-        //gets smallest height and width
-        int h = Math.Min(fossilTexture.height, dirtTexture.height);
-        int w = Math.Min(fossilTexture.width, dirtTexture.width);
-
-        //makes new texture
-        m_Texture = new Texture2D(dirtTexture.width, dirtTexture.height, TextureFormat.ARGB32, false);
-        m_Texture.filterMode = FilterMode.Bilinear;
-        m_Texture.wrapMode = TextureWrapMode.Clamp;
-
-        //gives dirt the shape of fossil
-        Color[] fossilColors = fossilTexture.GetPixels();
-        Color[] dirtMap = dirtTexture.GetPixels();
-        for (int x = 0; x < w; x++)
-        {
-            for (int y = 0; y < h; y++)
-            {
-                //5 instead of 0 for a bit of tolerance.
-                if (fossilColors[x + y * w].a < 5)
-                {
-                    dirtMap[x + y * w].a = 0;
-                }
-            }
-        }
-
-        m_Texture.SetPixels(m_Colors);
-        m_Texture.Apply();
-
-        spriteRend.sprite = Sprite.Create(m_Texture, spriteRend.sprite.rect, new Vector2(0.5f, 0.5f));
-
-
 
         //set the rect of the sprite
         originalSpriteRect = new Rect(spriteRend.sprite.rect.x, spriteRend.sprite.rect.y, spriteRend.sprite.rect.width, spriteRend.sprite.rect.height);
@@ -141,7 +110,7 @@ public class EraseDirt : MonoBehaviour
         {
             currentColourSaturation += color.a;
         }
-        if (currentColourSaturation <= totalColourSaturation - (totalColourSaturation / 100 * cleanPercentage))
+        if ((currentColourSaturation - ignoredOppasity) <= totalColourSaturation - (totalColourSaturation / 100 * cleanPercentage))
         {
             //play feedback & remove dirt gameobject
             Debug.Log("clean!");
@@ -149,5 +118,30 @@ public class EraseDirt : MonoBehaviour
             gameObject.transform.parent.gameObject.GetComponent<CleanableFossil>().LayerCleaned();
             GameObject.Destroy(gameObject);
         }
+    }
+
+    public void UpdateIgnoredOppasity()
+    {
+        Texture2D fossilTexture = gameObject.transform.parent.gameObject.GetComponent<SpriteRenderer>().sprite.texture;
+        float fossilOppasity = 0;
+        foreach (var color in fossilTexture.GetPixels())
+        {
+            fossilOppasity += color.a;
+        }
+
+        ignoredOppasity = dirtMapOppasity - fossilOppasity;
+        Debug.Log($"{ignoredOppasity} | {totalColourSaturation}");
+        totalColourSaturation -= ignoredOppasity;
+
+/*        //gets smallest height and width
+        int h = Math.Min(fossilTexture.height, dirtTexture.height);
+        int w = Math.Min(fossilTexture.width, dirtTexture.width);
+
+        //makes new texture
+        Texture2D textureTemp = new Texture2D(dirtTexture.width, dirtTexture.height, TextureFormat.ARGB32, false);
+        textureTemp.filterMode = FilterMode.Bilinear;
+        textureTemp.wrapMode = TextureWrapMode.Clamp;*/
+
+
     }
 }

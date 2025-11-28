@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7569642437883288581}
   - component: {fileID: 6319818228443912958}
   - component: {fileID: 7520565993500779158}
+  - component: {fileID: 7227005190091357409}
   m_Layer: 0
   m_Name: CleaningObject
   m_TagString: Untagged
@@ -82,7 +83,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -6249800146077113139, guid: fc9a7b5c413264d4e90ee96ee2c1c698, type: 3}
+  m_Sprite: {fileID: 8214954244256243037, guid: 80e0ec5e1298dc3468c026fbcf07885e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -217,6 +218,61 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   totalLayers: 3
+--- !u!331 &7227005190091357409
+SpriteMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7488443650341991529}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 15d0c3709176029428a0da2f8cecf0b5, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 8214954244256243037, guid: 80e0ec5e1298dc3468c026fbcf07885e, type: 3}
+  m_MaskAlphaCutoff: 0.2
+  m_FrontSortingLayerID: 0
+  m_BackSortingLayerID: 0
+  m_FrontSortingLayer: 0
+  m_BackSortingLayer: 0
+  m_FrontSortingOrder: 0
+  m_BackSortingOrder: 0
+  m_IsCustomRangeActive: 0
+  m_SpriteSortPoint: 0
+  m_MaskSource: 0
 --- !u!1001 &736142777893155398
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -226,9 +282,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 612555475891471023}
     m_Modifications:
     - target: {fileID: 848306414210857062, guid: b066d5cb2b9828245a5d87d74ea6478d, type: 3}
+      propertyPath: m_Size.x
+      value: 9.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 848306414210857062, guid: b066d5cb2b9828245a5d87d74ea6478d, type: 3}
+      propertyPath: m_Size.y
+      value: 9.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 848306414210857062, guid: b066d5cb2b9828245a5d87d74ea6478d, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -7179632969856031092, guid: 26046bfaec406cf40ac8c9fc3ef1a608, type: 3}
+      objectReference: {fileID: -386031243584886134, guid: 7b975b61249dccc4d9388b1e83cc8e01, type: 3}
     - target: {fileID: 848306414210857062, guid: b066d5cb2b9828245a5d87d74ea6478d, type: 3}
       propertyPath: m_Color.b
       value: 0.21658063
@@ -245,6 +309,14 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 848306414210857062, guid: b066d5cb2b9828245a5d87d74ea6478d, type: 3}
+      propertyPath: m_MaskInteraction
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 848306414210857062, guid: b066d5cb2b9828245a5d87d74ea6478d, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4717935157375701707, guid: b066d5cb2b9828245a5d87d74ea6478d, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -256,7 +328,7 @@ PrefabInstance:
     - target: {fileID: 4717935157375701707, guid: b066d5cb2b9828245a5d87d74ea6478d, type: 3}
       propertyPath: dirtTexture
       value: 
-      objectReference: {fileID: 2800000, guid: 4d7a32b6e66c3c74cb446fd002556d26, type: 3}
+      objectReference: {fileID: 2800000, guid: 7b975b61249dccc4d9388b1e83cc8e01, type: 3}
     - target: {fileID: 4717935157375701707, guid: b066d5cb2b9828245a5d87d74ea6478d, type: 3}
       propertyPath: cleanPercentage
       value: 95
@@ -349,6 +421,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7283410047353668549, guid: b066d5cb2b9828245a5d87d74ea6478d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2460359797591696436}
+    - targetCorrespondingSourceObject: {fileID: 7283410047353668549, guid: b066d5cb2b9828245a5d87d74ea6478d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4773405930430254007}
   m_SourcePrefab: {fileID: 100100000, guid: b066d5cb2b9828245a5d87d74ea6478d, type: 3}
 --- !u!4 &6685681333899974050 stripped
 Transform:
@@ -362,6 +437,43 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
 --- !u!70 &2460359797591696436
 CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8008687861510222211}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.3904295, y: 0.4080182}
+  m_Size: {x: 17.961958, y: 16.667112}
+  m_Direction: 1
+--- !u!61 &4773405930430254007
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -394,9 +506,18 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.1528945, y: 0.01557134}
-  m_Size: {x: 9.389006, y: 7.912753}
-  m_Direction: 1
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 9.2, y: 9.2}
+    newSize: {x: 9.2, y: 9.2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 9.2, y: 9.2}
+  m_EdgeRadius: 0
 --- !u!1001 &2120998017093391836
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -441,6 +562,10 @@ PrefabInstance:
       propertyPath: eraserSize
       value: 40
       objectReference: {fileID: 0}
+    - target: {fileID: 4717935157375701707, guid: b066d5cb2b9828245a5d87d74ea6478d, type: 3}
+      propertyPath: dirtTexture
+      value: 
+      objectReference: {fileID: 2800000, guid: 7b975b61249dccc4d9388b1e83cc8e01, type: 3}
     - target: {fileID: 4717935157375701707, guid: b066d5cb2b9828245a5d87d74ea6478d, type: 3}
       propertyPath: cleanPercentage
       value: 95
@@ -533,6 +658,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 7283410047353668549, guid: b066d5cb2b9828245a5d87d74ea6478d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5549914305276230249, guid: b066d5cb2b9828245a5d87d74ea6478d, type: 3}
     m_RemovedGameObjects: []
@@ -598,9 +727,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 612555475891471023}
     m_Modifications:
     - target: {fileID: 848306414210857062, guid: b066d5cb2b9828245a5d87d74ea6478d, type: 3}
+      propertyPath: m_Size.x
+      value: 9.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 848306414210857062, guid: b066d5cb2b9828245a5d87d74ea6478d, type: 3}
+      propertyPath: m_Size.y
+      value: 9.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 848306414210857062, guid: b066d5cb2b9828245a5d87d74ea6478d, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -7179632969856031092, guid: 26046bfaec406cf40ac8c9fc3ef1a608, type: 3}
+      objectReference: {fileID: -386031243584886134, guid: 7b975b61249dccc4d9388b1e83cc8e01, type: 3}
     - target: {fileID: 848306414210857062, guid: b066d5cb2b9828245a5d87d74ea6478d, type: 3}
       propertyPath: m_Color.b
       value: 0.21658063
@@ -621,6 +758,14 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 848306414210857062, guid: b066d5cb2b9828245a5d87d74ea6478d, type: 3}
+      propertyPath: m_MaskInteraction
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 848306414210857062, guid: b066d5cb2b9828245a5d87d74ea6478d, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4717935157375701707, guid: b066d5cb2b9828245a5d87d74ea6478d, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -632,7 +777,7 @@ PrefabInstance:
     - target: {fileID: 4717935157375701707, guid: b066d5cb2b9828245a5d87d74ea6478d, type: 3}
       propertyPath: dirtTexture
       value: 
-      objectReference: {fileID: 2800000, guid: 4d7a32b6e66c3c74cb446fd002556d26, type: 3}
+      objectReference: {fileID: 2800000, guid: 7b975b61249dccc4d9388b1e83cc8e01, type: 3}
     - target: {fileID: 4717935157375701707, guid: b066d5cb2b9828245a5d87d74ea6478d, type: 3}
       propertyPath: cleanPercentage
       value: 95
@@ -725,6 +870,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7283410047353668549, guid: b066d5cb2b9828245a5d87d74ea6478d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3768654701081716335}
+    - targetCorrespondingSourceObject: {fileID: 7283410047353668549, guid: b066d5cb2b9828245a5d87d74ea6478d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7915935902465228354}
   m_SourcePrefab: {fileID: 100100000, guid: b066d5cb2b9828245a5d87d74ea6478d, type: 3}
 --- !u!4 &691781345182800680 stripped
 Transform:
@@ -738,6 +886,43 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
 --- !u!70 &3768654701081716335
 CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4212395735821401865}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.058394372, y: 0.5689183}
+  m_Size: {x: 18.10282, y: 16.184132}
+  m_Direction: 1
+--- !u!61 &7915935902465228354
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -770,6 +955,15 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.15289451, y: 0.015571339}
-  m_Size: {x: 9.389006, y: 7.9127526}
-  m_Direction: 1
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 9.2, y: 9.2}
+    newSize: {x: 9.2, y: 9.2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 9.2, y: 9.2}
+  m_EdgeRadius: 0
