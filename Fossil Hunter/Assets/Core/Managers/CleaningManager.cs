@@ -44,7 +44,7 @@ public static class CleaningManager
         for (int i = 0; i < foundFossils; i++)
         {
             GameObject waitinglistObject = (GameObject)GameObject.Instantiate(waitinglistObjectPrefab, SceneManager.GetSceneByName("Cleaning level"));
-            waitinglistObject.transform.position = new Vector3(5, 4 + i * 1.5f, 0);
+            waitinglistObject.transform.position = new Vector3(7, 4 - i * 1.5f, 0);
             waitinglistObjects.Add(waitinglistObject);
         }
 

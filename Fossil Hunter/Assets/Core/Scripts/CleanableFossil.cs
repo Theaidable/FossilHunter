@@ -32,13 +32,16 @@ public class CleanableFossil : MonoBehaviour
         gameObject.transform.GetChild(2).gameObject.GetComponent<SpriteRenderer>().sprite = this.fossilData.GetDirtySpite;
     }
 
-    public void LayerCleaned()
+    public async void LayerCleaned()
     {
         layersCleaned++;
 
         if (layersCleaned == totalLayers)
         {
-            Debug.Log("All layers cleaned");
+            Debug.Log("All layers cleaned, (1 sec delay)");
+
+            await Awaitable.WaitForSecondsAsync(1);
+
             CleaningManager.FossilCleaned(fossilData);
             GameObject.Destroy(gameObject);
         }
