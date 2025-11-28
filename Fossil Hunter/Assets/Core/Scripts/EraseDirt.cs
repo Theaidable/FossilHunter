@@ -1,8 +1,12 @@
+using System;
 using Unity.VisualScripting;
 using UnityEngine;
 
 public class EraseDirt : MonoBehaviour
 {
+    [SerializeField] private Texture2D dirtTexture;
+    private Texture2D fossilTexture;
+
     private Texture2D m_Texture;
     private Color[] m_Colors;
     SpriteRenderer spriteRend;
@@ -20,7 +24,41 @@ public class EraseDirt : MonoBehaviour
 
     void Awake()
     {
+
         spriteRend = gameObject.GetComponent<SpriteRenderer>();
+        fossilTexture = gameObject.transform.parent.gameObject.GetComponent<SpriteRenderer>().sprite.texture;
+
+        //gets smallest height and width
+        int h = Math.Min(fossilTexture.height, dirtTexture.height);
+        int w = Math.Min(fossilTexture.width, dirtTexture.width);
+
+        //makes new texture
+        m_Texture = new Texture2D(dirtTexture.width, dirtTexture.height, TextureFormat.ARGB32, false);
+        m_Texture.filterMode = FilterMode.Bilinear;
+        m_Texture.wrapMode = TextureWrapMode.Clamp;
+
+        //gives dirt the shape of fossil
+        Color[] fossilColors = fossilTexture.GetPixels();
+        Color[] dirtMap = dirtTexture.GetPixels();
+        for (int x = 0; x < w; x++)
+        {
+            for (int y = 0; y < h; y++)
+            {
+                //5 instead of 0 for a bit of tolerance.
+                if (fossilColors[x + y * w].a < 5)
+                {
+                    dirtMap[x + y * w].a = 0;
+                }
+            }
+        }
+
+        m_Texture.SetPixels(m_Colors);
+        m_Texture.Apply();
+
+        spriteRend.sprite = Sprite.Create(m_Texture, spriteRend.sprite.rect, new Vector2(0.5f, 0.5f));
+
+
+
         //set the rect of the sprite
         originalSpriteRect = new Rect(spriteRend.sprite.rect.x, spriteRend.sprite.rect.y, spriteRend.sprite.rect.width, spriteRend.sprite.rect.height);
         var tex = spriteRend.sprite.texture;

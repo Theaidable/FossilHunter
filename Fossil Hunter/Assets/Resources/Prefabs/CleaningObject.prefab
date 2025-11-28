@@ -254,6 +254,10 @@ PrefabInstance:
       value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 4717935157375701707, guid: b066d5cb2b9828245a5d87d74ea6478d, type: 3}
+      propertyPath: dirtTexture
+      value: 
+      objectReference: {fileID: 2800000, guid: 4d7a32b6e66c3c74cb446fd002556d26, type: 3}
+    - target: {fileID: 4717935157375701707, guid: b066d5cb2b9828245a5d87d74ea6478d, type: 3}
       propertyPath: cleanPercentage
       value: 95
       objectReference: {fileID: 0}
@@ -406,16 +410,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1167778907575987533, guid: 4baf58bb27bc62147855ab3e8ac57126, type: 3}
     - target: {fileID: 848306414210857062, guid: b066d5cb2b9828245a5d87d74ea6478d, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 848306414210857062, guid: b066d5cb2b9828245a5d87d74ea6478d, type: 3}
       propertyPath: m_Color.b
-      value: 0.4056604
+      value: 0.40392157
       objectReference: {fileID: 0}
     - target: {fileID: 848306414210857062, guid: b066d5cb2b9828245a5d87d74ea6478d, type: 3}
       propertyPath: m_Color.g
-      value: 0.4056604
+      value: 0.40392157
       objectReference: {fileID: 0}
     - target: {fileID: 848306414210857062, guid: b066d5cb2b9828245a5d87d74ea6478d, type: 3}
       propertyPath: m_Color.r
-      value: 0.4056604
+      value: 0.40392157
       objectReference: {fileID: 0}
     - target: {fileID: 848306414210857062, guid: b066d5cb2b9828245a5d87d74ea6478d, type: 3}
       propertyPath: m_Enabled
@@ -621,6 +629,10 @@ PrefabInstance:
       propertyPath: eraserSize
       value: 40
       objectReference: {fileID: 0}
+    - target: {fileID: 4717935157375701707, guid: b066d5cb2b9828245a5d87d74ea6478d, type: 3}
+      propertyPath: dirtTexture
+      value: 
+      objectReference: {fileID: 2800000, guid: 4d7a32b6e66c3c74cb446fd002556d26, type: 3}
     - target: {fileID: 4717935157375701707, guid: b066d5cb2b9828245a5d87d74ea6478d, type: 3}
       propertyPath: cleanPercentage
       value: 95
