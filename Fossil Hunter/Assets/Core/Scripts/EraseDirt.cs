@@ -15,10 +15,10 @@ public class EraseDirt : MonoBehaviour
     [SerializeField]
     [Range(0f, 100f)]
     private float cleanPercentage = 90;
-    public int EraserSize {  get { return eraserSize; } set { eraserSize = value; } }
-    public bool Drawing {  get { return drawing; } set { drawing = value; } }
+    public int EraserSize { get { return eraserSize; } set { eraserSize = value; } }
+    public bool Drawing { get { return drawing; } set { drawing = value; } }
 
-void Awake()
+    void Awake()
     {
         spriteRend = gameObject.GetComponent<SpriteRenderer>();
         //set the rect of the sprite
@@ -108,6 +108,7 @@ void Awake()
             //play feedback & remove dirt gameobject
             Debug.Log("clean!");
             transform.parent.gameObject.GetComponent<AudioSource>().Play();
+            gameObject.transform.parent.gameObject.GetComponent<CleanableFossil>().LayerCleaned();
             GameObject.Destroy(gameObject);
         }
     }

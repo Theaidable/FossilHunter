@@ -1,18 +1,42 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 // Author - Malthe
 
 public class CleanableFossil : MonoBehaviour
 {
+    private int layersCleaned = 0;
+    [SerializeField] private int totalLayers;
+
+    private FossileInfo_SO fossilData;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    public void Initialize(FossileInfo_SO fossilData)
+    {
+        this.fossilData = fossilData;
+        GetComponent<SpriteRenderer>().sprite = this.fossilData.GetSprite;
+        gameObject.transform.GetChild(2).gameObject.GetComponent<SpriteRenderer>().sprite = this.fossilData.GetDirtySpite;
+    }
+
+    public void LayerCleaned()
+    {
+        layersCleaned++;
+
+        if (layersCleaned == totalLayers)
+        {
+            Debug.Log("All layers cleaned");
+            CleaningManager.FossilCleaned(fossilData);
+            GameObject.Destroy(gameObject);
+        }
     }
 }
