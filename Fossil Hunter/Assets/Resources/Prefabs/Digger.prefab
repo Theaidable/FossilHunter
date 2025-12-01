@@ -50,6 +50,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layerMasks: []
   holeSize: 2
+  layerCoverPercentage: 0
   holeSprite: {fileID: 8177471321811730583, guid: 87aaca0a643d54397ba969dab4fc8875, type: 3}
 --- !u!82 &6596214088682481754
 AudioSource:
@@ -160,7 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e1717657b33a1c409e018e08177903b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickUp: {fileID: 8300000, guid: bec1402017f8c9e42a23d4e203f41b2f, type: 3}
+  pickUp: {fileID: 8300000, guid: 5a76c8790abc419488bd932b341bfb24, type: 3}
   dig: {fileID: 8300000, guid: e8334b622fdb10f458734b3b1dde2c08, type: 3}
 --- !u!198 &1688922590690258196
 ParticleSystem:
@@ -1105,12 +1106,12 @@ ParticleSystem:
     m_BurstCount: 0
     m_Bursts: []
   SizeModule:
-    enabled: 0
+    enabled: 1
     curve:
       serializedVersion: 2
-      minMaxState: 1
-      scalar: 1
-      minScalar: 1
+      minMaxState: 3
+      scalar: 0.05
+      minScalar: 0.7
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1161,7 +1162,7 @@ ParticleSystem:
         m_RotationOrder: 4
     y:
       serializedVersion: 2
-      minMaxState: 1
+      minMaxState: 3
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -1214,7 +1215,7 @@ ParticleSystem:
         m_RotationOrder: 4
     z:
       serializedVersion: 2
-      minMaxState: 1
+      minMaxState: 3
       scalar: 1
       minScalar: 1
       maxCurve:
