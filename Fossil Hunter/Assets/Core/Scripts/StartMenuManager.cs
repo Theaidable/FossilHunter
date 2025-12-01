@@ -52,7 +52,7 @@ public class StartMenuManager : MonoBehaviour
 
     private void OnMuseumPressed()
     {
-        SceneManager.LoadSceneAsync("InfoPopUpScene", LoadSceneMode.Additive);
+        SceneManager.LoadSceneAsync("S_Museum", LoadSceneMode.Additive);
         SceneManager.UnloadSceneAsync("StartScreen");
         MenuManager.currentScene = 3;
     }
