@@ -1,5 +1,6 @@
 using UnityEngine;
 
+// Author - Malthe
 public enum Kvalitet
 {
     None = 0,

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c11e67e7fadb81c44a70cf4ad32a176b
+guid: 7b975b61249dccc4d9388b1e83cc8e01
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 362642305050631739
-    second: "S\xF8pindsvin_Fossil_0"
+      213: -386031243584886134
+    second: dirtMap_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "S\xF8pindsvin_Fossil_0"
+      name: dirtMap_0
       rect:
         serializedVersion: 2
-        x: 62
-        y: 114
-        width: 900
-        height: 814
+        x: 0
+        y: 0
+        width: 920
+        height: 920
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b3e521d414d580500800000000000000
-      internalID: 362642305050631739
+      spriteID: a8aabe511aa84aaf0800000000000000
+      internalID: -386031243584886134
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "S\xF8pindsvin_Fossil_0": 362642305050631739
+      dirtMap_0: -386031243584886134
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

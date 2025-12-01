@@ -3,13 +3,15 @@ using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor.U2D;
 
 //Author - Malthe
 
 [CreateAssetMenu(fileName = "FossileInfo_SO", menuName = "Scriptable Objects/FossileInfo_SO")]
 public class FossileInfo_SO : ScriptableObject
 {
-    [SerializeField][Tooltip("The is the sprites for every type. There should only one SO with a list of sprites.")] private List<Sprite> FossilSprites = new List<Sprite>();
+    [SerializeField][Tooltip("This is the sprites for uncleaned fossil. There should only one SO with a list of sprites.")] private List<Sprite> DirtySprites = new List<Sprite>();
+    [SerializeField][Tooltip("This is the sprites for every type. There should only one SO with a list of sprites.")] private List<Sprite> FossilSprites = new List<Sprite>();
 
     [SerializeField][Tooltip("The fact text about the fossil.\nLeave empty for the fossil's deafult tekst.")] private string infoText;
     [SerializeField][Tooltip("The fossils sprite.\nLeave empty for the fossil's deafult sprite.")] private Sprite sprite;
@@ -19,12 +21,13 @@ public class FossileInfo_SO : ScriptableObject
     [SerializeField][Tooltip("The quality of the fossil.\nChoose 'Unik' for a one of one fossil.")] public Kvalitet Kvalitet;
 
     private static FossileInfo_SO Instance;
+    private Sprite dirtySpite;
     private bool found = false;
     /// <summary>
     /// Shows whether or not the fossil has been found.
     /// Is only used for unik fossils.
     /// </summary>
-    public bool Found 
+    public bool Found
     {
         get => found;
         set
@@ -48,6 +51,19 @@ public class FossileInfo_SO : ScriptableObject
                 return sprite;
             }
 
+        }
+    }
+
+    public Sprite GetDirtySpite
+    {
+        get
+        {
+            if (dirtySpite == null)
+            {
+                int index = Random.Range(0, Instance.DirtySprites.Count);
+                dirtySpite = Instance.DirtySprites[index];
+            }
+            return dirtySpite;
         }
     }
 
@@ -85,6 +101,7 @@ public class FossileInfo_SO : ScriptableObject
         }
     }
 
+
     // når værdierne fra inspectoren er givet
     private void OnValidate()
     {
@@ -92,7 +109,7 @@ public class FossileInfo_SO : ScriptableObject
         if (FossilSprites.Count != 0)
         {
             Instance = this;
-        }        
+        }
     }
 
     public string GetInfoText()
@@ -125,10 +142,10 @@ public class FossileInfo_SO : ScriptableObject
 
         // if type isn't set, set a random one.
         DataSO.FossilType = (type == FossilType.None) ? (FossilType)Random.Range(1, 6) : type;
-        
+
         // give a random age.
         DataSO.Age = GetRandomizedAge(DataSO.FossilType);
-        
+
         //giver fossilet en kvalitet
         float quality = Random.value;
         if (quality <= 0.5f) //50%
@@ -147,7 +164,7 @@ public class FossileInfo_SO : ScriptableObject
         {
             DataSO.Kvalitet = Kvalitet.Perfekt;
         }
-        
+
         return DataSO;
     }
 

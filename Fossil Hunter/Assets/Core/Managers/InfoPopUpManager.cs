@@ -3,6 +3,8 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEditor;
 
+// Author - Malthe
+
 public class InfoPopUpManager : MonoBehaviour
 {
     private static UIDocument UIDocument;

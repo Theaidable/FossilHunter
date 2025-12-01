@@ -49,11 +49,11 @@ public static class MuseumItemManager
     public static void UpdateMuseum()
     {
 
-        foreach (FossileInfo_SO entry in PickedUpFossils.Instance.GetFossils())
+        foreach (FossileInfo_SO entry in PickedUpFossils.Instance.GetCleanedFossils())
         {
             UnlockFossil(entry);
         }
-        PickedUpFossils.Instance.ClearFossils();
+        PickedUpFossils.Instance.ClearCleanFossils();
     }
 
     private static void UpdateFossilData()
