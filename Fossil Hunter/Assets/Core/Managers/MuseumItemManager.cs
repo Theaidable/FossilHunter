@@ -4,6 +4,8 @@ using UnityEngine.SceneManagement;
 using System.Linq;
 using Unity.VisualScripting;
 
+//Author - Malthe
+
 public static class MuseumItemManager
 {
     // fossil placement index, fossil data
@@ -27,7 +29,7 @@ public static class MuseumItemManager
             // sets up an event to update the museum when it's switched the that scene.
             SceneManager.sceneLoaded += (scene, loadMode) =>
             {
-                if (scene.name == "InfoPopUpScene")
+                if (scene.name.Contains("Museum"))
                 {
                     UpdateFossilObjects();
                     UpdateMuseum();
@@ -47,11 +49,11 @@ public static class MuseumItemManager
     public static void UpdateMuseum()
     {
 
-        foreach (FossileInfo_SO entry in PickedUpFossils.Instance.GetFossils())
+        foreach (FossileInfo_SO entry in PickedUpFossils.Instance.GetCleanedFossils())
         {
             UnlockFossil(entry);
         }
-        PickedUpFossils.Instance.ClearFossils();
+        PickedUpFossils.Instance.ClearCleanFossils();
     }
 
     private static void UpdateFossilData()
@@ -79,9 +81,10 @@ public static class MuseumItemManager
             bool hasFossilOfSameType = museumFossildata.Any((entry) =>
             {
                 entryID = entry.Key;
-                return entry.Value.FossilType == fossileInfo.FossilType;
+                return entry.Value.FossilType == fossileInfo.FossilType & entry.Value.Kvalitet != Kvalitet.Unik & fossileInfo.Kvalitet != Kvalitet.Unik;
             });
 
+            
             if (hasFossilOfSameType)
             {
                 if ((int)museumFossildata[entryID].Kvalitet < (int)fossileInfo.Kvalitet)
@@ -89,7 +92,7 @@ public static class MuseumItemManager
                     museumFossildata[entryID] = fossileInfo;
                 }
             }
-            else
+            else // hvis du har fundet en ny type eller et unikt fossil.
             {
                 museumFossildata.Add(museumFossildata.Count, fossileInfo);
             }
