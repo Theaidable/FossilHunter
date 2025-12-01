@@ -1,6 +1,10 @@
 using UnityEditor;
 using UnityEngine;
 
+/// <summary>
+/// Bliver automatisk sat på hvert lag i DiggingScene og sørger for at laget kan udviskes og opdatere sin sprite
+/// primært lavet af emma, med lidt kode fra nettet
+/// </summary>
 public class DiggableLayer : MonoBehaviour
 {
     private Texture2D m_Texture;

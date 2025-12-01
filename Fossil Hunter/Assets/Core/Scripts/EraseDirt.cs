@@ -2,6 +2,10 @@ using System;
 using Unity.VisualScripting;
 using UnityEngine;
 
+/// <summary>
+/// Kode som sættes på skidtlag i CleaningScene og lader dem blive udvisket
+/// kode delvist fra internettet, med noget redigering og customisation af emma
+/// </summary>
 public class EraseDirt : MonoBehaviour
 {
     private float ignoredOppasity;

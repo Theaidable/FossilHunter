@@ -6,7 +6,9 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 //Author - 90% Emma, 10% Malthe
-
+/// <summary>
+/// Bruger Unity's Editor til at lade udviklere betemme lag i DiggingScene uden at skulle kode det hele. Lag og fossiler instantieres efter behov
+/// </summary>
 public class LayerSetup : MonoBehaviour
 {
     [SerializeField]

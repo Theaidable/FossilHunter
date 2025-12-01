@@ -7,6 +7,10 @@ using UnityEngine.InputSystem;
 using static UnityEngine.ParticleSystem;
 
 public enum CleaningTool { None, Brush, Dremel, FineBrush }
+/// <summary>
+/// Sets up and keeps track of the various tools in the cleaning scene, and keeps track of which tool is in use
+/// primarily made by emma
+/// </summary>
 public class CleaningTools : MonoBehaviour
 {
     [SerializeField]
