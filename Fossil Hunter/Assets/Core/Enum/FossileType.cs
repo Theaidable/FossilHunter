@@ -1,5 +1,7 @@
 using UnityEngine;
 
+// Author - Malthe
+
 public enum FossilType
 {
     None = 0,

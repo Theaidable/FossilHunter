@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8585d3a4c28b76640a9fedd802c8a8b4, type: 3}
   m_Name: FossileInfo_SO1
   m_EditorClassIdentifier: 
+  DirtySprites:
+  - {fileID: 1167778907575987533, guid: 4baf58bb27bc62147855ab3e8ac57126, type: 3}
   FossilSprites:
   - {fileID: 6594980007012716387, guid: 0fc5d5a545009f84f837acde0e806ffc, type: 3}
   - {fileID: 8214954244256243037, guid: 80e0ec5e1298dc3468c026fbcf07885e, type: 3}
