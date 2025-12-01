@@ -5,7 +5,7 @@ public class PickupableFossil : MonoBehaviour
     [SerializeField] private FossileInfo_SO data;
     [SerializeField] private ParticleSystem pickupEffectPrefab;
 
-    public FossileInfo_SO Data { get => data; set { if (data == null) data = value; } }
+    public FossileInfo_SO Data { get => data; set { data = value; } }
 
     /// <summary>
     /// When the fossil is clicked on, send the data to the PickedUpFossils Scriptable Object,
