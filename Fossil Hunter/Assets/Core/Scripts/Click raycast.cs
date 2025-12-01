@@ -3,6 +3,10 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.InputSystem;
 
+/// <summary>
+/// Super simple Raycasting script that only says what collider it hits, used for testing and as a template for other scripts
+/// made by emma
+/// </summary>
 public class Clickraycast : MonoBehaviour
 {
     LayerMask layerMask;

@@ -2,6 +2,10 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// Used to determine layer disappearance & collision order in raycast
+/// primarily made by emma
+/// </summary>
 public class DigThroughLayers : MonoBehaviour
 {
     private LayerMask layerMask;
@@ -88,6 +92,7 @@ public class DigThroughLayers : MonoBehaviour
                     }
 
                     /*
+                     //earlier version, could be deleted
                     Debug.Log($"hit! {hitCollider.collider.gameObject.name}");
                     //if we've hit a sprite mask, aka a hole, pass through the layer onto the next
                     if (hitCollider.collider.gameObject.TryGetComponent<SpriteMask>(out SpriteMask mask))

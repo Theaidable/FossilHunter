@@ -1,5 +1,6 @@
 using UnityEngine;
 
+// Author - Malthe
 public enum Kvalitet
 {
     None = 0,
@@ -7,4 +8,5 @@ public enum Kvalitet
     Middle = 2,
     God = 3,
     Perfekt = 4,
+    Unik = 5,
 }
