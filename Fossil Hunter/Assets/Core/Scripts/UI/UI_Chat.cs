@@ -90,12 +90,11 @@ namespace UI_Handlers
                 if(_chat == null)
                 {
                     _chat = FindFirstObjectByType<Network_Chat>();
+                    _chat.RequestHistoryFromServer();
                 }
 
                 if (_chat != null)
                 {
-                    _chat.RequestHistoryFromServer();
-
                     //Subscribe til network objekt for at sende besked
                     _chat.OnMessageRecieved += OnMessageReceived;
                 }
