@@ -1,3 +1,4 @@
+using System;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -7,6 +8,9 @@ using UnityEngine;
 /// </summary>
 public class EraseDirt : MonoBehaviour
 {
+    private float ignoredOppasity;
+    private const float dirtMapOppasity = 641134.9f;
+
     private Texture2D m_Texture;
     private Color[] m_Colors;
     SpriteRenderer spriteRend;
@@ -19,12 +23,15 @@ public class EraseDirt : MonoBehaviour
     [SerializeField]
     [Range(0f, 100f)]
     private float cleanPercentage = 90;
-    public int EraserSize {  get { return eraserSize; } set { eraserSize = value; } }
-    public bool Drawing {  get { return drawing; } set { drawing = value; } }
+    public int EraserSize { get { return eraserSize; } set { eraserSize = value; } }
+    public bool Drawing { get { return drawing; } set { drawing = value; } }
 
-void Awake()
+    void Awake()
     {
+
+
         spriteRend = gameObject.GetComponent<SpriteRenderer>();
+
         //set the rect of the sprite
         originalSpriteRect = new Rect(spriteRend.sprite.rect.x, spriteRend.sprite.rect.y, spriteRend.sprite.rect.width, spriteRend.sprite.rect.height);
         var tex = spriteRend.sprite.texture;
@@ -98,6 +105,7 @@ void Awake()
         spriteRend.sprite = Sprite.Create(m_Texture, originalSpriteRect, new Vector2(0.5f, 0.5f));
         CheckIfClean();
     }
+
     void CheckIfClean()
     {
         //compare current opacity to starting opacity & check if it meets the clean percentage
@@ -106,12 +114,38 @@ void Awake()
         {
             currentColourSaturation += color.a;
         }
-        if (currentColourSaturation <= totalColourSaturation - (totalColourSaturation / 100 * cleanPercentage))
+        if ((currentColourSaturation - ignoredOppasity) <= totalColourSaturation - (totalColourSaturation / 100 * cleanPercentage))
         {
             //play feedback & remove dirt gameobject
             Debug.Log("clean!");
             transform.parent.gameObject.GetComponent<AudioSource>().Play();
+            gameObject.transform.parent.gameObject.GetComponent<CleanableFossil>().LayerCleaned();
             GameObject.Destroy(gameObject);
         }
+    }
+
+    public void UpdateIgnoredOppasity()
+    {
+        Texture2D fossilTexture = gameObject.transform.parent.gameObject.GetComponent<SpriteRenderer>().sprite.texture;
+        float fossilOppasity = 0;
+        foreach (var color in fossilTexture.GetPixels())
+        {
+            fossilOppasity += color.a;
+        }
+
+        ignoredOppasity = dirtMapOppasity - fossilOppasity;
+        Debug.Log($"{ignoredOppasity} | {totalColourSaturation}");
+        totalColourSaturation -= ignoredOppasity;
+
+/*        //gets smallest height and width
+        int h = Math.Min(fossilTexture.height, dirtTexture.height);
+        int w = Math.Min(fossilTexture.width, dirtTexture.width);
+
+        //makes new texture
+        Texture2D textureTemp = new Texture2D(dirtTexture.width, dirtTexture.height, TextureFormat.ARGB32, false);
+        textureTemp.filterMode = FilterMode.Bilinear;
+        textureTemp.wrapMode = TextureWrapMode.Clamp;*/
+
+
     }
 }

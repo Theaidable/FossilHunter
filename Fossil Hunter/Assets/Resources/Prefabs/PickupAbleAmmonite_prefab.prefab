@@ -62,7 +62,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6967099039927861175, guid: 4a01dc38feba66f4a9c9e3af9a2eba5e, type: 3}
       propertyPath: m_Name
-      value: Ammonite
+      value: PickupAbleAmmonite_prefab
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

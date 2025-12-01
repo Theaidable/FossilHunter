@@ -51,7 +51,10 @@ namespace UI_Handlers
         {
             if(startHidden == false)
             {
-                _chat = FindFirstObjectByType<Network_Chat>();
+                if(_chat == null)
+                {
+                    _chat = FindFirstObjectByType<Network_Chat>();
+                }
 
                 if (_chat != null)
                 {
@@ -84,7 +87,10 @@ namespace UI_Handlers
 
                 GetOverlay();
 
-                _chat = FindFirstObjectByType<Network_Chat>();
+                if(_chat == null)
+                {
+                    _chat = FindFirstObjectByType<Network_Chat>();
+                }
 
                 if (_chat != null)
                 {
