@@ -218,6 +218,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   totalLayers: 3
+  displayStarPrefab: {fileID: 5721551818150667193, guid: 27b8844fde42b7b4b849181cdb119573, type: 3}
+  displayStarTime: 2.5
 --- !u!331 &7227005190091357409
 SpriteMask:
   m_ObjectHideFlags: 0
