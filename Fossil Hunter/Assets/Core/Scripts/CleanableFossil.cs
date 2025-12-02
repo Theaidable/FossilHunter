@@ -30,6 +30,7 @@ public class CleanableFossil : MonoBehaviour
         gameObject.transform.GetChild(0).gameObject.GetComponent<EraseDirt>().UpdateIgnoredOppasity(); 
         gameObject.transform.GetChild(1).gameObject.GetComponent<EraseDirt>().UpdateIgnoredOppasity();
         gameObject.transform.GetChild(2).gameObject.GetComponent<SpriteRenderer>().sprite = this.fossilData.GetDirtySpite;
+        gameObject.transform.GetChild(2).gameObject.GetComponent<EraseDirt>().UpdateTotalSaturation();
     }
 
     public async void LayerCleaned()

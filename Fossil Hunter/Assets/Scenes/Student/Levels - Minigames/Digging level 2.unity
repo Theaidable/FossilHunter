@@ -191,9 +191,9 @@ MonoBehaviour:
   layer1Sprite: {fileID: 8547753652136361683, guid: c9b924ace0f759b45bb84996b10303ae, type: 3}
   fossilTypesOnLayer1: 
   layer2Sprite: {fileID: 4823382702429700698, guid: 94757fe8ee3c24440b857f24a750b7ff, type: 3}
-  fossilTypesOnLayer2: 0100000003000000
+  fossilTypesOnLayer2: 020000000300000002000000
   layer3Sprite: {fileID: 3895382488454125955, guid: 2bcf21dffd7781742a8f833a5b6cb36f, type: 3}
-  fossilTypesOnLayer3: 04000000
+  fossilTypesOnLayer3: 040000000100000002000000
   layer4Sprite: {fileID: 0}
   fossilTypesOnLayer4: 
   layer5Sprite: {fileID: 0}

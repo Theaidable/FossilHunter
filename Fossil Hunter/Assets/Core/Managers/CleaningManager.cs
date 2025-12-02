@@ -38,13 +38,15 @@ public static class CleaningManager
     /// </summary>
     private static void OpenManager()
     {
-        int foundFossils = PickedUpFossils.Instance.GetFossils().Count;
+        List<FossileInfo_SO> foundFossils = PickedUpFossils.Instance.GetFossils();
 
         //spawns and positions the waitinglist.
-        for (int i = 0; i < foundFossils; i++)
+        for (int i = 0; i < foundFossils.Count; i++)
         {
             GameObject waitinglistObject = (GameObject)GameObject.Instantiate(waitinglistObjectPrefab, SceneManager.GetSceneByName("Cleaning level"));
-            waitinglistObject.transform.position = new Vector3(7, 4 - i * 1.5f, 0);
+            waitinglistObject.GetComponent<SpriteRenderer>().sprite = foundFossils[i].GetDirtySpite;
+            waitinglistObject.GetComponent<SpriteRenderer>().sortingOrder = 1;
+            waitinglistObject.transform.position = new Vector3(7, 3 - i * 1.25f, 0);
             waitinglistObjects.Add(waitinglistObject);
         }
 
