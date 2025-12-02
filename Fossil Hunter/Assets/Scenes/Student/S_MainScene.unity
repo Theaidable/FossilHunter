@@ -150,6 +150,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: BaseUI
       objectReference: {fileID: 0}
+    - target: {fileID: 575387953250716211, guid: c7e6694a46f186540a8e09dedc7c972d, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 575387953250716211, guid: c7e6694a46f186540a8e09dedc7c972d, type: 3}
+      propertyPath: m_PanelSettings
+      value: 
+      objectReference: {fileID: 11400000, guid: 32e332199be957c43938c3255c1e675a, type: 2}
     - target: {fileID: 1531264079063407182, guid: c7e6694a46f186540a8e09dedc7c972d, type: 3}
       propertyPath: currentScene
       value: 1

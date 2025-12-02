@@ -14,7 +14,9 @@ public class MenuManager : MonoBehaviour
     private Button leftBtn;
     private Button rightBtn;
     private Button exitBtn;
+
     [SerializeField]
+
     //Kan ændres til at sætte start scenen
     public static int currentScene = 1;
 
@@ -22,11 +24,11 @@ public class MenuManager : MonoBehaviour
     {
         SceneManager.LoadSceneAsync(currentScene, LoadSceneMode.Additive);
     }
+
     private void Update()
     {
 
     }
-  
 
     //Når UI er interegeret med køres denne kode og håndtere events
     private void OnEnable()
@@ -52,7 +54,7 @@ public class MenuManager : MonoBehaviour
 
     private void OnExitButtonPressed()
     {
-        SceneManager.LoadSceneAsync("StartScreen", LoadSceneMode.Additive);
+        SceneManager.LoadSceneAsync("S_StartScene", LoadSceneMode.Additive);
         SceneManager.UnloadSceneAsync(currentScene);
     }
 
