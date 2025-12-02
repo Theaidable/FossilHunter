@@ -14,6 +14,8 @@ public enum CleaningTool { None, Brush, Dremel, FineBrush }
 public class CleaningTools : MonoBehaviour
 {
     [SerializeField]
+    float tempParticleAdjustment;
+    [SerializeField]
     CleaningTool currentTool = CleaningTool.None;
     [Space]
     [Header("Brush settings")]
@@ -59,11 +61,10 @@ public class CleaningTools : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        emitParams.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
         //only try to draw & update sprite if the mouse is clicking
         if (Input.GetMouseButton(0))
         {
+            emitParams.position = Camera.main.ScreenToWorldPoint(Input.mousePosition)*tempParticleAdjustment;
             switch (currentTool)
             {
                 case CleaningTool.Brush:
@@ -75,7 +76,7 @@ public class CleaningTools : MonoBehaviour
                         hit.collider.gameObject.GetComponent<EraseDirt>().Drawing = true;
                         if (!GetComponent<AudioSource>().isPlaying) GetComponent<AudioSource>().Play();
                         cleaningColliders.Add(hit.collider);
-                        //particles.Emit(emitParams, 1);
+                        particles.Emit(emitParams, 1);
                     }
 
                     break;
@@ -100,6 +101,7 @@ public class CleaningTools : MonoBehaviour
                         hit3.collider.gameObject.GetComponent<EraseDirt>().Drawing = true;
                         if (!GetComponent<AudioSource>().isPlaying) GetComponent<AudioSource>().Play();
                         cleaningColliders.Add(hit3.collider);
+                        particles.Emit(emitParams, 1);
                     }
                     break;
                 default:
