@@ -1,5 +1,6 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 // Author - Malthe
 
@@ -7,6 +8,8 @@ public class CleanableFossil : MonoBehaviour
 {
     private int layersCleaned = 0;
     [SerializeField] private int totalLayers;
+    [SerializeField] private GameObject displayStarPrefab;
+    [SerializeField] private float displayStarTime;
 
     private FossileInfo_SO fossilData;
 
@@ -39,12 +42,23 @@ public class CleanableFossil : MonoBehaviour
 
         if (layersCleaned == totalLayers)
         {
-            Debug.Log("All layers cleaned, (1 sec delay)");
+            Debug.Log($"All layers cleaned, play star animation for {displayStarTime} sec");
 
-            await Awaitable.WaitForSecondsAsync(1);
+            // makes star
+            GameObject star = (GameObject)GameObject.Instantiate(displayStarPrefab, SceneManager.GetSceneByName("Cleaning level"));
+            star.GetComponent<cleaningStarRotation>().SetSprite(fossilData.GetSprite);
 
-            CleaningManager.FossilCleaned(fossilData);
+            // removes cleaned object
             GameObject.Destroy(gameObject);
+
+            // waits for a little bit
+            await Awaitable.WaitForSecondsAsync(displayStarTime);
+
+            // removes animation
+            GameObject.Destroy(star);
+
+            // Tell manager to cycle to next fossil
+            CleaningManager.FossilCleaned(fossilData);
         }
     }
 }

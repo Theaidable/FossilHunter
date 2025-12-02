@@ -971,6 +971,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   totalLayers: 0
+  displayStarPrefab: {fileID: 0}
 --- !u!1001 &1395436292
 PrefabInstance:
   m_ObjectHideFlags: 0
