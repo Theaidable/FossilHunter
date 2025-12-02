@@ -1081,6 +1081,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da78bd8fcf902bb47a5f8ac9d4ece971, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  btnTintColor: {r: 0.5380028, g: 0.5583875, b: 0.735849, a: 1}
 --- !u!1 &1786404916
 GameObject:
   m_ObjectHideFlags: 0
@@ -1113,6 +1114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dec6cadc543238d489ed28d976b51d2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tempParticleAdjustment: 4
   currentTool: 0
   brushSize: 40
   brushWorksOnLayers:
@@ -1268,7 +1270,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 82fc737fde8df7b429ffb9c57f20165a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1286,9 +1288,9 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 596635699
+  m_SortingLayer: 10
+  m_SortingOrder: 5
   m_RenderMode: 0
   m_MeshDistribution: 0
   m_SortMode: 0
@@ -1404,7 +1406,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.5
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -1575,7 +1577,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 2
       minScalar: 1
       maxCurve:
         serializedVersion: 2
