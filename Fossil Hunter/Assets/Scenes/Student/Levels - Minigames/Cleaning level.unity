@@ -1114,7 +1114,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dec6cadc543238d489ed28d976b51d2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tempParticleAdjustment: 4
   currentTool: 0
   brushSize: 40
   brushWorksOnLayers:
@@ -1122,12 +1121,12 @@ MonoBehaviour:
     m_Bits: 1536
   brushUseSound: {fileID: 8300000, guid: 4f8f48272a4f7a446adbe8578de67746, type: 3}
   brushSprite: {fileID: 2800000, guid: 9643902eef7f3a64abc5402b4501e3b2, type: 3}
-  dremelSize: 20
-  dremelWorksOnLayers:
+  chiselSize: 20
+  chiselWorksOnLayers:
     serializedVersion: 2
     m_Bits: 192
-  dremelUseSound: {fileID: 8300000, guid: 54e4740ab0f759c459aa3cd9c884da47, type: 3}
-  dremelSprite: {fileID: 2800000, guid: ae196e40eda23c14cba4b7a3551f19f3, type: 3}
+  chiselUseSound: {fileID: 8300000, guid: 347639e98c675e04da5df763766fadb9, type: 3}
+  chiselSprite: {fileID: 2800000, guid: ae196e40eda23c14cba4b7a3551f19f3, type: 3}
   fineBrushSize: 15
   fineBrushWorksOnLayers:
     serializedVersion: 2
