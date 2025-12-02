@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DirtySprites:
   - {fileID: -5359793898965210153, guid: f86c93b5c18716b4a8a42474a54ec9bc, type: 3}
-  - {fileID: 1619208009736256141, guid: 54e91c7642d45d741b32155473635c85, type: 3}
   - {fileID: 1193433837078032258, guid: 7859622c3cefdd6439f22a39ca2e5317, type: 3}
+  - {fileID: -7789493028026738720, guid: fa1c4a7aa036dd341b2dc97764358dd5, type: 3}
   FossilSprites:
   - {fileID: 6594980007012716387, guid: 0fc5d5a545009f84f837acde0e806ffc, type: 3}
   - {fileID: 8214954244256243037, guid: 80e0ec5e1298dc3468c026fbcf07885e, type: 3}
