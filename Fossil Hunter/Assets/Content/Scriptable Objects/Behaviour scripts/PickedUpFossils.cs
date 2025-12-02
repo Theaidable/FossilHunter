@@ -18,6 +18,7 @@ public class PickedUpFossils : ScriptableObject
     {
         get
         {
+            // Laver et instance, hvis der ikke allerede existere et.
             if (instance == null)
             {
                 instance = ScriptableObject.CreateInstance<PickedUpFossils>();
@@ -27,7 +28,7 @@ public class PickedUpFossils : ScriptableObject
     }
 
     /// <summary>
-    /// private constructor, feel free to add things
+    /// private constructor, feel free to add things.
     /// </summary>
     private PickedUpFossils()
     {

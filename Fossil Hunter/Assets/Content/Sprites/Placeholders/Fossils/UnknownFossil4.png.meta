@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 4baf58bb27bc62147855ab3e8ac57126
+guid: fa1c4a7aa036dd341b2dc97764358dd5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1167778907575987533
-    second: Klump of dirt_0
-  - first:
-      213: -8512086822619842060
-    second: Klump of dirt_1
+      213: -7789493028026738720
+    second: UnknownFossil4_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -116,23 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Klump of dirt_0
+      name: UnknownFossil4_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 21
-        width: 404
-        height: 356
+        x: 88
+        y: 97
+        width: 845
+        height: 832
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d4da242bab8c43010800000000000000
-      internalID: 1167778907575987533
+      spriteID: 0e7951c8c5926e390800000000000000
+      internalID: -7789493028026738720
       vertices: []
       indices: 
       edges: []
@@ -141,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: a69faa56a6d3fda4595f2d2578c553fa
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -151,8 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Klump of dirt_0: 1167778907575987533
-      Klump of dirt_1: -8512086822619842060
+      UnknownFossil4_0: -7789493028026738720
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
