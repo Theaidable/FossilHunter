@@ -77,7 +77,8 @@ public class CleaningTools : MonoBehaviour
                         hit.collider.gameObject.GetComponent<EraseDirt>().Drawing = true;
                         if (!GetComponent<AudioSource>().isPlaying) GetComponent<AudioSource>().Play();
                         cleaningColliders.Add(hit.collider);
-                        particles.Emit(emitParams, 1);
+                        emitParams.startSize = 0.5f;
+                        particles.Emit(emitParams, 2);
                     }
 
                     break;
@@ -90,6 +91,8 @@ public class CleaningTools : MonoBehaviour
                         hit2.collider.gameObject.GetComponent<EraseDirt>().Drawing = true;
                         if (!GetComponent<AudioSource>().isPlaying) GetComponent<AudioSource>().Play();
                         cleaningColliders.Add(hit2.collider);
+                        emitParams.startSize = 1f;
+                        particles.Emit(emitParams, 2);
                     }
                     break;
                 case CleaningTool.FineBrush:
@@ -102,7 +105,9 @@ public class CleaningTools : MonoBehaviour
                         hit3.collider.gameObject.GetComponent<EraseDirt>().Drawing = true;
                         if (!GetComponent<AudioSource>().isPlaying) GetComponent<AudioSource>().Play();
                         cleaningColliders.Add(hit3.collider);
+                        emitParams.startSize = 0.5f;
                         particles.Emit(emitParams, 1);
+
                     }
                     break;
                 default:
