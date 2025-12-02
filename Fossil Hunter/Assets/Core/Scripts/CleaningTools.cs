@@ -14,8 +14,6 @@ public enum CleaningTool { None, Brush, Dremel, FineBrush }
 public class CleaningTools : MonoBehaviour
 {
     [SerializeField]
-    float tempParticleAdjustment;
-    [SerializeField]
     CleaningTool currentTool = CleaningTool.None;
     [Space]
     [Header("Brush settings")]
@@ -46,6 +44,8 @@ public class CleaningTools : MonoBehaviour
     [SerializeField]
     private Texture2D fineBrushSprite;
 
+    //adjust this to determine the position of the particle emission
+    private float particleAdjustment = 5;
     private HashSet<Collider2D> cleaningColliders = new HashSet<Collider2D>();
     private ParticleSystem particles;
     ParticleSystem.EmitParams emitParams;
@@ -64,7 +64,8 @@ public class CleaningTools : MonoBehaviour
         //only try to draw & update sprite if the mouse is clicking
         if (Input.GetMouseButton(0))
         {
-            emitParams.position = Camera.main.ScreenToWorldPoint(Input.mousePosition)*tempParticleAdjustment;
+            emitParams.position = new Vector2(Camera.main.ScreenToWorldPoint(Input.mousePosition).x * particleAdjustment, Camera.main.ScreenToWorldPoint(Input.mousePosition).y * particleAdjustment);
+            Debug.Log(emitParams.position);
             switch (currentTool)
             {
                 case CleaningTool.Brush:

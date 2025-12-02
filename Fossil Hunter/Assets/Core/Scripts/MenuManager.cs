@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
+
 /// <summary>
 /// Tænkt til at styre alle knapperne, dette bliver en form for UI styrning
 /// </summary>
@@ -53,6 +54,7 @@ public class MenuManager : MonoBehaviour
     private void OnExitButtonPressed()
     {
         SceneManager.LoadSceneAsync("StartScreen", LoadSceneMode.Additive);
+        UnityEngine.Cursor.SetCursor(default, Vector2.zero, CursorMode.Auto);
         SceneManager.UnloadSceneAsync(currentScene);
     }
 

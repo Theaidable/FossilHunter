@@ -13,6 +13,8 @@ public class LayerSetup : MonoBehaviour
 {
     [SerializeField]
     GameObject newFossilPrefab;
+    [SerializeField]
+    private Texture2D cursorSprite;
 
     private bool unikSpawned;
     [SerializeField] private FossileInfo_SO unikFossil;
@@ -70,6 +72,7 @@ public class LayerSetup : MonoBehaviour
 
     void Awake()
     {
+        if (cursorSprite != null) Cursor.SetCursor(cursorSprite, Vector2.zero, CursorMode.Auto);
         unikSpawned = false;
 
         //get postion & size of the gameobject designating diggable area (said gameobject will be removed in first update)

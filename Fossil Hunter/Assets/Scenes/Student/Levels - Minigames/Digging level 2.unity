@@ -185,6 +185,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newFossilPrefab: {fileID: 0}
+  cursorSprite: {fileID: 2800000, guid: 490962ca2f167c248ae07119b7783925, type: 3}
   unikFossil: {fileID: 0}
   unikChance: 0
   totalLayers: 3
