@@ -20,6 +20,16 @@ public class FossileInfo_SO : ScriptableObject
     private static FossileInfo_SO Instance;
     private Sprite dirtySpite;
     private bool found = false;
+
+    private void OnEnable()
+    {
+        // kun ét instance er blevet givet spritesne, hvis det er den her; bliver den det static 'Instance' som du andre referere til.
+        if (FossilSprites.Count != 0 || DirtySprites.Count != 0)
+        {
+            Instance = this;
+        }
+    }
+
     /// <summary>
     /// Shows whether or not the fossil has been found.
     /// Is only used for unik fossils.
@@ -98,7 +108,7 @@ public class FossileInfo_SO : ScriptableObject
         }
     }
 
-
+    /* Denne metode er kun i editor
     // når værdierne fra inspectoren er givet
     private void OnValidate()
     {
@@ -108,6 +118,7 @@ public class FossileInfo_SO : ScriptableObject
             Instance = this;
         }
     }
+    */
 
     public string GetInfoText()
     {
@@ -125,7 +136,6 @@ public class FossileInfo_SO : ScriptableObject
 
         return finalText;
     }
-
 
     /// <summary>
     /// Makes a randomized <see cref="FossileInfo_SO"/>.
