@@ -47,7 +47,7 @@ public class ToolBtnHandler : MonoBehaviour
     }
     private void DremelBtnPressed()
     {
-        tools.SwitchTool(CleaningTool.Dremel);
+        tools.SwitchTool(CleaningTool.Chisel);
         dremelBtn.style.unityBackgroundImageTintColor = btnTintColor;
         brushBtn.style.unityBackgroundImageTintColor = Color.white;
         fineBrushBtn.style.unityBackgroundImageTintColor = Color.white;

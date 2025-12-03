@@ -185,15 +185,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newFossilPrefab: {fileID: 0}
+  cursorSprite: {fileID: 2800000, guid: 490962ca2f167c248ae07119b7783925, type: 3}
   unikFossil: {fileID: 0}
   unikChance: 0
   totalLayers: 3
   layer1Sprite: {fileID: 8547753652136361683, guid: c9b924ace0f759b45bb84996b10303ae, type: 3}
   fossilTypesOnLayer1: 
   layer2Sprite: {fileID: 4823382702429700698, guid: 94757fe8ee3c24440b857f24a750b7ff, type: 3}
-  fossilTypesOnLayer2: 0100000003000000
+  fossilTypesOnLayer2: 020000000300000002000000
   layer3Sprite: {fileID: 3895382488454125955, guid: 2bcf21dffd7781742a8f833a5b6cb36f, type: 3}
-  fossilTypesOnLayer3: 04000000
+  fossilTypesOnLayer3: 040000000100000002000000
   layer4Sprite: {fileID: 0}
   fossilTypesOnLayer4: 
   layer5Sprite: {fileID: 0}
@@ -5982,7 +5983,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1962539018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6034,7 +6035,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1962539017}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &1962539020
 Camera:
   m_ObjectHideFlags: 0
@@ -6105,6 +6106,7 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1962539021}
   - {fileID: 793027951}
   - {fileID: 1255238805}
   - {fileID: 1267368901}
@@ -6113,4 +6115,3 @@ SceneRoots:
   - {fileID: 1625866097}
   - {fileID: 615200349}
   - {fileID: 1220239200}
-  - {fileID: 1962539021}
