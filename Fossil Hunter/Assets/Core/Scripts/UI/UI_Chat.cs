@@ -208,7 +208,10 @@ namespace UI_Handlers
         {
             if(_messageScroll != null)
             {
-                var label = new Label(message);
+                var label = new Label();
+
+                label.enableRichText = true;
+                label.text = message;
 
                 if (message.StartsWith("[Privat]"))
                 {

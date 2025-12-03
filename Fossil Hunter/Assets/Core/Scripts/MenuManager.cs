@@ -19,16 +19,11 @@ public class MenuManager : MonoBehaviour
     [SerializeField]
 
     //Kan ændres til at sætte start scenen
-    public static int currentScene = 1;
+    public static int currentScene = 6;
 
     private void Start()
     {
         SceneManager.LoadSceneAsync(currentScene, LoadSceneMode.Additive);
-    }
-
-    private void Update()
-    {
-
     }
 
     //Når UI er interegeret med køres denne kode og håndtere events

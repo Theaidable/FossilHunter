@@ -39,7 +39,7 @@ public class StartMenuManager : MonoBehaviour
         Debug.Log("Pls");
         SceneManager.LoadSceneAsync("Digging level 1", LoadSceneMode.Additive);
         SceneManager.UnloadSceneAsync("S_StartScene");
-        MenuManager.currentScene = 4;
+        MenuManager.currentScene = 9;
         Debug.Log(MenuManager.currentScene);
     }
 
@@ -47,20 +47,20 @@ public class StartMenuManager : MonoBehaviour
     {
         SceneManager.LoadSceneAsync("Digging level 2", LoadSceneMode.Additive);
         SceneManager.UnloadSceneAsync("S_StartScene");
-        MenuManager.currentScene = 5;
+        MenuManager.currentScene = 10;
     }
 
     private void OnMuseumPressed()
     {
         SceneManager.LoadSceneAsync("S_Museum", LoadSceneMode.Additive);
         SceneManager.UnloadSceneAsync("S_StartScene");
-        MenuManager.currentScene = 3;
+        MenuManager.currentScene = 7;
     }
 
     private void OnCleaningPressed()
     {
         SceneManager.LoadSceneAsync("Cleaning level", LoadSceneMode.Additive);
         SceneManager.UnloadSceneAsync("S_StartScene");
-        MenuManager.currentScene = 2;
+        MenuManager.currentScene = 8;
     }
 }

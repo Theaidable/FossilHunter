@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 using UnityEditor;
 using System.Linq;
+using Network_Handler;
 
 // Author - Malthe
 
@@ -75,12 +76,53 @@ public static class CleaningManager
         }
     }
 
+    private static void TrySendFossilCleanedMessage(FossileInfo_SO fossil)
+    {
+        if(fossil == null || Network_Chat.Instance == null || Network_Chat.Instance.IsSpawned == false)
+        {
+            return;
+        }
+
+        string fossilName = fossil.FossilType.ToString();
+
+        string colorHex;
+
+        switch (fossil.Kvalitet)
+        {
+            case Kvalitet.Dårlig: // Garbage kvalitet
+                colorHex = "FF0000"; // Rød farve
+                break;
+            case Kvalitet.Middle: // Common
+                colorHex = "B0B0B0"; // Grå farve
+                break;
+            case Kvalitet.God: // Rare
+                colorHex = "0080FF"; // Blå farve
+                break;
+            case Kvalitet.Perfekt: // Epic
+                colorHex = "8000FF"; // Lilla farve
+                break;
+            case Kvalitet.Unik: // Legendary
+                colorHex = "FFD700"; // Guld farve
+                break;
+            default:
+                colorHex = "FFFFFF";
+                break;
+        }
+
+        // Selve beskeden med fossilnavn og farve
+        string message = $"<i>Har fundet <color=#{colorHex}>{fossilName}</color></i>";
+
+        // Send besked til alle
+        Network_Chat.Instance.SendLocalMessage(message, false);
+    }
+
     /// <summary>
     /// Sends a fossil to the museum, after its been cleaned.
     /// </summary>
     /// <param name="fossil">The fossil being sent to the museum.</param>
     public static void FossilCleaned(FossileInfo_SO fossil)
     {
+        TrySendFossilCleanedMessage(fossil);
         PickedUpFossils.Instance.CleanFossil(fossil);
         SpawnNextFossil();
     }
