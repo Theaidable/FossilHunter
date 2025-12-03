@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 4baf58bb27bc62147855ab3e8ac57126
+guid: 490962ca2f167c248ae07119b7783925
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1167778907575987533
-    second: Klump of dirt_0
-  - first:
-      213: -8512086822619842060
-    second: Klump of dirt_1
+      213: 2753308212948155410
+    second: tempshovel_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -27,7 +24,7 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
     flipGreenChannel: 0
-  isReadable: 1
+  isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -99,40 +96,27 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Klump of dirt_0
+      name: tempshovel_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 21
-        width: 404
-        height: 356
+        x: 0
+        y: 0
+        width: 824
+        height: 997
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d4da242bab8c43010800000000000000
-      internalID: 1167778907575987533
+      spriteID: 21cb0f56b37b53620800000000000000
+      internalID: 2753308212948155410
       vertices: []
       indices: 
       edges: []
@@ -141,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: a69faa56a6d3fda4595f2d2578c553fa
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -151,8 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Klump of dirt_0: 1167778907575987533
-      Klump of dirt_1: -8512086822619842060
+      tempshovel_0: 2753308212948155410
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

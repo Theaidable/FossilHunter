@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 07257132130cc114081ea16ad87a62c9
+guid: fa1c4a7aa036dd341b2dc97764358dd5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -762420635945660699
-    second: Tool_Brush1_0
-  - first:
-      213: -6758823918878422410
-    second: Tool_Brush1_1
+      213: -7789493028026738720
+    second: UnknownFossil4_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -27,7 +24,7 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
     flipGreenChannel: 0
-  isReadable: 0
+  isReadable: 1
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -99,17 +96,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Tool_Brush1_0
+      name: UnknownFossil4_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 0
-        width: 1533
-        height: 1024
+        x: 88
+        y: 97
+        width: 845
+        height: 832
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,30 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5ee080998765b65f0800000000000000
-      internalID: -762420635945660699
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tool_Brush1_1
-      rect:
-        serializedVersion: 2
-        x: 82
-        y: 798
-        width: 6
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 67a86df9475d332a0800000000000000
-      internalID: -6758823918878422410
+      spriteID: 0e7951c8c5926e390800000000000000
+      internalID: -7789493028026738720
       vertices: []
       indices: 
       edges: []
@@ -160,8 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Tool_Brush1_0: -762420635945660699
-      Tool_Brush1_1: -6758823918878422410
+      UnknownFossil4_0: -7789493028026738720
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -185,15 +185,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newFossilPrefab: {fileID: 0}
+  cursorSprite: {fileID: 2800000, guid: 490962ca2f167c248ae07119b7783925, type: 3}
   unikFossil: {fileID: 0}
   unikChance: 0
   totalLayers: 3
   layer1Sprite: {fileID: 8547753652136361683, guid: c9b924ace0f759b45bb84996b10303ae, type: 3}
   fossilTypesOnLayer1: 
   layer2Sprite: {fileID: 4823382702429700698, guid: 94757fe8ee3c24440b857f24a750b7ff, type: 3}
-  fossilTypesOnLayer2: 0100000003000000
+  fossilTypesOnLayer2: 020000000300000002000000
   layer3Sprite: {fileID: 3895382488454125955, guid: 2bcf21dffd7781742a8f833a5b6cb36f, type: 3}
-  fossilTypesOnLayer3: 04000000
+  fossilTypesOnLayer3: 040000000100000002000000
   layer4Sprite: {fileID: 0}
   fossilTypesOnLayer4: 
   layer5Sprite: {fileID: 0}
@@ -317,7 +318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e1717657b33a1c409e018e08177903b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickUp: {fileID: 8300000, guid: bec1402017f8c9e42a23d4e203f41b2f, type: 3}
+  pickUp: {fileID: 8300000, guid: 5a76c8790abc419488bd932b341bfb24, type: 3}
   dig: {fileID: 8300000, guid: e8334b622fdb10f458734b3b1dde2c08, type: 3}
 --- !u!199 &313772133
 ParticleSystemRenderer:

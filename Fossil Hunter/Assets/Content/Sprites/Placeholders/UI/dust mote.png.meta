@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 07257132130cc114081ea16ad87a62c9
+guid: 383879bce778eed478e5ae36e8d24b0d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -762420635945660699
-    second: Tool_Brush1_0
-  - first:
-      213: -6758823918878422410
-    second: Tool_Brush1_1
+      213: 4459007672405859866
+    second: dust mote_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Tool_Brush1_0
+      name: dust mote_0
       rect:
         serializedVersion: 2
-        x: 3
+        x: 0
         y: 0
-        width: 1533
-        height: 1024
+        width: 40
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,30 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5ee080998765b65f0800000000000000
-      internalID: -762420635945660699
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tool_Brush1_1
-      rect:
-        serializedVersion: 2
-        x: 82
-        y: 798
-        width: 6
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 67a86df9475d332a0800000000000000
-      internalID: -6758823918878422410
+      spriteID: a1e1e7c6ad391ed30800000000000000
+      internalID: 4459007672405859866
       vertices: []
       indices: 
       edges: []
@@ -160,8 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Tool_Brush1_0: -762420635945660699
-      Tool_Brush1_1: -6758823918878422410
+      dust mote_0: 4459007672405859866
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
