@@ -20,7 +20,7 @@ namespace Network_Handler
         //Liste for at gemme beskeder så nye clients kan se dem
         private readonly List<string> chatHistory = new List<string>();
 
-        private Network_Chat() { }
+        public Network_Chat() { }
 
         /// <summary>
         /// Send besked til server
