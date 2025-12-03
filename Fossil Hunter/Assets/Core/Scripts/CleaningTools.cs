@@ -78,7 +78,7 @@ public class CleaningTools : MonoBehaviour
                         if (!GetComponent<AudioSource>().isPlaying) GetComponent<AudioSource>().Play();
                         cleaningColliders.Add(hit.collider);
                         emitParams.startSize = 0.5f;
-                        particles.Emit(emitParams, 2);
+                        particles.Emit(emitParams, 1);
                     }
 
                     break;
