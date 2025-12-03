@@ -1,7 +1,0 @@
-<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <Style src="project://database/Assets/UI/Styles/StartSceneStyle.uss?fileID=7433441132597879392&amp;guid=49f32e9d155f1a6408830c13c2c9fb5c&amp;type=3#StartSceneStyle" />
-    <ui:Button text="Rock Beach" name="RockBeach" style="position: absolute; height: 84px; width: 123px; top: 534px; left: 1127px;" />
-    <ui:Button text="Sand Beach&#10;" name="SandBeach" style="position: absolute; height: 104px; width: 136px; top: 518px; left: 574px;" />
-    <ui:Button text="Museum" name="Museum" style="position: absolute; top: 724px; left: 1038px; height: 95px; width: 124px;" />
-    <ui:Button text="Cleaning" name="Cleaning" style="position: absolute; height: 98px; width: 118px; top: 723px; left: 709px;" />
-</ui:UXML>

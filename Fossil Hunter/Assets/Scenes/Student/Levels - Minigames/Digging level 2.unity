@@ -5983,7 +5983,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1962539018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6035,7 +6035,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1962539017}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &1962539020
 Camera:
   m_ObjectHideFlags: 0
@@ -6106,6 +6106,7 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1962539021}
   - {fileID: 793027951}
   - {fileID: 1255238805}
   - {fileID: 1267368901}
@@ -6114,4 +6115,3 @@ SceneRoots:
   - {fileID: 1625866097}
   - {fileID: 615200349}
   - {fileID: 1220239200}
-  - {fileID: 1962539021}
