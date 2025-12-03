@@ -21,14 +21,29 @@ public class FossileInfo_SO : ScriptableObject
     private Sprite dirtySpite;
     private bool found = false;
 
+    /*
     private void OnEnable()
     {
         // kun ét instance er blevet givet spritesne, hvis det er den her; bliver den det static 'Instance' som du andre referere til.
-        if (FossilSprites.Count != 0 || DirtySprites.Count != 0)
+        if (FossilSprites.Count != 0)
         {
             Instance = this;
         }
     }
+    */
+
+    public static void RegisterDatabase(FossileInfo_SO db)
+    {
+        if (db == null)
+        {
+            Debug.LogError("FossileInfo_SO.RegisterDatabase called with null");
+            return;
+        }
+
+        Instance = db;
+        Debug.Log("FossileInfo_SO: Database registered: " + db.name);
+    }
+
 
     /// <summary>
     /// Shows whether or not the fossil has been found.
