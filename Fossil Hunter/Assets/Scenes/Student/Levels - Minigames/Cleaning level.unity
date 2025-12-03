@@ -972,6 +972,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   totalLayers: 0
   displayStarPrefab: {fileID: 0}
+  displayStarTime: 0
 --- !u!1001 &1395436292
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1135,7 +1136,7 @@ MonoBehaviour:
   m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_PanelSettings: {fileID: 11400000, guid: 20457778133ed0948840384deb974deb, type: 2}
+  m_PanelSettings: {fileID: 11400000, guid: 32e332199be957c43938c3255c1e675a, type: 2}
   m_ParentUI: {fileID: 0}
   sourceAsset: {fileID: 9197481963319205126, guid: 1a03272afc62fd240ba48941dc5eab8b, type: 3}
   m_SortingOrder: 0
@@ -1151,7 +1152,7 @@ Transform:
   m_GameObject: {fileID: 1716829942}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5852015, y: 0.28216666, z: 0.46320185}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

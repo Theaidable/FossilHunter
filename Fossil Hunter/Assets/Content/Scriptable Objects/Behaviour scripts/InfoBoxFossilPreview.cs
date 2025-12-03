@@ -9,13 +9,4 @@ public class InfoBoxFossilPreview : ScriptableObject
     }
 
     [SerializeField] public static Sprite ViewedSprite;
-
-    /*
-    private static InfoBoxFossilPreview Instance;
-
-    private void OnValidate()
-    {
-        Instance = this;
-    }
-    */
 }

@@ -78,8 +78,25 @@ public static class CleaningManager
 
     private static void TrySendFossilCleanedMessage(FossileInfo_SO fossil)
     {
-        if(fossil == null || Network_Chat.Instance == null || Network_Chat.Instance.IsSpawned == false)
+        Debug.Log("[CleaningManager] TrySendFossilCleanedMessage kaldt");
+
+        if (fossil == null)
         {
+            Debug.LogWarning("[CleaningManager] Fossil er NULL – sender ingen besked.");
+            return;
+        }
+
+        var _chat = Object.FindFirstObjectByType<Network_Chat>();
+
+        if (_chat == null)
+        {
+            Debug.LogWarning("[CleaningManager] Network_Chat.Instance er NULL – sender ingen besked.");
+            return;
+        }
+
+        if (_chat.IsSpawned == false)
+        {
+            Debug.LogWarning("[CleaningManager] Network_Chat er ikke spawned endnu – sender ingen besked.");
             return;
         }
 
@@ -113,7 +130,9 @@ public static class CleaningManager
         string message = $"<i>Har fundet <color=#{colorHex}>{fossilName}</color></i>";
 
         // Send besked til alle
-        Network_Chat.Instance.SendLocalMessage(message, false);
+        _chat.SendLocalMessage(message, false);
+
+        Debug.Log("Feedback message has been sent");
     }
 
     /// <summary>
@@ -122,6 +141,8 @@ public static class CleaningManager
     /// <param name="fossil">The fossil being sent to the museum.</param>
     public static void FossilCleaned(FossileInfo_SO fossil)
     {
+        Debug.Log("[CleaningManager] FossilCleaned kaldt med: " + (fossil != null ? fossil.FossilType.ToString() : "NULL"));
+
         TrySendFossilCleanedMessage(fossil);
         PickedUpFossils.Instance.CleanFossil(fossil);
         SpawnNextFossil();
