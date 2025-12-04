@@ -28,8 +28,6 @@ public class EraseDirt : MonoBehaviour
 
     void Awake()
     {
-
-
         spriteRend = gameObject.GetComponent<SpriteRenderer>();
 
         //set the rect of the sprite
@@ -145,7 +143,29 @@ public class EraseDirt : MonoBehaviour
         Texture2D textureTemp = new Texture2D(dirtTexture.width, dirtTexture.height, TextureFormat.ARGB32, false);
         textureTemp.filterMode = FilterMode.Bilinear;
         textureTemp.wrapMode = TextureWrapMode.Clamp;*/
+    }
 
+    public void UpdateTotalSaturation()
+    {
+        spriteRend = gameObject.GetComponent<SpriteRenderer>();
+
+        //set the rect of the sprite
+        originalSpriteRect = new Rect(spriteRend.sprite.rect.x, spriteRend.sprite.rect.y, spriteRend.sprite.rect.width, spriteRend.sprite.rect.height);
+        var tex = spriteRend.sprite.texture;
+        //ready the texture that will be turning into a new sprite
+        m_Texture = new Texture2D(tex.width, tex.height, TextureFormat.ARGB32, false);
+        m_Texture.filterMode = FilterMode.Bilinear;
+        m_Texture.wrapMode = TextureWrapMode.Clamp;
+        m_Colors = tex.GetPixels();
+        m_Texture.SetPixels(m_Colors);
+        m_Texture.Apply();
+        //render sprite to test that it matches current settings
+        spriteRend.sprite = Sprite.Create(m_Texture, originalSpriteRect, new Vector2(0.5f, 0.5f));
+        //determine the total opacity of the dirt
+        foreach (Color c in m_Colors)
+        {
+            totalColourSaturation += c.a;
+        }
 
     }
 }

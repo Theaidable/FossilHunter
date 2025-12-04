@@ -6,7 +6,7 @@ using UnityEngine.Audio;
 using UnityEngine.InputSystem;
 using static UnityEngine.ParticleSystem;
 
-public enum CleaningTool { None, Brush, Dremel, FineBrush }
+public enum CleaningTool { None, Brush, Chisel, FineBrush }
 /// <summary>
 /// Sets up and keeps track of the various tools in the cleaning scene, and keeps track of which tool is in use
 /// primarily made by emma
@@ -25,15 +25,15 @@ public class CleaningTools : MonoBehaviour
     private AudioResource brushUseSound;
     [SerializeField]
     private Texture2D brushSprite;
-    [Header("Dremel settings")]
+    [Header("Chisel settings")]
     [SerializeField]
-    private int dremelSize;
+    private int chiselSize;
     [SerializeField]
-    private LayerMask dremelWorksOnLayers;
+    private LayerMask chiselWorksOnLayers;
     [SerializeField]
-    private AudioResource dremelUseSound;
+    private AudioResource chiselUseSound;
     [SerializeField]
-    private Texture2D dremelSprite;
+    private Texture2D chiselSprite;
     [Header("Fine brush settings")]
     [SerializeField]
     private int fineBrushSize;
@@ -44,6 +44,8 @@ public class CleaningTools : MonoBehaviour
     [SerializeField]
     private Texture2D fineBrushSprite;
 
+    //adjust this to determine the position of the particle emission
+    private float particleAdjustment = 5;
     private HashSet<Collider2D> cleaningColliders = new HashSet<Collider2D>();
     private ParticleSystem particles;
     ParticleSystem.EmitParams emitParams;
@@ -59,11 +61,11 @@ public class CleaningTools : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        emitParams.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
         //only try to draw & update sprite if the mouse is clicking
         if (Input.GetMouseButton(0))
         {
+            emitParams.position = new Vector2(Camera.main.ScreenToWorldPoint(Input.mousePosition).x * particleAdjustment, Camera.main.ScreenToWorldPoint(Input.mousePosition).y * particleAdjustment);
+            Debug.Log(emitParams.position);
             switch (currentTool)
             {
                 case CleaningTool.Brush:
@@ -75,19 +77,22 @@ public class CleaningTools : MonoBehaviour
                         hit.collider.gameObject.GetComponent<EraseDirt>().Drawing = true;
                         if (!GetComponent<AudioSource>().isPlaying) GetComponent<AudioSource>().Play();
                         cleaningColliders.Add(hit.collider);
-                        //particles.Emit(emitParams, 1);
+                        emitParams.startSize = 0.5f;
+                        particles.Emit(emitParams, 1);
                     }
 
                     break;
-                case CleaningTool.Dremel:
-                    RaycastHit2D hit2 = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, 0, dremelWorksOnLayers);
+                case CleaningTool.Chisel:
+                    RaycastHit2D hit2 = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, 0, chiselWorksOnLayers);
                     if (hit2.collider != null && hit2.collider is Collider2D && hit2.collider.gameObject.GetComponent<EraseDirt>() != null)
                     {
-                        hit2.collider.gameObject.GetComponent<EraseDirt>().EraserSize = dremelSize;
+                        hit2.collider.gameObject.GetComponent<EraseDirt>().EraserSize = chiselSize;
                         hit2.collider.gameObject.GetComponent<EraseDirt>().UpdateTexture(hit2);
                         hit2.collider.gameObject.GetComponent<EraseDirt>().Drawing = true;
                         if (!GetComponent<AudioSource>().isPlaying) GetComponent<AudioSource>().Play();
                         cleaningColliders.Add(hit2.collider);
+                        emitParams.startSize = 1f;
+                        particles.Emit(emitParams, 2);
                     }
                     break;
                 case CleaningTool.FineBrush:
@@ -100,6 +105,9 @@ public class CleaningTools : MonoBehaviour
                         hit3.collider.gameObject.GetComponent<EraseDirt>().Drawing = true;
                         if (!GetComponent<AudioSource>().isPlaying) GetComponent<AudioSource>().Play();
                         cleaningColliders.Add(hit3.collider);
+                        emitParams.startSize = 0.5f;
+                        particles.Emit(emitParams, 1);
+
                     }
                     break;
                 default:
@@ -136,10 +144,10 @@ public class CleaningTools : MonoBehaviour
                     if (brushUseSound != null) GetComponent<AudioSource>().resource = brushUseSound;
                     Debug.Log($"switched to {currentTool}");
                     break;
-                case CleaningTool.Dremel:
-                    currentTool = CleaningTool.Dremel;
-                    if (dremelSprite != null) Cursor.SetCursor(dremelSprite, Vector2.zero, CursorMode.Auto);
-                    if (dremelUseSound != null) GetComponent<AudioSource>().resource = dremelUseSound;
+                case CleaningTool.Chisel:
+                    currentTool = CleaningTool.Chisel;
+                    if (chiselSprite != null) Cursor.SetCursor(chiselSprite, Vector2.zero, CursorMode.Auto);
+                    if (chiselUseSound != null) GetComponent<AudioSource>().resource = chiselUseSound;
                     Debug.Log($"switched to {currentTool}");
                     break;
                 case CleaningTool.FineBrush:

@@ -5,6 +5,8 @@ using System.Security.Cryptography;
 using System.Text;
 using UnityEngine;
 
+/// Database klasser
+///<author> David Gudmund Danielsen </author>
 namespace Database
 {
     public enum UserRole

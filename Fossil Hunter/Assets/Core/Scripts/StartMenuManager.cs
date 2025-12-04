@@ -37,30 +37,39 @@ public class StartMenuManager : MonoBehaviour
     private void OnSandBeachPressed()
     {
         Debug.Log("Pls");
-        SceneManager.LoadSceneAsync("Digging level 1", LoadSceneMode.Additive);
-        SceneManager.UnloadSceneAsync("StartScreen");
-        MenuManager.currentScene = 4;
+
+        string sandBeachScene = "Digging level 1"; 
+
+        SceneManager.LoadSceneAsync(sandBeachScene, LoadSceneMode.Additive);
+        SceneManager.UnloadSceneAsync("S_StartScene");
+        MenuManager.currentScene = sandBeachScene;
         Debug.Log(MenuManager.currentScene);
     }
 
     private void OnStoneBeachPressed()
     {
-        SceneManager.LoadSceneAsync("Digging level 2", LoadSceneMode.Additive);
-        SceneManager.UnloadSceneAsync("StartScreen");
-        MenuManager.currentScene = 5;
+        string stoneBeachScene = "Digging level 2";
+
+        SceneManager.LoadSceneAsync(stoneBeachScene, LoadSceneMode.Additive);
+        SceneManager.UnloadSceneAsync("S_StartScene");
+        MenuManager.currentScene = stoneBeachScene;
     }
 
     private void OnMuseumPressed()
     {
-        SceneManager.LoadSceneAsync("S_Museum", LoadSceneMode.Additive);
-        SceneManager.UnloadSceneAsync("StartScreen");
-        MenuManager.currentScene = 3;
+        string museumScene = "S_Museum";
+
+        SceneManager.LoadSceneAsync(museumScene, LoadSceneMode.Additive);
+        SceneManager.UnloadSceneAsync("S_StartScene");
+        MenuManager.currentScene = museumScene;
     }
 
     private void OnCleaningPressed()
     {
-        SceneManager.LoadSceneAsync("Cleaning level", LoadSceneMode.Additive);
-        SceneManager.UnloadSceneAsync("StartScreen");
-        MenuManager.currentScene = 2;
+        string cleaningScene = "Cleaning level";
+
+        SceneManager.LoadSceneAsync(cleaningScene, LoadSceneMode.Additive);
+        SceneManager.UnloadSceneAsync("S_StartScene");
+        MenuManager.currentScene = cleaningScene;
     }
 }

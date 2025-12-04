@@ -18,32 +18,70 @@ namespace UI_Handlers
         [SerializeField] private UIDocument _uiDocument;
 
         //Reference til alt INDE i UIDocumentet
+        private Button _chatOpenButton;
+        private VisualElement _chatBox;
+
         private TextField _inputField;
         private Button _sendButton;
         private Button _handUpButton;
         private Button _closeButton;
         private ScrollView _messageScroll;
-        private VisualElement _root;
-
-        private BoxCollider2D _collider;
 
         [SerializeField] private bool startHidden = false;
 
         private Network_Chat _chat;
 
+        private bool _overlayInitialized = false;
+
         private void Awake()
         {
-            _collider = GetComponent<BoxCollider2D>();
-            _root = _uiDocument.rootVisualElement;
+            var _root = _uiDocument.rootVisualElement;
 
-            if (startHidden == true)
+            _chatOpenButton = _root.Q<Button>("ChatOpenButton");
+            _chatBox = _root.Q<VisualElement>("ChatBox");
+
+            if (startHidden == true && _chatBox != null)
             {
-                //_uiDocument.enabled = false;
-                _root.style.display = DisplayStyle.None;
+                //Skjul selve chatboxen
+                _chatBox.style.display = DisplayStyle.None;
+                
+                if (_chatOpenButton != null)
+                {
+                    _chatOpenButton.clicked += OnChatOpenButtonClicked;
+                }
             }
             else
             {
-                GetOverlay();
+                GetChatOverlay();
+            }
+        }
+
+        private void OnDestroy()
+        {
+            if (_chatOpenButton != null)
+            {
+                _chatOpenButton.clicked -= OnChatOpenButtonClicked;
+            }
+
+            //Unsubscribe events
+            if (_sendButton != null)
+            {
+                _sendButton.clicked -= OnSendClicked;
+            }
+
+            if (_handUpButton != null)
+            {
+                _handUpButton.clicked -= OnHandUpClicked;
+            }
+
+            if (_closeButton != null)
+            {
+                _closeButton.clicked -= OnCloseClicked;
+            }
+
+            if (_chat != null)
+            {
+                _chat.OnMessageRecieved -= OnMessageReceived;
             }
         }
 
@@ -71,47 +109,11 @@ namespace UI_Handlers
         }
 
         /// <summary>
-        /// Event for når man klikker på objektets collider
-        /// </summary>
-        private void OnMouseDown()
-        {
-            if(_root != null)
-            {
-                _root.style.display = DisplayStyle.Flex;
-
-
-                if (_collider != null)
-                {
-                    _collider.enabled = false;
-                }
-
-                GetOverlay();
-
-                if(_chat == null)
-                {
-                    _chat = FindFirstObjectByType<Network_Chat>();
-                }
-
-                if (_chat != null)
-                {
-                    _chat.RequestHistoryFromServer();
-
-                    //Subscribe til network objekt for at sende besked
-                    _chat.OnMessageRecieved += OnMessageReceived;
-                }
-                else
-                {
-                    Debug.Log("Network_chat could not be found");
-                }
-            }
-        }
-
-        /// <summary>
         /// Få fat i UIDocumentets layout
         /// </summary>
-        private void GetOverlay()
+        private void GetChatOverlay()
         {
-            _root = _uiDocument.rootVisualElement;
+            var _root = _uiDocument.rootVisualElement;
             _inputField = _root.Q<TextField>("InputField");
             _sendButton = _root.Q<Button>("SendButton");
             _handUpButton = _root.Q<Button>("HandUpButton");
@@ -132,6 +134,37 @@ namespace UI_Handlers
             if(_closeButton != null)
             {
                 _closeButton.clicked += OnCloseClicked;
+            }
+        }
+
+        private void OnChatOpenButtonClicked()
+        {
+            if (_chatBox != null)
+            {
+                _chatBox.style.display = DisplayStyle.Flex;
+
+                //Hent refs ved første klik
+                if(_overlayInitialized == false)
+                {
+                    GetChatOverlay();
+                    _overlayInitialized = true;
+                }
+
+                if (_chat == null)
+                {
+                    _chat = FindFirstObjectByType<Network_Chat>();
+                    _chat.RequestHistoryFromServer();
+
+                    if (_chat != null)
+                    {
+                        //Subscribe til network objekt for at sende besked
+                        _chat.OnMessageRecieved += OnMessageReceived;
+                    }
+                    else
+                    {
+                        Debug.Log("Network_chat could not be found");
+                    }
+                }
             }
         }
 
@@ -175,7 +208,10 @@ namespace UI_Handlers
         {
             if(_messageScroll != null)
             {
-                var label = new Label(message);
+                var label = new Label();
+
+                label.enableRichText = true;
+                label.text = message;
 
                 if (message.StartsWith("[Privat]"))
                 {
@@ -193,27 +229,8 @@ namespace UI_Handlers
         /// </summary>
         private void OnCloseClicked()
         {
-            //Unsubscribe events
-            if (_sendButton != null)
-            {
-                _sendButton.clicked -= OnSendClicked;
-            }
-
-            if (_closeButton != null)
-            {
-                _closeButton.clicked -= OnCloseClicked;
-            }
-
-            if (_chat != null)
-            {
-                _chat.OnMessageRecieved -= OnMessageReceived;
-            }
-
             //Luk chatten
-            _root.style.display = DisplayStyle.None;
-
-            //Enable chat collider igen, så man kan åbne den
-            _collider.enabled = true;
+            _chatBox.style.display = DisplayStyle.None;
         }
     }
 }

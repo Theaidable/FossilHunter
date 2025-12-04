@@ -1,5 +1,6 @@
 VisualElement {
-    pointer-events:none;
+    pointer-events: none;
+    flex-grow: 1;
 }
 
 .toolBtn {

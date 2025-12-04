@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 using UnityEditor;
 using System.Linq;
+using Network_Handler;
 
 // Author - Malthe
 
@@ -38,13 +39,15 @@ public static class CleaningManager
     /// </summary>
     private static void OpenManager()
     {
-        int foundFossils = PickedUpFossils.Instance.GetFossils().Count;
+        List<FossileInfo_SO> foundFossils = PickedUpFossils.Instance.GetFossils();
 
         //spawns and positions the waitinglist.
-        for (int i = 0; i < foundFossils; i++)
+        for (int i = 0; i < foundFossils.Count; i++)
         {
             GameObject waitinglistObject = (GameObject)GameObject.Instantiate(waitinglistObjectPrefab, SceneManager.GetSceneByName("Cleaning level"));
-            waitinglistObject.transform.position = new Vector3(7, 4 - i * 1.5f, 0);
+            waitinglistObject.GetComponent<SpriteRenderer>().sprite = foundFossils[i].GetDirtySpite;
+            waitinglistObject.GetComponent<SpriteRenderer>().sortingOrder = 1;
+            waitinglistObject.transform.position = new Vector3(7, 3 - i * 1.25f, 0);
             waitinglistObjects.Add(waitinglistObject);
         }
 
@@ -73,12 +76,74 @@ public static class CleaningManager
         }
     }
 
+    private static void TrySendFossilCleanedMessage(FossileInfo_SO fossil)
+    {
+        Debug.Log("[CleaningManager] TrySendFossilCleanedMessage kaldt");
+
+        if (fossil == null)
+        {
+            Debug.LogWarning("[CleaningManager] Fossil er NULL – sender ingen besked.");
+            return;
+        }
+
+        var _chat = Object.FindFirstObjectByType<Network_Chat>();
+
+        if (_chat == null)
+        {
+            Debug.LogWarning("[CleaningManager] Network_Chat.Instance er NULL – sender ingen besked.");
+            return;
+        }
+
+        if (_chat.IsSpawned == false)
+        {
+            Debug.LogWarning("[CleaningManager] Network_Chat er ikke spawned endnu – sender ingen besked.");
+            return;
+        }
+
+        string fossilName = fossil.FossilType.ToString();
+
+        string colorHex;
+
+        switch (fossil.Kvalitet)
+        {
+            case Kvalitet.Dårlig: // Garbage kvalitet
+                colorHex = "FF0000"; // Rød farve
+                break;
+            case Kvalitet.Middle: // Common
+                colorHex = "B0B0B0"; // Grå farve
+                break;
+            case Kvalitet.God: // Rare
+                colorHex = "0080FF"; // Blå farve
+                break;
+            case Kvalitet.Perfekt: // Epic
+                colorHex = "8000FF"; // Lilla farve
+                break;
+            case Kvalitet.Unik: // Legendary
+                colorHex = "FFD700"; // Guld farve
+                break;
+            default:
+                colorHex = "FFFFFF";
+                break;
+        }
+
+        // Selve beskeden med fossilnavn og farve
+        string message = $"<i>Har fundet <color=#{colorHex}>{fossilName}</color></i>";
+
+        // Send besked til alle
+        _chat.SendLocalMessage(message, false);
+
+        Debug.Log("Feedback message has been sent");
+    }
+
     /// <summary>
     /// Sends a fossil to the museum, after its been cleaned.
     /// </summary>
     /// <param name="fossil">The fossil being sent to the museum.</param>
     public static void FossilCleaned(FossileInfo_SO fossil)
     {
+        Debug.Log("[CleaningManager] FossilCleaned kaldt med: " + (fossil != null ? fossil.FossilType.ToString() : "NULL"));
+
+        TrySendFossilCleanedMessage(fossil);
         PickedUpFossils.Instance.CleanFossil(fossil);
         SpawnNextFossil();
     }

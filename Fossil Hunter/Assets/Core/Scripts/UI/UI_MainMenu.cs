@@ -28,6 +28,8 @@ namespace UI_Handlers
 
             buttonLogIn = root.Q<Button>("LogInButton");
             buttonSignUp = root.Q<Button>("SignUpButton");
+
+
         }
 
         /// <summary>
